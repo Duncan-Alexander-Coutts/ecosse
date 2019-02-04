@@ -4,6 +4,7 @@ import Hero from "./components/hero/Hero";
 import Services from "./components/services/Services";
 import { withStyles } from "@material-ui/core";
 import PageFooter from "./components/page-footer/PageFooter";
+import About from "./components/about/About";
 
 const styles = theme => ({
   appContent: {
@@ -22,6 +23,7 @@ class App extends Component {
         <PageHeader />
         <div className={this.props.classes.appContent}>
           <Hero />
+          <About />
           <div className={this.props.classes.services}>
             <Services />
           </div>

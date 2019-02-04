@@ -43,7 +43,7 @@ export default withStyles(styles)(props => (
         <div>
           <Button>Home</Button>
           <Button>Services</Button>
-          <Button>About</Button>
+          <Button>About Us</Button>
           <Button>Contact</Button>
         </div>
       </Toolbar>
