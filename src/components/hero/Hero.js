@@ -24,7 +24,10 @@ const styles = theme => ({
   overlay: {
     backgroundColor: "rgba(255,255,255,.5)",
     width: "100%",
-    textAlign: "center"
+    alignItems: "center",
+    height: 60,
+    display: "flex",
+    justifyContent: "center"
   }
 });
 
@@ -34,10 +37,7 @@ export default withStyles(styles)(props => (
     <div className={props.classes.overlayContainer}>
       <div className={props.classes.overlay}>
         <Typography style={{ color: "#4c4c4c" }} variant="h3">
-          Innovative corrosion solutions
-        </Typography>
-        <Typography style={{ color: "#4c4c4c" }} variant="h6">
-          Some other text that we can see
+          Ultimate asset integrity solutions
         </Typography>
       </div>
     </div>
