@@ -6,30 +6,48 @@ import { withStyles } from "@material-ui/core";
 import PageFooter from "./components/page-footer/PageFooter";
 import About from "./components/about/About";
 
-const styles = theme => ({
-  appContent: {
-    marginTop: 85
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { red } from "@material-ui/core/colors";
+
+const theme = createMuiTheme({
+  palette: {
+    secondary: red
   },
+  overrides: {
+    MuiButton: {
+      root: {
+        textTransform: "none"
+      }
+    }
+  }
+});
+
+const styles = theme => ({
+  appContent: {},
   services: {
     marginTop: theme.spacing.unit * 2,
-    padding: `0 ${theme.spacing.unit * 2}px 0 ${theme.spacing.unit * 2}px`
+    padding: `0 ${theme.spacing.unit * 2}px 0 ${theme.spacing.unit * 2}px`,
+    display: "flex",
+    justifyContent: "center"
   }
 });
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <PageHeader />
-        <div className={this.props.classes.appContent}>
-          <Hero />
-          <About />
-          <div className={this.props.classes.services}>
-            <Services />
+      <MuiThemeProvider theme={theme}>
+        <React.Fragment>
+          <PageHeader />
+          <div className={this.props.classes.appContent}>
+            <Hero />
+            <About />
+            <div className={this.props.classes.services}>
+              <Services />
+            </div>
+            <PageFooter />
           </div>
-          <PageFooter />
-        </div>
-      </React.Fragment>
+        </React.Fragment>
+      </MuiThemeProvider>
     );
   }
 }
