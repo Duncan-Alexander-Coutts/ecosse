@@ -16,7 +16,8 @@ const styles = theme => ({
   badgeContainer: {
     display: "flex",
     justifyContent: "center",
-    marginTop: theme.spacing.unit * 2
+    marginTop: theme.spacing.unit * 2,
+    flexWrap: "wrap"
   },
   achilles: {
     width: 144,

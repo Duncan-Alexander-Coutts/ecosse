@@ -1,43 +1,71 @@
 import React from "react";
-import {
-  Card,
-  CardActionArea,
-  CardContent,
-  Typography,
-  CardMedia,
-  withStyles
-} from "@material-ui/core";
+import { Typography, withStyles, Grid, Button } from "@material-ui/core";
 
-const styles = {
-  media: {
-    backgroundSize: 125,
-    width: 125,
-    height: 125,
-    margin: "auto"
+const styles = theme => ({
+  serviceRoot: {
+    marginBottom: theme.spacing.unit * 4,
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column",
+      alignItems: "center"
+    }
   },
-  mediaContainer: {
-    backgroundColor: "#f5f5f5"
+  image: {
+    width: 300
+  },
+  title: {
+    marginBottom: theme.spacing.unit * 2,
+    fontWeight: "bold"
+  },
+  textContentGridItem: {
+    display: "flex",
+    textAlign: "center",
+    alignItems: "center"
+  },
+  imageContainer: {
+    textAlign: "center"
+  },
+  button: {
+    width: 200,
+    margin: "auto",
+    marginTop: theme.spacing.unit * 4
+  },
+  descriptionContentContainer: {
+    margin: "auto"
   }
-};
+});
 
-export default withStyles(styles)(props => (
-  <Card>
-    <CardActionArea>
-      <CardContent>
-        <Typography align="center" variant="title" component="h2">
-          {props.title}
-        </Typography>
-      </CardContent>
-      <div className={props.classes.mediaContainer}>
-        <CardMedia
-          className={props.classes.media}
-          image={props.image}
-          title="Contemplative Reptile"
-        />
-      </div>
-      <CardContent>
-        <Typography component="p">{props.description}</Typography>
-      </CardContent>
-    </CardActionArea>
-  </Card>
-));
+export default withStyles(styles)(props => {
+  function getDirection() {
+    return props.imageAlignment === "left" ? "row-reverse" : undefined;
+  }
+
+  return (
+    <Grid
+      className={props.classes.serviceRoot}
+      container
+      spacing={24}
+      direction={getDirection()}
+    >
+      <Grid item xs={12} sm={6} className={props.classes.textContentGridItem}>
+        <div className={props.classes.descriptionContentContainer}>
+          <Typography className={props.classes.title} variant="headline">
+            {props.title}
+          </Typography>
+          <Typography color="textSecondary" variant="body1">
+            {props.description}
+          </Typography>
+          <Button
+            className={props.classes.button}
+            variant="outlined"
+            color="secondary"
+          >
+            Learn more
+          </Button>
+        </div>
+      </Grid>
+      <Grid className={props.classes.imageContainer} item xs={12} sm={6}>
+        <img src={props.image} className={props.classes.image} />
+      </Grid>
+    </Grid>
+  );
+});

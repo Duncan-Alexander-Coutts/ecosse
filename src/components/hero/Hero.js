@@ -1,9 +1,12 @@
 import React from "react";
 
 import BigImage from "../../hero.jpg";
-import { withStyles, Typography } from "@material-ui/core";
+import { withStyles, Typography, Button } from "@material-ui/core";
 
 const styles = theme => ({
+  heroContainer: {
+    position: "relative"
+  },
   bigImage: {
     width: "100%",
     height: 500,
@@ -19,27 +22,25 @@ const styles = theme => ({
     width: "100%",
     height: "100%",
     display: "flex",
-    alignItems: "center"
-  },
-  overlay: {
-    backgroundColor: "rgba(255,255,255,.5)",
-    width: "100%",
+    flexDirection: "column",
     alignItems: "center",
-    height: 60,
-    display: "flex",
+    background: "rgba(0,0,0,0.2)",
     justifyContent: "center"
+  },
+  slogan: {
+    color: "white",
+    fontWeight: "bold",
+    marginBottom: theme.spacing.unit
   }
 });
 
 export default withStyles(styles)(props => (
-  <div style={{ position: "relative" }}>
+  <div className={props.classes.heroContainer}>
     <div className={props.classes.bigImage} />
     <div className={props.classes.overlayContainer}>
-      <div className={props.classes.overlay}>
-        <Typography style={{ color: "#4c4c4c" }} variant="h3">
-          Ultimate asset integrity solutions
-        </Typography>
-      </div>
+      <Typography align="center" className={props.classes.slogan} variant="h3">
+        Ultimate asset integrity solutions
+      </Typography>
     </div>
   </div>
 ));
