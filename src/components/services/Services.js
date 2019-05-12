@@ -1,6 +1,5 @@
 import React from "react";
 
-import menClipboard from "../../men-clipboard.png";
 import rust from "../../rust.png";
 import composite from "../../composite.png";
 import sealants from "../../sealants.png";

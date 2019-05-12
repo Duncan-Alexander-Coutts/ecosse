@@ -1,7 +1,7 @@
 import React from "react";
 
 import BigImage from "../../hero.jpg";
-import { withStyles, Typography, Button, Grow } from "@material-ui/core";
+import { withStyles, Typography, Grow } from "@material-ui/core";
 
 const styles = theme => ({
   heroContainer: {
