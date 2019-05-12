@@ -1,7 +1,7 @@
 import React from "react";
 
 import BigImage from "../../hero.jpg";
-import { withStyles, Typography, Button } from "@material-ui/core";
+import { withStyles, Typography, Button, Grow } from "@material-ui/core";
 
 const styles = theme => ({
   heroContainer: {
@@ -9,7 +9,7 @@ const styles = theme => ({
   },
   bigImage: {
     width: "100%",
-    height: 500,
+    height: 550,
     backgroundRepeat: "none",
     backgroundSize: "cover",
     backgroundImage: `url(${BigImage})`,
@@ -24,7 +24,7 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    background: "rgba(0,0,0,0.2)",
+    background: "rgba(0, 0, 0, 0.3)",
     justifyContent: "center"
   },
   slogan: {
@@ -38,9 +38,15 @@ export default withStyles(styles)(props => (
   <div className={props.classes.heroContainer}>
     <div className={props.classes.bigImage} />
     <div className={props.classes.overlayContainer}>
-      <Typography align="center" className={props.classes.slogan} variant="h3">
-        Ultimate asset integrity solutions
-      </Typography>
+      <Grow in={true} timeout={1000}>
+        <Typography
+          align="center"
+          className={props.classes.slogan}
+          variant="h2"
+        >
+          Ultimate asset integrity solutions
+        </Typography>
+      </Grow>
     </div>
   </div>
 ));

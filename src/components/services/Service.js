@@ -27,7 +27,8 @@ const styles = theme => ({
   button: {
     width: 200,
     margin: "auto",
-    marginTop: theme.spacing.unit * 4
+    marginTop: theme.spacing.unit * 4,
+    marginBottom: theme.spacing.unit * 2
   },
   descriptionContentContainer: {
     margin: "auto"
@@ -43,7 +44,6 @@ export default withStyles(styles)(props => {
     <Grid
       className={props.classes.serviceRoot}
       container
-      spacing={24}
       direction={getDirection()}
     >
       <Grid item xs={12} sm={6} className={props.classes.textContentGridItem}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { withStyles, Typography, Button } from "@material-ui/core";
+import { withStyles, Typography, Button, Fade } from "@material-ui/core";
 
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -53,25 +53,27 @@ export default withStyles(styles)(props => (
   <MuiThemeProvider
     theme={theme => createMuiTheme({ ...getLocalTheme(theme) })}
   >
-    <AppBar className={props.classes.appBar}>
-      <Toolbar className={props.classes.toolbar}>
-        <div className={props.classes.toolbarLeft}>
-          <img
-            src={EcosseLogo}
-            alt="Ecosse Global fire and water logo"
-            className={props.classes.logo}
-          />
-          <Typography className={props.classes.title} variant="h5">
-            Ecosse Global UK
-          </Typography>
-        </div>
-        <div>
-          <Button size="large">Home</Button>
-          <Button size="large">Services</Button>
-          <Button size="large">About Us</Button>
-          <Button size="large">Contact</Button>
-        </div>
-      </Toolbar>
-    </AppBar>
+    <Fade in={true} timeout={1000}>
+      <AppBar className={props.classes.appBar}>
+        <Toolbar className={props.classes.toolbar}>
+          <div className={props.classes.toolbarLeft}>
+            <img
+              src={EcosseLogo}
+              alt="Ecosse Global fire and water logo"
+              className={props.classes.logo}
+            />
+            <Typography className={props.classes.title} variant="h5">
+              Ecosse Global UK
+            </Typography>
+          </div>
+          <div>
+            <Button size="large">Home</Button>
+            <Button size="large">Services</Button>
+            <Button size="large">About Us</Button>
+            <Button size="large">Contact</Button>
+          </div>
+        </Toolbar>
+      </AppBar>
+    </Fade>
   </MuiThemeProvider>
 ));

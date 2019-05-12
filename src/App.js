@@ -13,6 +13,9 @@ const theme = createMuiTheme({
   palette: {
     secondary: red
   },
+  typography: {
+    fontFamily: "Montserrat, sans-serif"
+  },
   overrides: {
     MuiButton: {
       root: {
