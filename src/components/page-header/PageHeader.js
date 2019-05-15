@@ -6,6 +6,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import EcosseLogo from "../../logo_svg.svg";
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { Link, withRouter } from "react-router-dom";
+import Hero from "../hero/Hero";
 
 const getLocalTheme = theme => ({
   ...theme,
@@ -49,31 +51,42 @@ const styles = theme => ({
   }
 });
 
-export default withStyles(styles)(props => (
-  <MuiThemeProvider
-    theme={theme => createMuiTheme({ ...getLocalTheme(theme) })}
-  >
-    <Fade in={true} timeout={1000}>
-      <AppBar className={props.classes.appBar}>
-        <Toolbar className={props.classes.toolbar}>
-          <div className={props.classes.toolbarLeft}>
-            <img
-              src={EcosseLogo}
-              alt="Ecosse Global fire and water logo"
-              className={props.classes.logo}
-            />
-            <Typography className={props.classes.title} variant="h5">
-              Ecosse Global UK
-            </Typography>
-          </div>
-          <div>
-            <Button size="large">Home</Button>
-            <Button size="large">Services</Button>
-            <Button size="large">About Us</Button>
-            <Button size="large">Contact</Button>
-          </div>
-        </Toolbar>
-      </AppBar>
-    </Fade>
-  </MuiThemeProvider>
-));
+export default withRouter(
+  withStyles(styles)(props => {
+    return (
+      <MuiThemeProvider
+        theme={theme => createMuiTheme({ ...getLocalTheme(theme) })}
+      >
+        <React.Fragment>
+          <Fade in={true} timeout={1000}>
+            <AppBar className={props.classes.appBar}>
+              <Toolbar className={props.classes.toolbar}>
+                <div className={props.classes.toolbarLeft}>
+                  <img
+                    src={EcosseLogo}
+                    alt="Ecosse Global fire and water logo"
+                    className={props.classes.logo}
+                  />
+                  <Typography className={props.classes.title} variant="h5">
+                    Ecosse Global UK
+                  </Typography>
+                </div>
+                <div>
+                  <Button component={Link} to="/" size="large">
+                    Home
+                  </Button>
+                  <Button component={Link} to="/services" size="large">
+                    Services
+                  </Button>
+                  <Button size="large">About Us</Button>
+                  <Button size="large">Contact</Button>
+                </div>
+              </Toolbar>
+            </AppBar>
+          </Fade>
+          <Hero fullHeight={props.location.pathname === "/"} />
+        </React.Fragment>
+      </MuiThemeProvider>
+    );
+  })
+);

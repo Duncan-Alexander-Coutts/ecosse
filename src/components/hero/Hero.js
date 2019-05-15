@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 
 import BigImage from "../../hero.jpg";
 import { withStyles, Typography, Grow } from "@material-ui/core";
@@ -7,14 +8,18 @@ const styles = theme => ({
   heroContainer: {
     position: "relative"
   },
-  bigImage: {
+  hero: {
     width: "100%",
-    height: 550,
+    height: 85,
     backgroundRepeat: "none",
     backgroundSize: "cover",
     backgroundImage: `url(${BigImage})`,
-    backgroundPosition: "center",
-    boxShadow: theme.shadows[2]
+    boxShadow: theme.shadows[2],
+    backgroundPositionY: -40
+  },
+  heroLarge: {
+    height: 550,
+    backgroundPosition: "center"
   },
   overlayContainer: {
     position: "absolute",
@@ -34,19 +39,33 @@ const styles = theme => ({
   }
 });
 
-export default withStyles(styles)(props => (
-  <div className={props.classes.heroContainer}>
-    <div className={props.classes.bigImage} />
-    <div className={props.classes.overlayContainer}>
-      <Grow in={true} timeout={1000}>
-        <Typography
-          align="center"
-          className={props.classes.slogan}
-          variant="h2"
-        >
-          Ultimate asset integrity solutions
-        </Typography>
-      </Grow>
+export default withStyles(styles)(props => {
+  const renderSlogan = () => {
+    return (
+      <div className={props.classes.overlayContainer}>
+        {props.fullHeight && (
+          <Grow in={true} timeout={1000}>
+            <Typography
+              align="center"
+              className={props.classes.slogan}
+              variant="h2"
+            >
+              Ultimate asset integrity solutions
+            </Typography>
+          </Grow>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className={props.classes.heroContainer}>
+      <div
+        className={classNames(props.classes.hero, {
+          [props.classes.heroLarge]: props.fullHeight
+        })}
+      />
+      {renderSlogan()}
     </div>
-  </div>
-));
+  );
+});

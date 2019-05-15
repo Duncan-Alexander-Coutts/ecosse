@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import PageHeader from "./components/page-header/PageHeader";
-import Hero from "./components/hero/Hero";
-import Services from "./home/services/Services";
-import { withStyles } from "@material-ui/core";
 import PageFooter from "./components/page-footer/PageFooter";
-import About from "./home/about/About";
+import Hero from "./components/hero/Hero";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import HomePage from "./home/HomePage";
+import ServicesPage from "./services/ServicesPage";
 
 const theme = createMuiTheme({
   palette: {
@@ -30,13 +29,12 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
-        <React.Fragment>
+        <Router>
           <PageHeader />
-          <div>
-            <HomePage />
-          </div>
+          <Route path="/" component={HomePage} exact />
+          <Route path="/services" component={ServicesPage} />
           <PageFooter />
-        </React.Fragment>
+        </Router>
       </MuiThemeProvider>
     );
   }
