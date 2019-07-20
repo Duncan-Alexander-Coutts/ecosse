@@ -78,7 +78,9 @@ export default withRouter(
                   <Button component={Link} to="/services" size="large">
                     Services
                   </Button>
-                  <Button size="large">About Us</Button>
+                  <Button component={Link} to="/team" size="large">
+                    Team
+                  </Button>
                   <Button size="large">Contact</Button>
                 </div>
               </Toolbar>

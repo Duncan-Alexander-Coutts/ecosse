@@ -14,12 +14,12 @@ const styles = theme => ({
 
 const HomePage = props => {
   return (
-    <React.Fragment>
+    <>
       <About />
       <div className={props.classes.services}>
         <Services />
       </div>
-    </React.Fragment>
+    </>
   );
 };
 

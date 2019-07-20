@@ -8,6 +8,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import HomePage from "./home/HomePage";
 import ServicesPage from "./services/ServicesPage";
+import TeamPage from "./team/TeamPage";
 
 const theme = createMuiTheme({
   palette: {
@@ -33,6 +34,7 @@ class App extends Component {
           <PageHeader />
           <Route path="/" component={HomePage} exact />
           <Route path="/services" component={ServicesPage} />
+          <Route path="/team" component={TeamPage} />
           <PageFooter />
         </Router>
       </MuiThemeProvider>
