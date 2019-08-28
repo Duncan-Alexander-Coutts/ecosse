@@ -18,6 +18,11 @@ const theme = createMuiTheme({
     fontFamily: "Montserrat, sans-serif"
   },
   overrides: {
+    MuiTab: {
+      root: {
+        textTransform: "none"
+      }
+    },
     MuiButton: {
       root: {
         textTransform: "none"

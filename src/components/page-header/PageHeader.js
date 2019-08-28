@@ -8,6 +8,7 @@ import EcosseLogo from "../../logo_svg.svg";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { Link, withRouter } from "react-router-dom";
 import Hero from "../hero/Hero";
+import SimpleMenu from "../navigation/SimpleMenu";
 
 const getLocalTheme = theme => ({
   ...theme,
@@ -75,9 +76,7 @@ export default withRouter(
                   <Button component={Link} to="/" size="large">
                     Home
                   </Button>
-                  <Button component={Link} to="/services" size="large">
-                    Services
-                  </Button>
+                  <SimpleMenu />
                   <Button component={Link} to="/team" size="large">
                     Team
                   </Button>

@@ -48,6 +48,7 @@ export default withStyles(styles)(props => (
           <Typography
             className={props.classes.secondaryIntro}
             color="textSecondary"
+            variant="body1"
           >
             Ecosse Global UK Limited has over 28 years of industry experience of
             understanding effective asset lifecycle extension. Looking for the

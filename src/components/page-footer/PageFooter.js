@@ -7,7 +7,7 @@ import DnvGl from "../../svg/dnvgl.svg";
 const styles = theme => ({
   root: {
     marginTop: theme.spacing.unit * 2,
-    background: "#21167a",
+    background: "#4d4b5a",
     borderRadius: 0,
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
