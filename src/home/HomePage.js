@@ -5,11 +5,11 @@ import { withStyles } from "@material-ui/core";
 
 const styles = theme => ({
   services: {
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit * 2}px 0 ${theme
+    padding: `${theme.spacing.unit * 4}px ${theme.spacing.unit * 2}px 0 ${theme
       .spacing.unit * 2}px`,
     display: "flex",
     justifyContent: "center",
-    backgroundColor: "#183c65"
+    backgroundColor: "#ececec"
   }
 });
 

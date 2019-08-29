@@ -55,9 +55,9 @@ export default withStyles(styles)(props => {
             {props.description}
           </Typography>
           <Button
+            color="primary"
             className={props.classes.button}
-            variant="outlined"
-            color="secondary"
+            variant="raised"
           >
             Learn more
           </Button>

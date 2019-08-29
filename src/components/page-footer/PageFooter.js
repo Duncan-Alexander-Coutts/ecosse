@@ -7,7 +7,7 @@ import DnvGl from "../../svg/dnvgl.svg";
 const styles = theme => ({
   root: {
     marginTop: theme.spacing.unit * 2,
-    background: "#4d4b5a",
+    background: theme.palette.primary.main,
     borderRadius: 0,
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
@@ -26,7 +26,7 @@ const styles = theme => ({
 });
 
 export default withStyles(styles)(props => (
-  <React.Fragment>
+  <>
     <div className={props.classes.badgeContainer}>
       <img className={props.classes.achilles} src={Achilles} />
       <img className={props.classes.achilles} src={DnvGl} />
@@ -37,5 +37,5 @@ export default withStyles(styles)(props => (
         Ecosse Global UK
       </Typography>
     </Paper>
-  </React.Fragment>
+  </>
 ));
