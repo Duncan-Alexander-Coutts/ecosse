@@ -5,10 +5,10 @@ import Hero from "./components/hero/Hero";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { blue, red, blueGrey } from "@material-ui/core/colors";
+import { red, blueGrey } from "@material-ui/core/colors";
 import HomePage from "./home/HomePage";
-import ServicesPage from "./services/ServicesPage";
 import TeamPage from "./team/TeamPage";
+import CompositesPage from "./services/CompositesPage";
 
 const theme = createMuiTheme({
   palette: {
@@ -39,7 +39,7 @@ class App extends Component {
         <Router>
           <PageHeader />
           <Route path="/" component={HomePage} exact />
-          <Route path="/services" component={ServicesPage} />
+          <Route path="/services/composites" component={CompositesPage} />
           <Route path="/team" component={TeamPage} />
           <PageFooter />
         </Router>

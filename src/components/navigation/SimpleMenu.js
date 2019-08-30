@@ -3,6 +3,7 @@ import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import { withStyles } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const styles = {
   root: {
@@ -37,7 +38,13 @@ function SimpleMenu(props) {
         onClose={handleClose}
       >
         <MenuItem onClick={handleClose}>Anti-Corrosion</MenuItem>
-        <MenuItem onClick={handleClose}>Composites</MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          component={Link}
+          to="/services/composites"
+        >
+          Composites
+        </MenuItem>
         <MenuItem onClick={handleClose}>Fire & Blast</MenuItem>
         <MenuItem onClick={handleClose}>Sealants</MenuItem>
       </Menu>
