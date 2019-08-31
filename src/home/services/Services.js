@@ -33,11 +33,13 @@ export default withStyles(styles)(props => (
           imageAlignment="left"
           title="Anti Corrosion"
           description="Some text that describes anti corrosion services. And then some other text. Some other text too."
+          url="/home"
         />
         <Service
           image={composite}
           title="Composites"
           description="Some text that describes anti composite services"
+          url="/services/composites"
         />
         <Service
           image={fire}

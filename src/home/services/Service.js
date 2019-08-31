@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, withStyles, Grid, Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const styles = theme => ({
   serviceRoot: {
@@ -55,6 +56,8 @@ export default withStyles(styles)(props => {
             {props.description}
           </Typography>
           <Button
+            component={Link}
+            to={props.url}
             color="primary"
             className={props.classes.button}
             variant="raised"

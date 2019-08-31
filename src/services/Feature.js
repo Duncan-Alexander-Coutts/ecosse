@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, withStyles } from "@material-ui/core";
-import DoneIcon from "@material-ui/icons/Done";
 
 const styles = theme => ({
   root: {
@@ -16,19 +15,20 @@ const styles = theme => ({
   title: {
     fontWeight: "bold"
   },
-  doneIcon: {
+  icon: {
     background: "white",
     color: "dodgerblue",
     borderRadius: "50%",
     position: "absolute",
+    padding: theme.spacing.unit,
     left: "50%",
-    transform: "translate(-50%, -27px)"
+    transform: `translate(-50%, -${theme.spacing.unit * 4}px)`
   }
 });
 
 const Feature = props => (
   <div className={props.classes.root}>
-    <DoneIcon className={props.classes.doneIcon} />
+    <props.icon className={props.classes.icon} />
     <Typography className={props.classes.title} variant="h6">
       {props.title}
     </Typography>
