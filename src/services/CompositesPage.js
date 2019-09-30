@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, withStyles, Grid, GridItem } from "@material-ui/core";
+import { Typography, withStyles, Grid } from "@material-ui/core";
 import Feature from "./Feature";
 import BigImage from "../ivan-bandura-PV8D2xTjdVo-unsplash.jpg";
 import MainImage from "../42_in_heat_exchanger.jpg";
@@ -13,6 +13,7 @@ import {
   BlurCircularOutlined,
   DoneOutline
 } from "@material-ui/icons";
+import TitledImagedContent from "./TitledImageContent";
 
 const styles = theme => ({
   root: {
@@ -35,6 +36,14 @@ const styles = theme => ({
   statement: {
     maxWidth: theme.spacing.unit * 100,
     marginTop: theme.spacing.unit * 2
+  },
+  compositeHighlights: {
+    paddingTop: theme.spacing.unit * 4,
+    paddingLeft: theme.spacing.unit * 3,
+    paddingRight: theme.spacing.unit * 3
+  },
+  compositeHighlightImage: {
+    width: 400
   },
   keyFeatures: {
     marginTop: theme.spacing.unit,
@@ -76,12 +85,53 @@ const CompositesPage = props => (
     <Typography className={props.classes.bold} variant="h4">
       Composites
     </Typography>
-    {/* <div className={props.classes.mainImage}></div> */}
     <Typography align="center" variant="h6" className={props.classes.statement}>
       Our modern composite repair systems are extremely versatile, adaptable and
       reliable. They have many impressive capabilities that make them an
       attractive alternative to traditional repair or replacement methods.
     </Typography>
+    <section className={props.classes.compositeHighlights}>
+      <TitledImagedContent
+        title="Pipe Pressure Repair"
+        image={BigImage}
+        imageClass={props.classes.compositeHighlightImage}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </TitledImagedContent>
+      <TitledImagedContent
+        title="Deck and Module"
+        image={BigImage}
+        imageAlignment="left"
+        imageClass={props.classes.compositeHighlightImage}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </TitledImagedContent>
+      <TitledImagedContent
+        title="Caissor and Riser Repair"
+        image={BigImage}
+        imageClass={props.classes.compositeHighlightImage}
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </TitledImagedContent>
+    </section>
     <div className={props.classes.keyFeatures}>
       <Typography
         className={props.classes.featuresHeading}

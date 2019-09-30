@@ -11,10 +11,6 @@ const styles = theme => ({
   },
   imageContainer: {
     textAlign: "center"
-  },
-  image: {
-    width: 300,
-    borderRadius: "50%"
   }
 });
 
@@ -29,7 +25,7 @@ const ImagedContentItem = props => {
         {props.children}
       </Grid>
       <Grid className={props.classes.imageContainer} item xs={12} sm={6}>
-        <img src={props.image} className={props.classes.image} />
+        <img src={props.image} className={props.imageClass} />
       </Grid>
     </Grid>
   );

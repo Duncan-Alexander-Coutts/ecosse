@@ -13,13 +13,21 @@ const styles = theme => ({
   },
   teamContainer: {
     maxWidth: 1000
+  },
+  imageClass: {
+    width: 300,
+    borderRadius: "50%"
   }
 });
 
 const TeamPage = props => (
   <div className={props.classes.root}>
     <div className={props.classes.teamContainer}>
-      <ImagedContentItem imageAlignment="left" image={ernieMugshot}>
+      <ImagedContentItem
+        imageAlignment="left"
+        image={ernieMugshot}
+        imageClass={props.classes.imageClass}
+      >
         <TeamItemContent
           name="Ernie Coutts"
           title="Chief Executive Officer"
@@ -39,7 +47,10 @@ const TeamPage = props => (
           </p>
         </TeamItemContent>
       </ImagedContentItem>
-      <ImagedContentItem image={carolineMugshot}>
+      <ImagedContentItem
+        image={carolineMugshot}
+        imageClass={props.classes.imageClass}
+      >
         <TeamItemContent
           name="Caroline Hyland"
           title="Director"
