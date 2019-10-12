@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, withStyles } from "@material-ui/core";
+import classNames from "classnames";
 
 const styles = theme => ({
   root: {
@@ -10,21 +11,44 @@ const styles = theme => ({
     }
   },
   imageContainer: {
-    textAlign: "center"
+    display: "flex",
+    alignItems: "center"
+  },
+  imageLeftAligned: {
+    justifyContent: "flex-end"
   }
 });
 
 const ImagedContentItem = props => {
-  function getDirection() {
+  const getDirection = () => {
     return props.imageAlignment === "left" ? "row-reverse" : undefined;
-  }
+  };
+
+  const getImageAlignmentClass = () =>
+    props.imageAlignment === "left"
+      ? props.classes.imageLeftAligned
+      : undefined;
 
   return (
-    <Grid className={props.classes.root} container direction={getDirection()}>
-      <Grid item xs={12} sm={6} className={props.classes.textContentGridItem}>
+    <Grid
+      spacing={32}
+      className={props.classes.root}
+      container
+      direction={getDirection()}
+      justify="center"
+    >
+      <Grid item s={12} sm={6} className={props.classes.textContentGridItem}>
         {props.children}
       </Grid>
-      <Grid className={props.classes.imageContainer} item xs={12} sm={6}>
+      <Grid
+        className={classNames(
+          props.classes.imageContainer,
+          getImageAlignmentClass()
+        )}
+        item
+        s={12}
+        sm={6}
+      >
         <img src={props.image} className={props.imageClass} />
       </Grid>
     </Grid>
