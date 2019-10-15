@@ -32,7 +32,7 @@ const Feature = props => (
     <Typography className={props.classes.title} variant="h6">
       {props.title}
     </Typography>
-    <Typography>{props.description}</Typography>
+    <div>{props.children}</div>
   </div>
 );
 

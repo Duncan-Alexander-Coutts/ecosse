@@ -20,6 +20,7 @@ const TitledImagedContent = props => (
       className={classNames(props.classes.title, props.textStyle)}
       variant="h4"
       align="center"
+      color="primary"
     >
       {props.title}
     </Typography>
