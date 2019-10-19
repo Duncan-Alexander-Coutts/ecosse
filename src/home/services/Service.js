@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography, withStyles, Grid, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import TitledImageContent from "../../services/TitledImageContent";
 
 const styles = theme => ({
   serviceRoot: {
@@ -32,43 +33,42 @@ const styles = theme => ({
     marginBottom: theme.spacing.unit * 2
   },
   descriptionContentContainer: {
-    margin: "auto"
+    maxWidth: 400,
+    display: "flex",
+    flexDirection: "column"
+  },
+
+  imageClass: {
+    maxWidth: 300,
+    width: "100%",
+    height: "auto",
+    borderRadius: "50%"
   }
 });
 
 export default withStyles(styles)(props => {
-  function getDirection() {
-    return props.imageAlignment === "left" ? "row-reverse" : undefined;
-  }
-
   return (
-    <Grid
-      className={props.classes.serviceRoot}
-      container
-      direction={getDirection()}
+    <TitledImageContent
+      reverseAlignment={props.reverseAlignment}
+      invertColors={props.invertColors}
+      image={props.image}
+      title={props.title}
+      imageClass={props.classes.imageClass}
     >
-      <Grid item xs={12} sm={6} className={props.classes.textContentGridItem}>
-        <div className={props.classes.descriptionContentContainer}>
-          <Typography className={props.classes.title} variant="headline">
-            {props.title}
-          </Typography>
-          <Typography color="textSecondary" variant="body1">
-            {props.description}
-          </Typography>
-          <Button
-            component={Link}
-            to={props.url}
-            color="primary"
-            className={props.classes.button}
-            variant="raised"
-          >
-            Learn more
-          </Button>
-        </div>
-      </Grid>
-      <Grid className={props.classes.imageContainer} item xs={12} sm={6}>
-        <img src={props.image} className={props.classes.image} />
-      </Grid>
-    </Grid>
+      <div className={props.classes.descriptionContentContainer}>
+        <Typography color="primary" variant="h6">
+          {props.description}
+        </Typography>
+        <Button
+          component={Link}
+          to={props.url}
+          color="primary"
+          className={props.classes.button}
+          variant="outlined"
+        >
+          Learn more
+        </Button>
+      </div>
+    </TitledImageContent>
   );
 });

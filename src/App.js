@@ -1,18 +1,19 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import PageHeader from "./components/page-header/PageHeader";
 import PageFooter from "./components/page-footer/PageFooter";
-import Hero from "./components/hero/Hero";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { red, blueGrey } from "@material-ui/core/colors";
+import { red } from "@material-ui/core/colors";
 import HomePage from "./home/HomePage";
 import TeamPage from "./team/TeamPage";
 import CompositesPage from "./services/CompositesPage";
 
 const theme = createMuiTheme({
   palette: {
-    primary: blueGrey,
+    primary: {
+      main: "#1d3c66"
+    },
     secondary: red
   },
   typography: {
@@ -32,20 +33,30 @@ const theme = createMuiTheme({
   }
 });
 
-class App extends Component {
-  render() {
-    return (
-      <MuiThemeProvider theme={theme}>
-        <Router>
-          <PageHeader />
-          <Route path="/" component={HomePage} exact />
-          <Route path="/services/composites" component={CompositesPage} />
-          <Route path="/team" component={TeamPage} />
-          <PageFooter />
-        </Router>
-      </MuiThemeProvider>
-    );
-  }
-}
+const App = () => {
+  const [pageTitle, setPageTitle] = useState("Page Title");
+
+  return (
+    <MuiThemeProvider theme={theme}>
+      <Router>
+        <PageHeader pageTitle={pageTitle} />
+        <Route
+          path="/"
+          render={() => <HomePage setPageTitle={setPageTitle} />}
+          exact
+        />
+        <Route
+          path="/services/composites"
+          render={() => <CompositesPage setPageTitle={setPageTitle} />}
+        />
+        <Route
+          path="/team"
+          render={() => <TeamPage setPageTitle={setPageTitle} />}
+        />
+        <PageFooter />
+      </Router>
+    </MuiThemeProvider>
+  );
+};
 
 export default App;

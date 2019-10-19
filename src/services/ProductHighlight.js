@@ -31,10 +31,9 @@ const ProductHighlight = props => {
     <TitledImagedContent
       title={props.title}
       image={props.image}
-      imageAlignment={props.imageAlignment}
+      reverseAlignment={props.reverseAlignment}
+      invertColors={props.invertColors}
       imageClass={props.classes.imageClass}
-      backgroundStyle={props.backgroundClass}
-      textStyle={props.textClass}
     >
       <div className={props.classes.productHighlightDescriptionContainer}>
         {props.children}

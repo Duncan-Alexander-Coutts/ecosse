@@ -10,7 +10,7 @@ const styles = theme => ({
   },
   hero: {
     width: "100%",
-    height: 85,
+    height: 138,
     backgroundRepeat: "none",
     backgroundSize: "cover",
     backgroundImage: `url(${BigImage})`,

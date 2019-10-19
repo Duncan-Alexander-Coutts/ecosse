@@ -12,6 +12,7 @@ const RiserHighlight = () => {
 
   return (
     <ProductHighlight
+      reverseAlignment
       caseStudies={caseStudies}
       title="Riser repair"
       image={RiserIntroImage}
@@ -22,12 +23,12 @@ const RiserHighlight = () => {
         their Ecowrap and Ecowrap S for retrofit corrosion protection and
         structural reinforcement in the form of an easy to install jacket wrap.
       </IntermediateHeader>
-      <Typography paragraph>
+      <Typography color="primary" paragraph>
         These are installed by rope access technicians or divers and are
         designed to suit the riser outer diameter with the facility to “stack”
         to any length as required.
       </Typography>
-      <Typography paragraph>
+      <Typography color="primary" paragraph>
         Ecowrap S is a structural version which carries a hydrophobic epoxy
         resin on its inner liner whilst the standard Ecowrap has a thixotropic
         anticorrosion gel and is used for anticorrosion only.

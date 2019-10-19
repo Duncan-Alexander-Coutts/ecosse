@@ -33,7 +33,6 @@ const styles = theme => ({
   },
   toolbar: {
     paddingTop: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
     display: "flex",
     justifyContent: "space-between",
     background: "transparent"
@@ -45,9 +44,16 @@ const styles = theme => ({
   logo: {
     width: 50
   },
-  title: {
+  companyName: {
     marginLeft: theme.spacing.unit,
-    color: "white",
+    color: theme.palette.common.white,
+    fontWeight: "bold"
+  },
+  pageTitleContainer: {
+    textAlign: "center"
+  },
+  pageTitle: {
+    color: theme.palette.common.white,
     fontWeight: "bold"
   }
 });
@@ -68,7 +74,10 @@ export default withRouter(
                     alt="Ecosse Global fire and water logo"
                     className={props.classes.logo}
                   />
-                  <Typography className={props.classes.title} variant="h5">
+                  <Typography
+                    className={props.classes.companyName}
+                    variant="h5"
+                  >
                     Ecosse Global UK
                   </Typography>
                 </div>
@@ -83,6 +92,11 @@ export default withRouter(
                   <Button size="large">Contact</Button>
                 </div>
               </Toolbar>
+              <div className={props.classes.pageTitleContainer}>
+                <Typography className={props.classes.pageTitle} variant="h3">
+                  {props.pageTitle}
+                </Typography>
+              </div>
             </AppBar>
           </Fade>
           <Hero fullHeight={props.location.pathname === "/"} />

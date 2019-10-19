@@ -21,13 +21,11 @@ const styles = theme => ({
 
 const ImagedContentItem = props => {
   const getDirection = () => {
-    return props.imageAlignment === "left" ? "row-reverse" : undefined;
+    return props.reverseAlignment ? "row-reverse" : undefined;
   };
 
   const getImageAlignmentClass = () =>
-    props.imageAlignment === "left"
-      ? props.classes.imageLeftAligned
-      : undefined;
+    props.reverseAlignment ? props.classes.imageLeftAligned : undefined;
 
   return (
     <Grid

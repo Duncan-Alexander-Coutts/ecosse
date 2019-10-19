@@ -39,7 +39,11 @@ export default withStyles(styles)(props => (
         container
       >
         <Grid className={props.classes.aboutText} item xs={10} sm={8}>
-          <Typography className={props.classes.intro} variant="h5">
+          <Typography
+            color="primary"
+            className={props.classes.intro}
+            variant="h4"
+          >
             At{" "}
             <span className={props.classes.companyName}>Ecosse Global UK</span>,
             our aim is to provide our clients with the most effective,
@@ -47,8 +51,8 @@ export default withStyles(styles)(props => (
           </Typography>
           <Typography
             className={props.classes.secondaryIntro}
-            color="textSecondary"
-            variant="body1"
+            color="primary"
+            variant="body2"
           >
             Ecosse Global UK Limited has over 28 years of industry experience of
             understanding effective asset lifecycle extension. Looking for the

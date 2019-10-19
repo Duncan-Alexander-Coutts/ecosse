@@ -21,11 +21,13 @@ const styles = theme => ({
 
 const TeamItemContent = props => (
   <>
-    <Typography variant="headline">{props.name}</Typography>
+    <Typography color="primary" variant="headline">
+      {props.name}
+    </Typography>
     <Typography color="secondary" variant="caption">
       {props.title}
     </Typography>
-    <Typography color="textSecondary" variant="body1">
+    <Typography color="primary" variant="body1">
       {props.children}
     </Typography>
     <div className={props.classes.emailContainer}>

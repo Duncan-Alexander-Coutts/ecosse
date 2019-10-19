@@ -22,6 +22,9 @@ const styles = theme => ({
   achilles: {
     width: 144,
     height: 91
+  },
+  copyright: {
+    color: theme.palette.common.white
   }
 });
 
@@ -33,7 +36,7 @@ export default withStyles(styles)(props => (
       <img className={props.classes.achilles} src={CompositesBadge} />
     </div>
     <Paper className={props.classes.root}>
-      <Typography style={{ color: "white" }} variant="title">
+      <Typography className={props.classes.copyright} variant="title">
         Ecosse Global UK
       </Typography>
     </Paper>
