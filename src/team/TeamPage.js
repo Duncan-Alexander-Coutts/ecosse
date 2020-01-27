@@ -9,7 +9,7 @@ const styles = theme => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    marginTop: theme.spacing.unit * 4
+    marginTop: theme.spacing(4)
   },
   teamContainer: {
     maxWidth: 1000

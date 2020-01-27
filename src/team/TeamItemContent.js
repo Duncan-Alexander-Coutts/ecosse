@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, withStyles, Link, Icon } from "@material-ui/core";
+import { Typography, withStyles, Link } from "@material-ui/core";
 import MailOutline from "@material-ui/icons/MailOutline";
 import linkedInIcon from "../LI-In-Bug.png";
 
@@ -9,7 +9,7 @@ const styles = theme => ({
     alignItems: "center"
   },
   emailIcon: {
-    marginRight: theme.spacing.unit / 2
+    marginRight: theme.spacing(0.5)
   },
   linkInIcon: {
     width: 24
@@ -21,7 +21,7 @@ const styles = theme => ({
 
 const TeamItemContent = props => (
   <>
-    <Typography color="primary" variant="headline">
+    <Typography color="primary" variant="h5">
       {props.name}
     </Typography>
     <Typography color="secondary" variant="caption">

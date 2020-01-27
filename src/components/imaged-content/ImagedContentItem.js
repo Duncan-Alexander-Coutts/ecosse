@@ -4,13 +4,15 @@ import classNames from "classnames";
 
 const styles = theme => ({
   root: {
-    marginBottom: theme.spacing.unit * 4,
+    marginBottom: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
       alignItems: "center"
     }
   },
   imageContainer: {
+    paddingLeft: 32,
+    paddingRight: 32,
     display: "flex",
     alignItems: "center"
   },

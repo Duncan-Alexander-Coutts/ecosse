@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import PageHeader from "./components/page-header/PageHeader";
 import PageFooter from "./components/page-footer/PageFooter";
 import { BrowserRouter as Router, Route } from "react-router-dom";

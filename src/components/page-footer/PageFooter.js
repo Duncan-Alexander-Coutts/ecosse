@@ -6,17 +6,17 @@ import DnvGl from "../../svg/dnvgl.svg";
 
 const styles = theme => ({
   root: {
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
     background: theme.palette.primary.main,
     borderRadius: 0,
-    paddingTop: theme.spacing.unit * 2,
-    paddingBottom: theme.spacing.unit * 2,
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
     textAlign: "center"
   },
   badgeContainer: {
     display: "flex",
     justifyContent: "center",
-    marginTop: theme.spacing.unit * 2,
+    marginTop: theme.spacing(2),
     flexWrap: "wrap"
   },
   achilles: {
@@ -36,7 +36,7 @@ export default withStyles(styles)(props => (
       <img className={props.classes.achilles} src={CompositesBadge} />
     </div>
     <Paper className={props.classes.root}>
-      <Typography className={props.classes.copyright} variant="title">
+      <Typography className={props.classes.copyright}>
         Ecosse Global UK
       </Typography>
     </Paper>

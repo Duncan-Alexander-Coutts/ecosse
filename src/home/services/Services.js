@@ -12,7 +12,7 @@ const styles = theme => ({
     fontWeight: "bold"
   },
   serviceList: {
-    paddingTop: theme.spacing.unit * 5
+    paddingTop: theme.spacing(5)
   }
 });
 

@@ -1,11 +1,11 @@
 import React from "react";
-import { Typography, withStyles, Grid, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import TitledImageContent from "../../services/TitledImageContent";
+import { Typography, Button, withStyles } from "@material-ui/core";
 
 const styles = theme => ({
   serviceRoot: {
-    marginBottom: theme.spacing.unit * 4,
+    marginBottom: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
       alignItems: "center"
@@ -15,7 +15,7 @@ const styles = theme => ({
     width: 300
   },
   title: {
-    marginBottom: theme.spacing.unit * 2,
+    marginBottom: theme.spacing(2),
     fontWeight: "bold"
   },
   textContentGridItem: {
@@ -29,8 +29,8 @@ const styles = theme => ({
   button: {
     width: 200,
     margin: "auto",
-    marginTop: theme.spacing.unit * 4,
-    marginBottom: theme.spacing.unit * 2
+    marginTop: theme.spacing(4),
+    marginBottom: theme.spacing(2)
   },
   descriptionContentContainer: {
     maxWidth: 400,

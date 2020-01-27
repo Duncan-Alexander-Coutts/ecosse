@@ -18,18 +18,18 @@ import ModuleHighlight from "./ModuleHighlight";
 import RiserHighlight from "./RiserHighlight";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import green from "@material-ui/core/colors/green";
-
 import Clamp from "./composites/images/16_in_clamp.jpg";
+
 import Exchange from "./composites/images/42_in_heat_exchanger.jpg";
 import Cool from "./composites/images/60_in_cooling_water_line.jpg";
+import { green } from "@material-ui/core/colors";
 
 const styles = theme => ({
   root: {
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
-    paddingTop: theme.spacing.unit * 2
+    paddingTop: theme.spacing(2)
   },
   mainImage: {
     backgroundRepeat: "none",
@@ -43,44 +43,47 @@ const styles = theme => ({
     fontWeight: "bold"
   },
   statement: {
-    maxWidth: theme.spacing.unit * 100,
+    maxWidth: theme.spacing(100),
     fontWeight: "bold"
   },
   carouselContainer: {
-    marginTop: theme.spacing.unit * 2
+    marginTop: theme.spacing(2)
   },
   compositeHighlights: {
-    paddingTop: theme.spacing.unit * 4,
+    paddingTop: theme.spacing(4),
     width: "100%"
   },
   keyFeatures: {
-    marginTop: theme.spacing.unit,
-    paddingTop: theme.spacing.unit,
+    marginTop: theme.spacing(1),
+    paddingTop: theme.spacing(1),
     background: theme.palette.primary.main
   },
   featuresHeading: {
     fontWeight: "bold",
     color: "white",
-    marginBottom: theme.spacing.unit * 4
+    marginBottom: theme.spacing(4)
   },
   feature: {
     textAlign: "center"
   },
   repairSection: {
-    paddingTop: theme.spacing.unit * 2
+    paddingTop: theme.spacing(2)
   },
   repairTypes: {
-    paddingTop: theme.spacing.unit * 2,
+    paddingTop: theme.spacing(2),
     justifyContent: "space-evenly"
   },
   repairType: {
     display: "flex",
     alignItems: "center",
-    padding: theme.spacing.unit
+    padding: theme.spacing(1)
   },
   repairIcon: {
     color: green[500],
-    marginRight: theme.spacing.unit * 2
+    marginRight: theme.spacing(2)
+  },
+  featureContainer: {
+    display: "flex"
   }
 });
 
@@ -109,7 +112,6 @@ const CompositesPage = props => {
             <Carousel showThumbs={false} showStatus={false}>
               <div>
                 <img src={Clamp} />
-                {/* <p className="legend">Legend 1</p> */}
               </div>
               <div>
                 <img src={Exchange} />
@@ -143,7 +145,12 @@ const CompositesPage = props => {
             </Typography>
           </Feature>
           <Grid container>
-            <Grid xs={6} item sm={4}>
+            <Grid
+              classes={{ item: props.classes.featureContainer }}
+              xs={6}
+              item
+              sm={4}
+            >
               <Feature icon={AccessTimeOutlined} title="No Down Time">
                 <Typography>
                   In most cases composites can be installed with no downtime and
@@ -152,7 +159,12 @@ const CompositesPage = props => {
                 </Typography>
               </Feature>
             </Grid>
-            <Grid xs={6} item sm={4}>
+            <Grid
+              classes={{ item: props.classes.featureContainer }}
+              xs={6}
+              item
+              sm={4}
+            >
               <Feature icon={WhatshotOutlined} title="No Hot Work">
                 <Typography>
                   In piping or infrastructure welding repairs, costs associated
@@ -162,7 +174,12 @@ const CompositesPage = props => {
                 </Typography>
               </Feature>
             </Grid>
-            <Grid xs={6} item sm={4}>
+            <Grid
+              classes={{ item: props.classes.featureContainer }}
+              xs={6}
+              item
+              sm={4}
+            >
               <Feature icon={TrendingDownOutlined} title="No Depressureization">
                 <Typography>
                   Repairs on live, hot, pressurised lines save the platform time
@@ -170,7 +187,12 @@ const CompositesPage = props => {
                 </Typography>
               </Feature>
             </Grid>
-            <Grid xs={6} item sm={4}>
+            <Grid
+              classes={{ item: props.classes.featureContainer }}
+              xs={6}
+              item
+              sm={4}
+            >
               <Feature icon={WavesOutlined} title="Corrosion Resistent">
                 <Typography>
                   The impermeability and high adhesion level of our 100% solids
@@ -179,7 +201,12 @@ const CompositesPage = props => {
                 </Typography>
               </Feature>
             </Grid>
-            <Grid xs={6} item sm={4}>
+            <Grid
+              classes={{ item: props.classes.featureContainer }}
+              xs={6}
+              item
+              sm={4}
+            >
               <Feature
                 icon={BlurCircularOutlined}
                 title="Compatible with all Piping"
@@ -191,7 +218,12 @@ const CompositesPage = props => {
                 </Typography>
               </Feature>
             </Grid>
-            <Grid xs={6} item sm={4}>
+            <Grid
+              classes={{ item: props.classes.featureContainer }}
+              xs={6}
+              item
+              sm={4}
+            >
               <Feature icon={NatureOutlined} title="Economical">
                 <Typography>
                   As a repair or reinforcement, composites can cost much less to
@@ -221,8 +253,9 @@ const CompositesPage = props => {
             repair type and some other things that I probably don't understand.
             There could probably be 2 or 3 sentences.
           </Typography>
-          <Grid className={props.classes.repairTypes} container>
-            <Grid xs={12} item sm={4}>
+
+          <Grid container spacing={1} className={props.classes.repairTypes}>
+            <Grid xs item>
               <div className={props.classes.repairType}>
                 <DoneOutline className={props.classes.repairIcon} />
                 <Typography>Abrasian & Wear</Typography>
@@ -248,7 +281,7 @@ const CompositesPage = props => {
                 <Typography>Cracks, Dents, Gouges</Typography>
               </div>
             </Grid>
-            <Grid xs={12} item sm={4}>
+            <Grid xs item>
               <div className={props.classes.repairType}>
                 <DoneOutline className={props.classes.repairIcon} />
                 <Typography>Encapsulation</Typography>

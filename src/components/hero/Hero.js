@@ -35,7 +35,7 @@ const styles = theme => ({
   slogan: {
     color: "white",
     fontWeight: "bold",
-    marginBottom: theme.spacing.unit
+    marginBottom: theme.spacing(1)
   }
 });
 

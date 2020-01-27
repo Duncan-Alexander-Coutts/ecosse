@@ -13,7 +13,7 @@ const styles = theme => ({
     borderRadius: "50%"
   },
   caseStudyButtonContainer: {
-    marginTop: theme.spacing.unit
+    marginTop: theme.spacing()
   }
 });
 
@@ -44,7 +44,7 @@ const ProductHighlight = props => {
             </Typography>
             <Grid
               container
-              spacing={props.theme.spacing.unit}
+              spacing={1}
               className={props.classes.caseStudyButtonContainer}
             >
               {getCaseStudyItems()}
@@ -56,4 +56,4 @@ const ProductHighlight = props => {
   );
 };
 
-export default withStyles(styles, { withTheme: true })(ProductHighlight);
+export default withStyles(styles)(ProductHighlight);

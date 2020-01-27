@@ -4,10 +4,10 @@ import { Typography, withStyles } from "@material-ui/core";
 const styles = theme => ({
   root: {
     textAlign: "center",
-    margin: theme.spacing.unit * 2,
-    padding: `${theme.spacing.unit * 2}px ${theme.spacing.unit}px ${
-      theme.spacing.unit
-    }px ${theme.spacing.unit}px`,
+    margin: theme.spacing(2),
+    padding: `${theme.spacing(2)}px ${theme.spacing(1)}px ${
+      theme.spacing(1)
+    }px ${theme.spacing(1)}px`,
     position: "relative",
     background: "white",
     borderRadius: 4
@@ -20,9 +20,9 @@ const styles = theme => ({
     color: "dodgerblue",
     borderRadius: "50%",
     position: "absolute",
-    padding: theme.spacing.unit,
+    padding: theme.spacing(1),
     left: "50%",
-    transform: `translate(-50%, -${theme.spacing.unit * 4}px)`
+    transform: `translate(-50%, -${theme.spacing(4)}px)`
   }
 });
 

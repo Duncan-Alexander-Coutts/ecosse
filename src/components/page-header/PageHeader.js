@@ -1,8 +1,6 @@
 import React from "react";
-import { withStyles, Typography, Button, Fade } from "@material-ui/core";
+import { withStyles, Typography, Button, Fade, AppBar, Toolbar } from "@material-ui/core";
 
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
 import EcosseLogo from "../../logo_svg.svg";
 
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
@@ -32,7 +30,7 @@ const styles = theme => ({
     position: "absolute"
   },
   toolbar: {
-    paddingTop: theme.spacing.unit,
+    paddingTop: theme.spacing(1),
     display: "flex",
     justifyContent: "space-between",
     background: "transparent"
@@ -45,7 +43,7 @@ const styles = theme => ({
     width: 50
   },
   companyName: {
-    marginLeft: theme.spacing.unit,
+    marginLeft: theme.spacing(1),
     color: theme.palette.common.white,
     fontWeight: "bold"
   },

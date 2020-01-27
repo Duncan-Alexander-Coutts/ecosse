@@ -10,11 +10,11 @@ import classNames from "classnames";
 
 const styles = theme => ({
   root: {
-    padding: theme.spacing.unit * 3,
-    paddingBottom: theme.spacing.unit
+    padding: theme.spacing(3),
+    paddingBottom: theme.spacing(1)
   },
   title: {
-    marginBottom: theme.spacing.unit * 3,
+    marginBottom: theme.spacing(3),
     fontWeight: "bold"
   },
   contentContainer: {

@@ -3,15 +3,15 @@ import { Typography, withStyles, Grid, Fade } from "@material-ui/core";
 
 const styles = theme => ({
   root: {
-    marginTop: theme.spacing.unit * 3,
-    marginBottom: theme.spacing.unit * 3,
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
     textAlign: "center"
   },
   companyName: {
     fontWeight: "bold"
   },
   aboutTextContainer: {
-    marginTop: theme.spacing.unit * 2
+    marginTop: theme.spacing(2)
   },
   aboutText: {
     textAlign: "center",
@@ -20,10 +20,10 @@ const styles = theme => ({
     alignItems: "center"
   },
   textSection: {
-    marginTop: theme.spacing.unit * 2
+    marginTop: theme.spacing(2)
   },
   intro: {
-    marginBottom: theme.spacing.unit * 2
+    marginBottom: theme.spacing(2)
   },
   secondaryIntro: {
     maxWidth: 500
@@ -42,7 +42,7 @@ export default withStyles(styles)(props => (
           <Typography
             color="primary"
             className={props.classes.intro}
-            variant="h4"
+            variant="h5"
           >
             At{" "}
             <span className={props.classes.companyName}>Ecosse Global UK</span>,
@@ -52,7 +52,7 @@ export default withStyles(styles)(props => (
           <Typography
             className={props.classes.secondaryIntro}
             color="primary"
-            variant="body2"
+            variant="subtitle1"
           >
             Ecosse Global UK Limited has over 28 years of industry experience of
             understanding effective asset lifecycle extension. Looking for the
