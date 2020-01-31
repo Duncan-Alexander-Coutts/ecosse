@@ -43,7 +43,9 @@ const styles = theme => ({
     fontWeight: "bold"
   },
   statement: {
-    maxWidth: theme.spacing(100)
+    maxWidth: theme.spacing(100),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2)
   },
   carouselContainer: {
     marginTop: theme.spacing(2)

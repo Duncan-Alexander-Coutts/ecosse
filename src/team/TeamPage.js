@@ -40,15 +40,17 @@ const TeamPage = props => {
               linkedInLink="https://www.linkedin.com/in/ernie-coutts-95a33a45/"
             >
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Pharetra convallis posuere morbi leo urna.
+                Energy industry professional with a wealth of experience
+                covering design through to delivery of many commonly used
+                products in new-build and brownfield projects. Currently
+                focusing on "life cycle enhancement" projects and their many
+                challenges relating to retaining current operator assets using
+                composite repair techniques.
               </p>
               <p>
-                Aliquet nibh praesent tristique magna. Turpis egestas integer
-                eget aliquet nibh. Urna cursus eget nunc scelerisque. Quis
-                varius quam quisque id diam vel quam elementum. Vitae nunc sed
-                velit dignissim sodales.
+                Ernie has designed a range of “industry first” diverless repairs
+                using retrofit internal water tolerant composite liners for the
+                reconditioning of ageing caissons and conductors.
               </p>
             </TeamItemContent>
           </ImagedContentItem>
