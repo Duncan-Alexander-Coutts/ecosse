@@ -31,7 +31,7 @@ const ImagedContentItem = props => {
 
   return (
     <Grid
-      spacing={32}
+      spacing={4}
       className={props.classes.root}
       container
       direction={getDirection()}

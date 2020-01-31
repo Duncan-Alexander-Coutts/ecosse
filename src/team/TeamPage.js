@@ -12,6 +12,8 @@ const styles = theme => ({
     marginTop: theme.spacing(4)
   },
   teamContainer: {
+    paddingLeft: theme.spacing(3),
+    paddingRight: theme.spacing(3),
     maxWidth: 1000
   },
   imageClass: {
@@ -61,15 +63,11 @@ const TeamPage = props => {
               linkedInLink="https://www.linkedin.com/in/caroline-hyland-8a4a6166/"
             >
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Pharetra convallis posuere morbi leo urna.
-              </p>
-              <p>
-                Aliquet nibh praesent tristique magna. Turpis egestas integer
-                eget aliquet nibh. Urna cursus eget nunc scelerisque. Quis
-                varius quam quisque id diam vel quam elementum. Vitae nunc sed
-                velit dignissim sodales.
+                Experienced Director with a demonstrated history of working in
+                the oil & gas energy industry. Skilled in Accounting,
+                Management, Product Marketing, and Renewable Energy. Strong
+                professional with a BA (Hons) focused in Liberal Arts and
+                Sciences.
               </p>
             </TeamItemContent>
           </ImagedContentItem>

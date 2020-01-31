@@ -1,12 +1,24 @@
 import React from "react";
-import { withStyles, Typography, Button, Fade, AppBar, Toolbar } from "@material-ui/core";
+import {
+  withStyles,
+  Typography,
+  Fade,
+  AppBar,
+  Toolbar,
+  useMediaQuery,
+  Grid
+} from "@material-ui/core";
 
-import EcosseLogo from "../../logo_svg.svg";
-
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { Link, withRouter } from "react-router-dom";
+import {
+  MuiThemeProvider,
+  createMuiTheme,
+  useTheme
+} from "@material-ui/core/styles";
+import { withRouter } from "react-router-dom";
 import Hero from "../hero/Hero";
-import SimpleMenu from "../navigation/SimpleMenu";
+import Logo from "../common/Logo";
+import MobileNavigation from "../navigation/MobileNavigation";
+import DesktopNavigation from "../navigation/DesktopNavigation";
 
 const getLocalTheme = theme => ({
   ...theme,
@@ -35,20 +47,17 @@ const styles = theme => ({
     justifyContent: "space-between",
     background: "transparent"
   },
-  toolbarLeft: {
-    display: "flex",
+  toolbarGrid: {
     alignItems: "center"
   },
-  logo: {
-    width: 50
-  },
-  companyName: {
-    marginLeft: theme.spacing(1),
-    color: theme.palette.common.white,
-    fontWeight: "bold"
+  toolbarLeft: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between"
   },
   pageTitleContainer: {
-    textAlign: "center"
+    textAlign: "center",
+    marginRight: theme.spacing()
   },
   pageTitle: {
     color: theme.palette.common.white,
@@ -58,6 +67,8 @@ const styles = theme => ({
 
 export default withRouter(
   withStyles(styles)(props => {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
     return (
       <MuiThemeProvider
         theme={theme => createMuiTheme({ ...getLocalTheme(theme) })}
@@ -66,35 +77,31 @@ export default withRouter(
           <Fade in={true} timeout={1000}>
             <AppBar className={props.classes.appBar}>
               <Toolbar className={props.classes.toolbar}>
-                <div className={props.classes.toolbarLeft}>
-                  <img
-                    src={EcosseLogo}
-                    alt="Ecosse Global fire and water logo"
-                    className={props.classes.logo}
-                  />
-                  <Typography
-                    className={props.classes.companyName}
-                    variant="h5"
+                <Grid className={props.classes.toolbarGrid} container>
+                  <Grid
+                    xs={2}
+                    sm={12}
+                    item
+                    className={props.classes.toolbarLeft}
                   >
-                    Ecosse Global UK
-                  </Typography>
-                </div>
-                <div>
-                  <Button component={Link} to="/" size="large">
-                    Home
-                  </Button>
-                  <SimpleMenu />
-                  <Button component={Link} to="/team" size="large">
-                    Team
-                  </Button>
-                  <Button size="large">Contact</Button>
-                </div>
+                    <div className={props.classes.toolbarLeft}>
+                      {isMobile && <MobileNavigation />}
+                      <Logo hideText={isMobile} />
+                    </div>
+                    <div>{!isMobile && <DesktopNavigation />}</div>
+                  </Grid>
+                  <Grid xs={10} sm={12} item>
+                    <div className={props.classes.pageTitleContainer}>
+                      <Typography
+                        className={props.classes.pageTitle}
+                        variant="h3"
+                      >
+                        {props.pageTitle}
+                      </Typography>
+                    </div>
+                  </Grid>
+                </Grid>
               </Toolbar>
-              <div className={props.classes.pageTitleContainer}>
-                <Typography className={props.classes.pageTitle} variant="h3">
-                  {props.pageTitle}
-                </Typography>
-              </div>
             </AppBar>
           </Fade>
           <Hero fullHeight={props.location.pathname === "/"} />

@@ -51,7 +51,7 @@ export default withStyles(styles)(props => (
         <Service
           reverseAlignment
           image={sealants}
-          title="Structual Sealants"
+          title="Structural Sealants"
           description="Some text that describes sealant services"
         />
       </div>
