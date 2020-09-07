@@ -115,18 +115,17 @@ const CompositesPage = props => {
           <Grid item sm={12} md={8}>
             <Carousel showThumbs={false} showStatus={false}>
               <div>
-                <img src={Clamp} />
+                <img src={Clamp} alt="Clamp type composite repair" />
               </div>
               <div>
-                <img src={Exchange} />
+                <img src={Exchange} alt="Heat exchanger composite repair" />
               </div>
               <div>
-                <img src={Cool} />
+                <img src={Cool} alt="Cooling water line composite repair" />
               </div>
             </Carousel>
           </Grid>
         </Grid>
-
         <section className={props.classes.compositeHighlights}>
           <CaissonHighlight />
           <PipePressureHighlight />

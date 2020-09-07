@@ -1,6 +1,8 @@
 import React from "react";
-import TitledImagedContent from "./TitledImageContent";
 import { Typography, Grid, Button, withStyles } from "@material-ui/core";
+
+import { withFadeIn } from '../components/higher-order/withFadeIn'
+import TitledImagedContent from "./TitledImageContent";
 
 const styles = theme => ({
   productHighlightDescriptionContainer: {
@@ -56,4 +58,4 @@ const ProductHighlight = props => {
   );
 };
 
-export default withStyles(styles)(ProductHighlight);
+export default withFadeIn(withStyles(styles)(ProductHighlight));

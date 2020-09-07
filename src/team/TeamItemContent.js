@@ -37,7 +37,7 @@ const TeamItemContent = props => (
         href={props.linkedInLink}
         className={props.classes.linkedInLink}
       >
-        <img className={props.classes.linkInIcon} src={linkedInIcon} />
+        <img className={props.classes.linkInIcon} src={linkedInIcon} alt="LinkedIn logo" />
       </a>
       <MailOutline className={props.classes.emailIcon} />
       <Link variant="caption" href={"mailto:" + props.email}>

@@ -49,7 +49,7 @@ const ImagedContentItem = props => {
         s={12}
         sm={6}
       >
-        <img src={props.image} className={props.imageClass} />
+        <img src={props.image} alt={props.imageAlt} className={props.imageClass} />
       </Grid>
     </Grid>
   );

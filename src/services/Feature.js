@@ -7,7 +7,7 @@ const styles = theme => ({
     margin: theme.spacing(2),
     padding: `${theme.spacing(2)}px ${theme.spacing(1)}px ${
       theme.spacing(1)
-    }px ${theme.spacing(1)}px`,
+      }px ${theme.spacing(1)}px`,
     position: "relative",
     background: "white",
     borderRadius: 4

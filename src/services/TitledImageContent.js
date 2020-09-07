@@ -68,6 +68,7 @@ const TitledImagedContent = props => {
           reverseAlignment={props.reverseAlignment}
           imageClass={props.imageClass}
           image={props.image}
+          imageAlt={props.imageAlt}
         >
           <div
             className={classNames(props.classes.contentContainer, {

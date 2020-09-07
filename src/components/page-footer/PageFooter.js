@@ -31,9 +31,9 @@ const styles = theme => ({
 export default withStyles(styles)(props => (
   <>
     <div className={props.classes.badgeContainer}>
-      <img className={props.classes.achilles} src={Achilles} />
-      <img className={props.classes.achilles} src={DnvGl} />
-      <img className={props.classes.achilles} src={CompositesBadge} />
+      <img className={props.classes.achilles} src={Achilles} alt="Achilles logo" />
+      <img className={props.classes.achilles} src={DnvGl} alt="DNV GL logo" />
+      <img className={props.classes.achilles} src={CompositesBadge} alt="DNV GL logo" />
     </div>
     <Paper className={props.classes.root}>
       <Typography className={props.classes.copyright}>

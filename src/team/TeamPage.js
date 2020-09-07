@@ -33,6 +33,7 @@ const TeamPage = props => {
             reverseAlignment
             image={ernieMugshot}
             imageClass={props.classes.imageClass}
+            imageAlt="Ernie Coutts CEO"
           >
             <TeamItemContent
               name="Ernie Coutts"
@@ -58,6 +59,7 @@ const TeamPage = props => {
           <ImagedContentItem
             image={carolineMugshot}
             imageClass={props.classes.imageClass}
+            imageAlt="Caroline Hyland Director"
           >
             <TeamItemContent
               name="Caroline Hyland"
