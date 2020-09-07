@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, withStyles, Grid, Fade } from "@material-ui/core";
+import { FADE_TRANSITION_DURATION } from "../../constants";
 
 const styles = theme => ({
   root: {
@@ -31,7 +32,7 @@ const styles = theme => ({
 });
 
 export default withStyles(styles)(props => (
-  <Fade in={true} timeout={1000}>
+  <Fade in timeout={FADE_TRANSITION_DURATION}>
     <section className={props.classes.root}>
       <Grid
         className={props.classes.aboutTextContainer}

@@ -6,6 +6,7 @@ import sealants from "../../sealants.png";
 import fire from "../../fire.png";
 import { withStyles, Fade, Typography } from "@material-ui/core";
 import Service from "./Service";
+import { FADE_TRANSITION_DURATION } from "../../constants";
 
 const styles = theme => ({
   header: {
@@ -17,7 +18,7 @@ const styles = theme => ({
 });
 
 export default withStyles(styles)(props => (
-  <Fade in timeout={1000}>
+  <Fade in timeout={FADE_TRANSITION_DURATION}>
     <div style={{ width: "100%" }}>
       <Typography
         variant="h3"

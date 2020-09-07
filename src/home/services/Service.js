@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import TitledImageContent from "../../services/TitledImageContent";
-import { Typography, Button, withStyles } from "@material-ui/core";
+import { Typography, Button, withStyles, Fade } from "@material-ui/core";
+import VisibilitySensor from "react-visibility-sensor"
+import { FADE_TRANSITION_DURATION } from "../../constants";
 
 const styles = theme => ({
   serviceRoot: {
@@ -47,28 +49,37 @@ const styles = theme => ({
 });
 
 export default withStyles(styles)(props => {
+  const [isVisible, setVisible] = useState(false)
+  const onVisibilityChange = (value) => value && !isVisible && setVisible(true)
+
   return (
-    <TitledImageContent
-      reverseAlignment={props.reverseAlignment}
-      invertColors={props.invertColors}
-      image={props.image}
-      title={props.title}
-      imageClass={props.classes.imageClass}
-    >
-      <div className={props.classes.descriptionContentContainer}>
-        <Typography color="primary" variant="h6">
-          {props.description}
-        </Typography>
-        <Button
-          component={Link}
-          to={props.url}
-          color="primary"
-          className={props.classes.button}
-          variant="outlined"
-        >
-          Learn more
-        </Button>
-      </div>
-    </TitledImageContent>
+    <VisibilitySensor onChange={onVisibilityChange} partialVisibility minTopValue={100}>
+      <Fade in={isVisible} timeout={FADE_TRANSITION_DURATION}>
+        <div>
+          <TitledImageContent
+            reverseAlignment={props.reverseAlignment}
+            invertColors={props.invertColors}
+            image={props.image}
+            title={props.title}
+            imageClass={props.classes.imageClass}
+          >
+            <div className={props.classes.descriptionContentContainer}>
+              <Typography color="primary" variant="h6">
+                {props.description}
+              </Typography>
+              <Button
+                component={Link}
+                to={props.url}
+                color="primary"
+                className={props.classes.button}
+                variant="outlined"
+              >
+                Learn more
+            </Button>
+            </div>
+          </TitledImageContent>
+        </div>
+      </Fade>
+    </VisibilitySensor>
   );
 });

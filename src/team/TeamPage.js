@@ -4,6 +4,7 @@ import carolineMugshot from "../caroline.jpg";
 import ernieMugshot from "../ernie.jpg";
 import { withStyles, Fade } from "@material-ui/core";
 import TeamItemContent from "./TeamItemContent";
+import { FADE_TRANSITION_DURATION } from "../constants";
 
 const styles = theme => ({
   root: {
@@ -25,7 +26,7 @@ const styles = theme => ({
 const TeamPage = props => {
   useEffect(() => props.setPageTitle("Team"));
   return (
-    <Fade in timeout={1000}>
+    <Fade in timeout={FADE_TRANSITION_DURATION}>
       <div className={props.classes.root}>
         <div className={props.classes.teamContainer}>
           <ImagedContentItem

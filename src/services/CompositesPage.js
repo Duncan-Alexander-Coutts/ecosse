@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import { Typography, withStyles, Grid, Fade } from "@material-ui/core";
-import Feature from "./Feature";
-import MainImage from "../42_in_heat_exchanger.jpg";
 import {
   AccessTimeOutlined,
   WhatshotOutlined,
@@ -12,17 +10,22 @@ import {
   BlurCircularOutlined,
   DoneOutline
 } from "@material-ui/icons";
+import { green } from "@material-ui/core/colors";
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+
 import CaissonHighlight from "./CaissonHighlight";
 import PipePressureHighlight from "./PipePressureHighlight";
 import ModuleHighlight from "./ModuleHighlight";
 import RiserHighlight from "./RiserHighlight";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import Clamp from "./composites/images/16_in_clamp.jpg";
+import Feature from "./Feature";
 
+import MainImage from "../42_in_heat_exchanger.jpg";
+import Clamp from "./composites/images/16_in_clamp.jpg";
 import Exchange from "./composites/images/42_in_heat_exchanger.jpg";
 import Cool from "./composites/images/60_in_cooling_water_line.jpg";
-import { green } from "@material-ui/core/colors";
+import { FADE_TRANSITION_DURATION } from '../constants'
 
 const styles = theme => ({
   root: {
@@ -92,7 +95,7 @@ const CompositesPage = props => {
   useEffect(() => props.setPageTitle("Composites"));
 
   return (
-    <Fade in timeout={1000}>
+    <Fade in timeout={FADE_TRANSITION_DURATION}>
       <div className={props.classes.root}>
         <Typography
           color="primary"

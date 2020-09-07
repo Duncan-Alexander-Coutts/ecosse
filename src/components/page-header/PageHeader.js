@@ -19,6 +19,7 @@ import Hero from "../hero/Hero";
 import Logo from "../common/Logo";
 import MobileNavigation from "../navigation/MobileNavigation";
 import DesktopNavigation from "../navigation/DesktopNavigation";
+import { FADE_TRANSITION_DURATION } from "../../constants";
 
 const getLocalTheme = theme => ({
   ...theme,
@@ -74,7 +75,7 @@ export default withRouter(
         theme={theme => createMuiTheme({ ...getLocalTheme(theme) })}
       >
         <React.Fragment>
-          <Fade in={true} timeout={1000}>
+          <Fade in timeout={FADE_TRANSITION_DURATION}>
             <AppBar className={props.classes.appBar}>
               <Toolbar className={props.classes.toolbar}>
                 <Grid className={props.classes.toolbarGrid} container>
