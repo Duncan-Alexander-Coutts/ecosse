@@ -1,0 +1,25 @@
+{
+  "home": {
+    "intro": "At <strong>Ecosse Global UK</strong>, our aim is to provide our clients with the most effective, innovative solutions for all their asset integrity needs",
+    "subIntro": "Ecosse Global UK Limited has over 30 years of industry experience of understanding effective asset lifecycle extension. Looking for the answers to clients problems, we at Ecosse Global UK maintain a watchful eye on new technology with a view to developing innovative products.",
+    "services": {
+      "title": "What we do",
+      "antiCorrosion": {
+        "title": "Anti Corrosion",
+        "description": "Some text that describes Anti Corrosion services. And then some other text. Some other text too."
+      },
+      "composites": {
+        "title": "Composites",
+        "description": "Our modern composite repair systems are extremely versatile, adaptable and reliable. They have many impressive capabilities that make them an attractive alternative to traditional repair or replacement methods."
+      },
+      "fireAndBlast": {
+        "title": "Fire and Blast",
+        "description": "Some text that describes Fire And Blast services. And then some other text. Some other text too."
+      },
+      "sealants": {
+        "title": "Structural Sealants",
+        "description": "Some text that describes Sealants services. And then some other text. Some other text too."
+      }
+    }
+  }
+}

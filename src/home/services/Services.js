@@ -7,55 +7,60 @@ import fire from "../../fire.png";
 import { withStyles, Fade, Typography } from "@material-ui/core";
 import Service from "./Service";
 import { FADE_TRANSITION_DURATION } from "../../constants";
+import { useTranslation } from "react-i18next";
 
-const styles = theme => ({
+const styles = (theme) => ({
   header: {
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   serviceList: {
-    paddingTop: theme.spacing(5)
-  }
+    paddingTop: theme.spacing(5),
+  },
 });
 
-export default withStyles(styles)(props => (
-  <Fade in timeout={FADE_TRANSITION_DURATION}>
-    <div style={{ width: "100%" }}>
-      <Typography
-        variant="h3"
-        align="center"
-        color="primary"
-        className={props.classes.header}
-      >
-        Services
-      </Typography>
-      <div className={props.classes.serviceList}>
-        <Service
-          invertColors
-          image={rust}
-          title="Anti Corrosion"
-          description="Some text that describes anti corrosion services. And then some other text. Some other text too."
-          url="/home"
-        />
-        <Service
-          reverseAlignment
-          image={composite}
-          title="Composites"
-          description="Our modern composite repair systems are extremely versatile, adaptable and reliable. They have many impressive capabilities that make them an attractive alternative to traditional repair or replacement methods."
-          url="/services/composites"
-        />
-        <Service
-          image={fire}
-          invertColors
-          title="Fire and Blast"
-          description="Some text that describes fire and blast services"
-        />
-        <Service
-          reverseAlignment
-          image={sealants}
-          title="Structural Sealants"
-          description="Some text that describes sealant services"
-        />
+export default withStyles(styles)((props) => {
+  const { t } = useTranslation();
+
+  return (
+    <Fade in timeout={FADE_TRANSITION_DURATION}>
+      <div style={{ width: "100%" }}>
+        <Typography
+          variant="h3"
+          align="center"
+          color="primary"
+          className={props.classes.header}
+        >
+          {t("home.services.title")}
+        </Typography>
+        <div className={props.classes.serviceList}>
+          <Service
+            invertColors
+            image={rust}
+            title={t("home.services.antiCorrosion.title")}
+            description={t("home.services.antiCorrosion.description")}
+            url="/home"
+          />
+          <Service
+            reverseAlignment
+            image={composite}
+            title={t("home.services.composites.title")}
+            description={t("home.services.composites.description")}
+            url="/services/composites"
+          />
+          <Service
+            image={fire}
+            invertColors
+            title={t("home.services.fireAndBlast.title")}
+            description={t("home.services.fireAndBlast.description")}
+          />
+          <Service
+            reverseAlignment
+            image={sealants}
+            title={t("home.services.sealants.title")}
+            description={t("home.services.sealants.description")}
+          />
+        </div>
       </div>
-    </div>
-  </Fade>
-));
+    </Fade>
+  );
+});
