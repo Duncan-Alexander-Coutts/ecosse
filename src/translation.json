@@ -21,5 +21,8 @@
         "description": "Some text that describes Sealants services. And then some other text. Some other text too."
       }
     }
+  },
+  "footer": {
+    "ownership": "© Copyright 2020 – Ecosse Global UK LTD. All Rights Reserved"
   }
 }

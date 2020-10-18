@@ -3,11 +3,11 @@ export const navigationItems = [
   {
     label: "Services",
     children: [
-      { label: "Anti-Corrosion" },
+      { label: "Anti-Corrosion", link: "/" },
       { label: "Composites", link: "/services/composites" },
-      { label: "Fire & Blast" },
-      { label: "Sealants" }
-    ]
+      { label: "Fire & Blast", link: "/" },
+      { label: "Structural Sealants", link: "/" },
+    ],
   },
-  { label: "Team", link: "/team" }
+  { label: "Team", link: "/team" },
 ];

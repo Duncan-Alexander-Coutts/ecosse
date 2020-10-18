@@ -1,10 +1,29 @@
-import React from "react";
-import { Button, Menu, MenuItem } from "@material-ui/core";
+import React, { useState } from "react";
+import { Button, makeStyles, Menu, MenuItem } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { navigationItems } from "./navigation-constants";
+import { LinkOffOutlined } from "@material-ui/icons";
 
-const DesktopNavigation = props => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "grid",
+    gridAutoFlow: "column",
+    gridGap: theme.spacing(),
+  },
+  navButton: {
+    color: theme.palette.common.white,
+    borderColor: theme.palette.common.white,
+    fontWeight: "bold",
+  },
+  childButton: {
+    width: "100%",
+    textTransform: "uppercase",
+  },
+}));
+
+const DesktopNavigation = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const classes = useStyles();
 
   const handleClick = (event, children) => {
     if (children.children) {
@@ -16,13 +35,19 @@ const DesktopNavigation = props => {
     setAnchorEl(null);
   };
 
-  const renderChildren = children => {
+  const renderChildren = (children) => {
     if (!children) return null;
 
     return (
       <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleClose}>
-        {children.map(child => (
-          <MenuItem onClick={handleClose} component={Link} to={child.link}>
+        {children.map((child) => (
+          <MenuItem
+            key={child.label}
+            onClick={handleClose}
+            to={child.link}
+            className={classes.childButton}
+            component={Link}
+          >
             {child.label}
           </MenuItem>
         ))}
@@ -31,20 +56,22 @@ const DesktopNavigation = props => {
   };
 
   return (
-    <div>
-      {navigationItems.map(item => {
+    <div className={classes.container}>
+      {navigationItems.map((item) => {
         return (
-          <>
+          <div key={item.label}>
             <Button
+              className={classes.navButton}
+              variant="outlined"
               component={Link}
-              to={item.link}
-              onClick={event => handleClick(event, item)}
+              to={item.link || ""}
+              onClick={(event) => handleClick(event, item)}
               size="large"
             >
               {item.label}
             </Button>
             {renderChildren(item.children)}
-          </>
+          </div>
         );
       })}
     </div>

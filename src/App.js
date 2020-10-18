@@ -12,25 +12,20 @@ import CompositesPage from "./services/CompositesPage";
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#1d3c66"
+      main: "#1d3c66",
     },
-    secondary: red
+    secondary: red,
   },
   typography: {
-    fontFamily: "Montserrat, sans-serif"
+    fontFamily: "Montserrat, sans-serif",
   },
   overrides: {
-    MuiTab: {
-      root: {
-        textTransform: "none"
-      }
+    MuiCardHeader: {
+      title: {
+        fontWeight: "bold",
+      },
     },
-    MuiButton: {
-      root: {
-        textTransform: "none"
-      }
-    }
-  }
+  },
 });
 
 const App = () => {

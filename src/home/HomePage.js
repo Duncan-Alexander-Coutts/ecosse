@@ -3,14 +3,14 @@ import About from "./about/About";
 import Services from "./services/Services";
 import { withStyles } from "@material-ui/core";
 
-const styles = theme => ({
+const styles = (theme) => ({
   services: {
     display: "flex",
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  },
 });
 
-const HomePage = props => {
+const HomePage = (props) => {
   useEffect(() => props.setPageTitle(""));
 
   return (
