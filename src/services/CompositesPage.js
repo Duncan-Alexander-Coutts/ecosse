@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
-import { Typography, withStyles, Grid, Fade } from "@material-ui/core";
+import { Typography, withStyles, Grid, Fade, Divider } from "@material-ui/core";
 import {
-  AccessTimeOutlined,
   WhatshotOutlined,
   VerifiedUserOutlined,
-  TrendingDownOutlined,
   WavesOutlined,
   NatureOutlined,
   BlurCircularOutlined,
-  DoneOutline
+  DoneOutline,
+  TrendingDown,
 } from "@material-ui/icons";
 import { green } from "@material-ui/core/colors";
 
@@ -25,14 +24,14 @@ import MainImage from "../42_in_heat_exchanger.jpg";
 import Clamp from "./composites/images/16_in_clamp.jpg";
 import Exchange from "./composites/images/42_in_heat_exchanger.jpg";
 import Cool from "./composites/images/60_in_cooling_water_line.jpg";
-import { FADE_TRANSITION_DURATION } from '../constants'
+import { FADE_TRANSITION_DURATION } from "../constants";
+import { Trans, useTranslation } from "react-i18next";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
-    paddingTop: theme.spacing(2)
   },
   mainImage: {
     backgroundRepeat: "none",
@@ -40,79 +39,69 @@ const styles = theme => ({
     backgroundImage: `url(${MainImage})`,
     backgroundPositionY: -40,
     width: "100%",
-    height: 270
+    height: 270,
   },
   bold: {
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   statement: {
     maxWidth: theme.spacing(100),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
     paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2)
+    paddingRight: theme.spacing(2),
   },
-  carouselContainer: {
-    marginTop: theme.spacing(2)
+  statementDivider: {
+    width: theme.spacing(50),
   },
   compositeHighlights: {
     paddingTop: theme.spacing(4),
-    width: "100%"
-  },
-  keyFeatures: {
-    marginTop: theme.spacing(1),
-    paddingTop: theme.spacing(1),
-    background: theme.palette.primary.main
+    width: "100%",
   },
   featuresHeading: {
     fontWeight: "bold",
     color: "white",
-    marginBottom: theme.spacing(4)
+    marginBottom: theme.spacing(4),
   },
   feature: {
-    textAlign: "center"
+    textAlign: "center",
   },
   repairSection: {
-    paddingTop: theme.spacing(2)
+    paddingTop: theme.spacing(2),
   },
   repairTypes: {
     paddingTop: theme.spacing(2),
-    justifyContent: "space-evenly"
+    justifyContent: "space-evenly",
   },
   repairType: {
     display: "flex",
     alignItems: "center",
-    padding: theme.spacing(1)
+    padding: theme.spacing(1),
   },
   repairIcon: {
     color: green[500],
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   featureContainer: {
-    display: "flex"
-  }
+    display: "flex",
+  },
 });
 
-const CompositesPage = props => {
+const FeatureGridItem = ({ children }) => (
+  <Grid item xs={6} sm={4}>
+    {children}
+  </Grid>
+);
+
+const CompositesPage = (props) => {
+  const { t } = useTranslation();
   useEffect(() => props.setPageTitle("Composites"));
 
   return (
     <Fade in timeout={FADE_TRANSITION_DURATION}>
       <div className={props.classes.root}>
-        <Typography
-          color="primary"
-          align="center"
-          variant="h6"
-          className={props.classes.statement}
-        >
-          Our modern composite repair systems are extremely versatile, adaptable
-          and reliable. They have many impressive capabilities that make them an
-          attractive alternative to traditional repair or replacement methods.
-        </Typography>
-        <Grid
-          className={props.classes.carouselContainer}
-          justify="center"
-          container
-        >
-          <Grid item sm={12} md={8}>
+        <Grid justify="center" container>
+          <Grid item xs={12} md={10} lg={8}>
             <Carousel showThumbs={false} showStatus={false}>
               <div>
                 <img src={Clamp} alt="Clamp type composite repair" />
@@ -126,117 +115,61 @@ const CompositesPage = props => {
             </Carousel>
           </Grid>
         </Grid>
+        <Typography
+          color="primary"
+          align="center"
+          variant="h6"
+          className={props.classes.statement}
+        >
+          <Trans i18nKey="composites.intro" />
+        </Typography>
+        <Divider className={props.classes.statementDivider} />
+        <div>
+          <Grid container>
+            <FeatureGridItem>
+              <Feature
+                icon={TrendingDown}
+                i18nKey="composites.features.noDownTime"
+              />
+            </FeatureGridItem>
+            <FeatureGridItem>
+              <Feature
+                icon={WhatshotOutlined}
+                i18nKey="composites.features.noHotWork"
+              />
+            </FeatureGridItem>
+            <FeatureGridItem>
+              <Feature
+                icon={VerifiedUserOutlined}
+                i18nKey="composites.features.extensivelyTested"
+              />
+            </FeatureGridItem>
+            <FeatureGridItem>
+              <Feature
+                icon={WavesOutlined}
+                i18nKey="composites.features.corrosionResistent"
+              />
+            </FeatureGridItem>
+            <FeatureGridItem>
+              <Feature
+                icon={BlurCircularOutlined}
+                i18nKey="composites.features.pipingCompatibility"
+              />
+            </FeatureGridItem>
+            <FeatureGridItem>
+              <Feature
+                icon={NatureOutlined}
+                i18nKey="composites.features.economical"
+              />
+            </FeatureGridItem>
+          </Grid>
+        </div>
         <section className={props.classes.compositeHighlights}>
           <CaissonHighlight />
           <PipePressureHighlight />
           <ModuleHighlight />
           <RiserHighlight />
         </section>
-        <div className={props.classes.keyFeatures}>
-          <Typography
-            className={props.classes.featuresHeading}
-            variant="h4"
-            align="center"
-          >
-            Key Features
-          </Typography>
-          <Feature icon={VerifiedUserOutlined} title="Extensively Tested">
-            <Typography>
-              Our engineered composite systems are in compliance with to
-              validated to the following industry standards:
-              <strong>ASME PCC-2, ISO/TS 24817, DNV Type </strong>Approval.
-            </Typography>
-          </Feature>
-          <Grid container>
-            <Grid
-              classes={{ item: props.classes.featureContainer }}
-              xs={6}
-              item
-              sm={4}
-            >
-              <Feature icon={AccessTimeOutlined} title="No Down Time">
-                <Typography>
-                  In most cases composites can be installed with no downtime and
-                  can be designed as a permanent repair, saving the platform a
-                  lot of money.
-                </Typography>
-              </Feature>
-            </Grid>
-            <Grid
-              classes={{ item: props.classes.featureContainer }}
-              xs={6}
-              item
-              sm={4}
-            >
-              <Feature icon={WhatshotOutlined} title="No Hot Work">
-                <Typography>
-                  In piping or infrastructure welding repairs, costs associated
-                  with hot work can be tremendous and generate their own
-                  numerous safety concerns. Composite repairs require no hot
-                  work whatsoever.
-                </Typography>
-              </Feature>
-            </Grid>
-            <Grid
-              classes={{ item: props.classes.featureContainer }}
-              xs={6}
-              item
-              sm={4}
-            >
-              <Feature icon={TrendingDownOutlined} title="No Depressureization">
-                <Typography>
-                  Repairs on live, hot, pressurised lines save the platform time
-                  and money.
-                </Typography>
-              </Feature>
-            </Grid>
-            <Grid
-              classes={{ item: props.classes.featureContainer }}
-              xs={6}
-              item
-              sm={4}
-            >
-              <Feature icon={WavesOutlined} title="Corrosion Resistent">
-                <Typography>
-                  The impermeability and high adhesion level of our 100% solids
-                  epoxy resin creates the containment barrier, arresting
-                  corrosion immediately.
-                </Typography>
-              </Feature>
-            </Grid>
-            <Grid
-              classes={{ item: props.classes.featureContainer }}
-              xs={6}
-              item
-              sm={4}
-            >
-              <Feature
-                icon={BlurCircularOutlined}
-                title="Compatible with all Piping"
-              >
-                <Typography>
-                  Compatible with Aluminium, GRE, Carbon Steel, PVC, Cast Iron,
-                  Polyethylene, Concrete, Polypropylene, Copper, Stainless
-                  Steel, Fibreglass, Titanium and many other materials.
-                </Typography>
-              </Feature>
-            </Grid>
-            <Grid
-              classes={{ item: props.classes.featureContainer }}
-              xs={6}
-              item
-              sm={4}
-            >
-              <Feature icon={NatureOutlined} title="Economical">
-                <Typography>
-                  As a repair or reinforcement, composites can cost much less to
-                  install when compared to traditional welded sleeve or
-                  replacement methods.
-                </Typography>
-              </Feature>
-            </Grid>
-          </Grid>
-        </div>
         <div className={props.classes.repairSection}>
           <Typography
             color="primary"

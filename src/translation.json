@@ -22,6 +22,35 @@
       }
     }
   },
+  "composites": {
+    "intro": "Our modern composite repair systems are extremely <strong>versatile</strong>, <strong>adaptable</strong> and <strong>reliable</strong>. They have many impressive capabilities that make them an attractive alternative to traditional repair or replacement methods.",
+    "features": {
+      "noDownTime": {
+        "label": "No Down Time",
+        "description": "In most cases composites can be installed with no downtime or depressurisation and can be designed as a permanent repair, saving the platform a lot of money."
+      },
+      "noHotWork": {
+        "label": "No Hot Work",
+        "description": "In piping or infrastructure welding repairs, costs associated with hot work can be tremendous and generate their own numerous safety concerns. Composite repairs require no hot work whatsoever."
+      },
+      "extensivelyTested": {
+        "label": "Extensively Tested",
+        "description": "Our engineered composite systems are in compliance with to validated to the following industry standards:ASME PCC-2, ISO/TS 24817, DNV Type Approval."
+      },
+      "corrosionResistent": {
+        "label": "Corrosion Resistent",
+        "description": "The impermeability and high adhesion level of our 100% solids epoxy resin creates the containment barrier, arresting corrosion immediately."
+      },
+      "pipingCompatibility": {
+        "label": "Compatible with all Piping",
+        "description": "Compatible with Aluminium, GRE, Carbon Steel, PVC, Cast Iron, Polyethylene, Concrete, Polypropylene, Copper, Stainless Steel, Fibreglass, Titanium and many other materials."
+      },
+      "economical": {
+        "label": "Economical",
+        "description": "As a repair or reinforcement, composites can cost much less to install when compared to traditional welded sleeve or replacement methods."
+      }
+    }
+  },
   "footer": {
     "ownership": "© Copyright 2020 – Ecosse Global UK LTD. All Rights Reserved"
   }
