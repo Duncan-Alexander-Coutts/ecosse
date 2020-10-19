@@ -3,6 +3,7 @@ import classNames from "classnames";
 
 import BigImage from "../../hero.jpg";
 import { withStyles, Typography, Grow } from "@material-ui/core";
+import { ECOSSE_COLOURS } from "../../constants";
 
 const styles = (theme) => ({
   heroContainer: {
@@ -39,6 +40,27 @@ const styles = (theme) => ({
     color: "white",
     fontWeight: "bold",
     marginBottom: theme.spacing(1),
+    zIndex: 1,
+  },
+  polygonContainer: {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    display: "flex",
+    opacity: 0.25,
+    zIndex: 0,
+  },
+  polygon: {
+    height: "100%",
+    flex: 1,
+  },
+  polygonRed: {
+    backgroundColor: ECOSSE_COLOURS.blue,
+    clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
+  },
+  polygonBlue: {
+    backgroundColor: ECOSSE_COLOURS.red,
+    clipPath: "polygon(0 0, 100% 100%, 0 100%)",
   },
 });
 
@@ -56,6 +78,14 @@ export default withStyles(styles)((props) => {
               >
                 Ultimate asset integrity solutions
               </Typography>
+              <div className={props.classes.polygonContainer}>
+                <div
+                  className={`${props.classes.polygon} ${props.classes.polygonBlue}`}
+                />
+                <div
+                  className={`${props.classes.polygon} ${props.classes.polygonRed}`}
+                />
+              </div>
             </>
           </Grow>
         )}

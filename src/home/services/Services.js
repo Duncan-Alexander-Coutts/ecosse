@@ -31,7 +31,6 @@ export default withStyles(styles)((props) => {
   return (
     <Fade in timeout={FADE_TRANSITION_DURATION}>
       <div>
-        <Saltire />
         <SectionTitle title={t("home.services.title")} />
         <div spacing={2} className={props.classes.serviceList}>
           <div>
