@@ -9,7 +9,6 @@ import fire from "../../fire.png";
 import { IntroCard } from "../../components/intro-card/IntroCard";
 import { FADE_TRANSITION_DURATION } from "../../constants";
 import { SectionTitle } from "../../components/section-title/SectionTitle";
-import { Saltire } from "../../components/saltire/Saltire";
 
 const styles = (theme) => ({
   header: {

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, makeStyles, Menu, MenuItem } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { navigationItems } from "./navigation-constants";
-import { LinkOffOutlined } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   container: {
