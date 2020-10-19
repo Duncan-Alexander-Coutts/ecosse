@@ -25,7 +25,7 @@ import Clamp from "./composites/images/16_in_clamp.jpg";
 import Exchange from "./composites/images/42_in_heat_exchanger.jpg";
 import Cool from "./composites/images/60_in_cooling_water_line.jpg";
 import { FADE_TRANSITION_DURATION } from "../constants";
-import { Trans, useTranslation } from "react-i18next";
+import { Trans } from "react-i18next";
 
 const styles = (theme) => ({
   root: {
@@ -94,7 +94,6 @@ const FeatureGridItem = ({ children }) => (
 );
 
 const CompositesPage = (props) => {
-  const { t } = useTranslation();
   useEffect(() => props.setPageTitle("Composites"));
 
   return (
