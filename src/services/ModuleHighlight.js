@@ -9,7 +9,7 @@ const ModuleHighlight = () => {
 
   return (
     <ProductHighlight
-      title="Deck, Vessel and Module repair"
+      title="Deck, Vessel and Module"
       caseStudies={caseStudies}
       image={ModuleIntroImage}
       invertColors

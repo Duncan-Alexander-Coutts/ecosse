@@ -7,7 +7,7 @@ import composite from "../../composite.png";
 import sealants from "../../sealants.png";
 import fire from "../../fire.png";
 import { IntroCard } from "../../components/intro-card/IntroCard";
-import { FADE_TRANSITION_DURATION } from "../../constants";
+import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../../constants";
 import { SectionTitle } from "../../components/section-title/SectionTitle";
 
 const styles = (theme) => ({
@@ -20,7 +20,7 @@ const styles = (theme) => ({
     display: "grid",
     gridTemplateColumns: "auto auto",
     gridGap: theme.spacing(3),
-    maxWidth: 1200,
+    maxWidth: CONTENT_MAX_WIDTH,
   },
 });
 

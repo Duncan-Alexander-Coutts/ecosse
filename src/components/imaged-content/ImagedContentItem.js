@@ -1,33 +1,33 @@
 import React from "react";
-import { Grid, withStyles } from "@material-ui/core";
-import classNames from "classnames";
+import { Grid, Typography, withStyles } from "@material-ui/core";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
-    marginBottom: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {
       flexDirection: "column",
-      alignItems: "center"
-    }
+      alignItems: "center",
+    },
+  },
+  contentContainer: {
+    display: "flex",
+  },
+  title: {
+    marginBottom: theme.spacing(2),
+    fontWeight: "bold",
   },
   imageContainer: {
-    paddingLeft: 32,
-    paddingRight: 32,
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
     display: "flex",
-    alignItems: "center"
+    flexDirection: "column",
+    alignItems: "center",
   },
-  imageLeftAligned: {
-    justifyContent: "flex-end"
-  }
 });
 
-const ImagedContentItem = props => {
+const ImagedContentItem = (props) => {
   const getDirection = () => {
     return props.reverseAlignment ? "row-reverse" : undefined;
   };
-
-  const getImageAlignmentClass = () =>
-    props.reverseAlignment ? props.classes.imageLeftAligned : undefined;
 
   return (
     <Grid
@@ -37,19 +37,22 @@ const ImagedContentItem = props => {
       direction={getDirection()}
       justify="center"
     >
-      <Grid item s={12} sm={6} className={props.classes.textContentGridItem}>
+      <Grid item s={12} sm={6} className={props.classes.contentContainer}>
         {props.children}
       </Grid>
-      <Grid
-        className={classNames(
-          props.classes.imageContainer,
-          getImageAlignmentClass()
-        )}
-        item
-        s={12}
-        sm={6}
-      >
-        <img src={props.image} alt={props.imageAlt} className={props.imageClass} />
+      <Grid className={props.classes.imageContainer} item s={12} sm={6}>
+        <Typography
+          color="primary"
+          variant="h4"
+          className={props.classes.title}
+        >
+          {props.title}
+        </Typography>
+        <img
+          src={props.image}
+          alt={props.imageAlt}
+          className={props.imageClass}
+        />
       </Grid>
     </Grid>
   );

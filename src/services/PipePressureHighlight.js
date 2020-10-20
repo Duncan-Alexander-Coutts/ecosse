@@ -8,15 +8,14 @@ const PipePressureHighlight = () => {
   const caseStudies = [
     { label: "LHC Geneva" },
     { label: "EFD gas mains" },
-    { label: "Rowan Gorilla II" }
+    { label: "Rowan Gorilla II" },
   ];
 
   return (
     <ProductHighlight
       caseStudies={caseStudies}
-      title="Pipe pressure repair"
+      title="Pipe Pressure"
       image={PipePressureIntroImage}
-      reverseAlignment
     >
       <IntermediateHeader>
         The loss of production due to leaking and structurally weakened pipework

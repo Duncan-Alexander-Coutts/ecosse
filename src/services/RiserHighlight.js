@@ -7,14 +7,14 @@ import RiserIntroImage from "../riser-intro.png";
 const RiserHighlight = () => {
   const caseStudies = [
     { label: "Almost heaven" },
-    { label: "Brooklyn bridge" }
+    { label: "Brooklyn bridge" },
   ];
 
   return (
     <ProductHighlight
       reverseAlignment
       caseStudies={caseStudies}
-      title="Riser repair"
+      title="Riser"
       image={RiserIntroImage}
     >
       <IntermediateHeader>

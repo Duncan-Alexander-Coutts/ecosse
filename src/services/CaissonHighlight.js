@@ -9,10 +9,9 @@ const CaissonHighlight = () => {
 
   return (
     <ProductHighlight
-      title="Caisson repair"
+      title="Caisson"
       caseStudies={caseStudies}
       image={CaissonIntroImage}
-      invertColors
     >
       <IntermediateHeader>
         Caissons are the arteries of offshore assets and in particular those

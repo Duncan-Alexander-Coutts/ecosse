@@ -6,3 +6,5 @@ export const ECOSSE_COLOURS = {
   red: red[500],
   blue: blue[500],
 };
+
+export const CONTENT_MAX_WIDTH = 1200;
