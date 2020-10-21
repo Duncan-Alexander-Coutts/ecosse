@@ -15,6 +15,10 @@ const styles = (theme) => ({
   container: {
     marginBottom: theme.spacing(4),
   },
+  content: {
+    margin: "auto",
+    maxWidth: theme.breakpoints.values.md,
+  },
   productHighlightDescriptionContainer: {
     maxWidth: 400,
     margin: "auto",
@@ -31,9 +35,9 @@ const styles = (theme) => ({
 });
 
 const ProductHighlight = (props) => {
-  const getCaseStudyItems = () =>
+  const renderCaseStudyItems = () =>
     props.caseStudies.map((study) => (
-      <Grid item>
+      <Grid key={study.label} item>
         <Button variant="outlined" color="primary">
           {study.label}
         </Button>
@@ -42,7 +46,7 @@ const ProductHighlight = (props) => {
 
   return (
     <Card elevation={8} className={props.classes.container}>
-      <CardContent>
+      <CardContent className={props.classes.content}>
         <ImagedContentItem
           title={props.title}
           image={props.image}
@@ -60,7 +64,7 @@ const ProductHighlight = (props) => {
                   spacing={1}
                   className={props.classes.caseStudyButtonContainer}
                 >
-                  {getCaseStudyItems()}
+                  {renderCaseStudyItems()}
                 </Grid>
               </div>
             )}

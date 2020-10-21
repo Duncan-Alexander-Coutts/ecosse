@@ -177,12 +177,12 @@ const CompositesPage = (props) => {
             <Grid container spacing={1} className={classes.repairTypes}>
               <Grid xs item>
                 {repairTypes.slice(0, 6).map((repair) => (
-                  <LabeledTick label={repair} />
+                  <LabeledTick key={repair} label={repair} />
                 ))}
               </Grid>
               <Grid xs item>
                 {repairTypes.slice(6, 12).map((repair) => (
-                  <LabeledTick label={repair} />
+                  <LabeledTick key={repair} label={repair} />
                 ))}
               </Grid>
             </Grid>

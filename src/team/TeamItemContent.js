@@ -1,50 +1,63 @@
 import React from "react";
-import { Typography, withStyles, Link } from "@material-ui/core";
+import { Link, makeStyles, Typography } from "@material-ui/core";
 import MailOutline from "@material-ui/icons/MailOutline";
 import linkedInIcon from "../LI-In-Bug.png";
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+  },
   emailContainer: {
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   emailIcon: {
-    marginRight: theme.spacing(0.5)
+    marginRight: theme.spacing(0.5),
   },
   linkInIcon: {
-    width: 24
+    width: theme.spacing(3),
   },
   linkedInLink: {
-    display: "flex"
-  }
-});
+    display: "flex",
+  },
+}));
 
-const TeamItemContent = props => (
-  <>
-    <Typography color="primary" variant="h5">
-      {props.name}
-    </Typography>
-    <Typography color="secondary" variant="caption">
-      {props.title}
-    </Typography>
-    <Typography color="primary" variant="body1">
-      {props.children}
-    </Typography>
-    <div className={props.classes.emailContainer}>
-      <a
-        rel="noopener noreferrer"
-        target="_blank"
-        href={props.linkedInLink}
-        className={props.classes.linkedInLink}
-      >
-        <img className={props.classes.linkInIcon} src={linkedInIcon} alt="LinkedIn logo" />
-      </a>
-      <MailOutline className={props.classes.emailIcon} />
-      <Link variant="caption" href={"mailto:" + props.email}>
-        {props.email}
-      </Link>
+const TeamItemContent = (props) => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.container}>
+      <Typography color="primary" variant="h5">
+        {props.name}
+      </Typography>
+      <Typography color="secondary" variant="caption">
+        {props.title}
+      </Typography>
+      <Typography color="primary" variant="body1">
+        {props.children}
+      </Typography>
+      <div className={classes.emailContainer}>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href={props.linkedInLink}
+          className={classes.linkedInLink}
+        >
+          <img
+            className={classes.linkInIcon}
+            src={linkedInIcon}
+            alt="LinkedIn logo"
+          />
+        </a>
+        <MailOutline className={classes.emailIcon} />
+        <Link variant="caption" href={"mailto:" + props.email}>
+          {props.email}
+        </Link>
+      </div>
     </div>
-  </>
-);
+  );
+};
 
-export default withStyles(styles)(TeamItemContent);
+export default TeamItemContent;

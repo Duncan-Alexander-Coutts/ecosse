@@ -6,24 +6,24 @@ import { withStyles, Fade } from "@material-ui/core";
 import TeamItemContent from "./TeamItemContent";
 import { FADE_TRANSITION_DURATION } from "../constants";
 
-const styles = theme => ({
+const styles = (theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
-    marginTop: theme.spacing(4)
+    marginTop: theme.spacing(4),
   },
   teamContainer: {
     paddingLeft: theme.spacing(3),
     paddingRight: theme.spacing(3),
-    maxWidth: 1000
+    maxWidth: 1000,
   },
   imageClass: {
     width: 300,
-    borderRadius: "50%"
-  }
+    borderRadius: "50%",
+  },
 });
 
-const TeamPage = props => {
+const TeamPage = (props) => {
   useEffect(() => props.setPageTitle("Team"));
   return (
     <Fade in timeout={FADE_TRANSITION_DURATION}>
@@ -63,7 +63,7 @@ const TeamPage = props => {
           >
             <TeamItemContent
               name="Caroline Hyland"
-              title="Director"
+              title="Managing Director"
               email="caroline.hyland@ecosseglobaluk.com"
               linkedInLink="https://www.linkedin.com/in/caroline-hyland-8a4a6166/"
             >
