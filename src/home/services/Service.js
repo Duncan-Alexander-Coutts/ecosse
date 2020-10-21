@@ -47,8 +47,6 @@ export default withFadeIn(
     return (
       <div>
         <TitledImageContent
-          reverseAlignment={props.reverseAlignment}
-          invertColors={props.invertColors}
           image={props.image}
           title={props.title}
           imageClass={props.classes.imageClass}

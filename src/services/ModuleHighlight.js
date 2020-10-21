@@ -12,7 +12,6 @@ const ModuleHighlight = () => {
       title="Deck, Vessel and Module"
       caseStudies={caseStudies}
       image={ModuleIntroImage}
-      invertColors
     >
       <IntermediateHeader>
         The loss of production due to leaking and structurally weakened pipework

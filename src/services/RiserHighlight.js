@@ -12,7 +12,6 @@ const RiserHighlight = () => {
 
   return (
     <ProductHighlight
-      reverseAlignment
       caseStudies={caseStudies}
       title="Riser"
       image={RiserIntroImage}

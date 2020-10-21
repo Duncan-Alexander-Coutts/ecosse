@@ -47,7 +47,6 @@ const ProductHighlight = (props) => {
           title={props.title}
           image={props.image}
           imageClass={props.classes.imageClass}
-          reverseAlignment
         >
           <div className={props.classes.productHighlightDescriptionContainer}>
             {props.children}

@@ -37,9 +37,6 @@ const ImagedContentItem = (props) => {
       direction={getDirection()}
       justify="center"
     >
-      <Grid item s={12} sm={6} className={props.classes.contentContainer}>
-        {props.children}
-      </Grid>
       <Grid className={props.classes.imageContainer} item s={12} sm={6}>
         <Typography
           color="primary"
@@ -53,6 +50,9 @@ const ImagedContentItem = (props) => {
           alt={props.imageAlt}
           className={props.imageClass}
         />
+      </Grid>
+      <Grid item s={12} sm={6} className={props.classes.contentContainer}>
+        {props.children}
       </Grid>
     </Grid>
   );
