@@ -23,7 +23,15 @@
     }
   },
   "composites": {
+    "pageHeader": "Composites",
     "intro": "Our modern composite repair systems are extremely <strong>versatile</strong>, <strong>adaptable</strong> and <strong>reliable</strong>. They have many impressive capabilities that make them an attractive alternative to traditional repair or replacement methods.",
+    "showcaseImages": {
+      "altText": {
+        "clamp": "Clamp type composite repair",
+        "heatExchange": "Heat exchanger composite repair",
+        "coolingWater": "Cooling water line composite repair"
+      }
+    },
     "features": {
       "noDownTime": {
         "label": "No Down Time",
@@ -49,6 +57,23 @@
         "label": "Economical",
         "description": "As a repair or reinforcement, composites can cost much less to install when compared to traditional welded sleeve or replacement methods."
       }
+    },
+    "repairTypes": {
+      "header": "More Repair Type",
+      "items": [
+        "Abrasian & Wear",
+        "Underwater",
+        "Pipe Bends",
+        "Leaks",
+        "Corrosion Mitigation",
+        "Cracks, Dents, Gouges",
+        "Encapsulation",
+        "Erosion",
+        "Full Hoop / Axial Strength Replacement",
+        "Isolation / Insulation",
+        "Structural Reinforcement",
+        "Weld Joint / HAZ Reinforcement"
+      ]
     }
   },
   "footer": {

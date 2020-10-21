@@ -1,15 +1,20 @@
 import React, { useEffect } from "react";
-import { Typography, withStyles, Grid, Fade, Divider } from "@material-ui/core";
+import {
+  Typography,
+  Grid,
+  Fade,
+  Divider,
+  Paper,
+  makeStyles,
+} from "@material-ui/core";
 import {
   WhatshotOutlined,
   VerifiedUserOutlined,
   WavesOutlined,
   NatureOutlined,
   BlurCircularOutlined,
-  DoneOutline,
   TrendingDown,
 } from "@material-ui/icons";
-import { green } from "@material-ui/core/colors";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -20,26 +25,18 @@ import ModuleHighlight from "./ModuleHighlight";
 import RiserHighlight from "./RiserHighlight";
 import Feature from "./Feature";
 
-import MainImage from "../42_in_heat_exchanger.jpg";
 import Clamp from "./composites/images/16_in_clamp.jpg";
 import Exchange from "./composites/images/42_in_heat_exchanger.jpg";
 import Cool from "./composites/images/60_in_cooling_water_line.jpg";
 import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../constants";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
+import { LabeledTick } from "../components/labeled-tick/LabeledTick";
 
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
-  },
-  mainImage: {
-    backgroundRepeat: "none",
-    backgroundSize: "cover",
-    backgroundImage: `url(${MainImage})`,
-    backgroundPositionY: -40,
-    width: "100%",
-    height: 270,
   },
   bold: {
     fontWeight: "bold",
@@ -61,34 +58,16 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(4),
     width: "100%",
   },
-  featuresHeading: {
-    fontWeight: "bold",
-    color: "white",
-    marginBottom: theme.spacing(4),
-  },
-  feature: {
-    textAlign: "center",
-  },
   repairSection: {
     paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   repairTypes: {
     paddingTop: theme.spacing(2),
-    justifyContent: "space-evenly",
+    margin: "auto",
+    maxWidth: theme.breakpoints.values.sm,
   },
-  repairType: {
-    display: "flex",
-    alignItems: "center",
-    padding: theme.spacing(1),
-  },
-  repairIcon: {
-    color: green[500],
-    marginRight: theme.spacing(2),
-  },
-  featureContainer: {
-    display: "flex",
-  },
-});
+}));
 
 const FeatureGridItem = ({ children }) => (
   <Grid item xs={6} sm={4}>
@@ -97,22 +76,37 @@ const FeatureGridItem = ({ children }) => (
 );
 
 const CompositesPage = (props) => {
-  useEffect(() => props.setPageTitle("Composites"));
+  useEffect(() => props.setPageTitle(t("composites.pageHeader")));
+  const { t } = useTranslation();
+  const classes = useStyles();
+
+  const repairTypes = t("composites.repairTypes.items", {
+    returnObjects: true,
+  });
 
   return (
     <Fade in timeout={FADE_TRANSITION_DURATION}>
-      <div className={props.classes.root}>
+      <div className={classes.root}>
         <Grid justify="center" container>
           <Grid item xs={12} md={10} lg={8}>
             <Carousel showThumbs={false} showStatus={false}>
               <div>
-                <img src={Clamp} alt="Clamp type composite repair" />
+                <img
+                  src={Clamp}
+                  alt={t("composites.showcaseImages.altText.clamp")}
+                />
               </div>
               <div>
-                <img src={Exchange} alt="Heat exchanger composite repair" />
+                <img
+                  src={Exchange}
+                  alt={t("composites.showcaseImages.altText.heatExchange")}
+                />
               </div>
               <div>
-                <img src={Cool} alt="Cooling water line composite repair" />
+                <img
+                  src={Cool}
+                  alt={t("composites.showcaseImages.altText.coolingWater")}
+                />
               </div>
             </Carousel>
           </Grid>
@@ -121,12 +115,12 @@ const CompositesPage = (props) => {
           color="primary"
           align="center"
           variant="h6"
-          className={props.classes.statement}
+          className={classes.statement}
         >
           <Trans i18nKey="composites.intro" />
         </Typography>
-        <Divider className={props.classes.statementDivider} />
-        <div className={props.classes.contentContainer}>
+        <Divider className={classes.statementDivider} />
+        <div className={classes.contentContainer}>
           <Grid container>
             <FeatureGridItem>
               <Feature
@@ -165,92 +159,38 @@ const CompositesPage = (props) => {
               />
             </FeatureGridItem>
           </Grid>
-          <section className={props.classes.compositeHighlights}>
+          <section className={classes.compositeHighlights}>
             <CaissonHighlight />
             <PipePressureHighlight />
             <ModuleHighlight />
             <RiserHighlight />
           </section>
-          <div className={props.classes.repairSection}>
+          <Paper elevation={8} className={classes.repairSection}>
             <Typography
               color="primary"
-              className={props.classes.bold}
-              variant="h5"
+              className={classes.bold}
+              variant="h4"
               align="center"
             >
-              Repair Types
+              {t("composites.repairTypes.header")}
             </Typography>
-            <Typography
-              align="center"
-              variant="h6"
-              className={props.classes.statement}
-              color="primary"
-            >
-              There could be some text here that explains a little bit about the
-              repair type and some other things that I probably don't
-              understand. There could probably be 2 or 3 sentences.
-            </Typography>
-            <Grid container spacing={1} className={props.classes.repairTypes}>
+            <Grid container spacing={1} className={classes.repairTypes}>
               <Grid xs item>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Abrasian & Wear</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Underwater</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Pipe Bends</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Leaks</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Corrosion Mitigation</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Cracks, Dents, Gouges</Typography>
-                </div>
+                {repairTypes.slice(0, 6).map((repair) => (
+                  <LabeledTick label={repair} />
+                ))}
               </Grid>
               <Grid xs item>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Encapsulation</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Erosion</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>
-                    Full Hoop / Axial Strength Replacement
-                  </Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Isolation / Insulation</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Structural Reinforcement</Typography>
-                </div>
-                <div className={props.classes.repairType}>
-                  <DoneOutline className={props.classes.repairIcon} />
-                  <Typography>Weld Joint / HAZ Reinforcement</Typography>
-                </div>
+                {repairTypes.slice(6, 12).map((repair) => (
+                  <LabeledTick label={repair} />
+                ))}
               </Grid>
             </Grid>
-          </div>
+          </Paper>
         </div>
       </div>
     </Fade>
   );
 };
 
-export default withStyles(styles, { withTheme: true })(CompositesPage);
+export default CompositesPage;
