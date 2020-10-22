@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
   },
   linkInIcon: {
     width: theme.spacing(3),
+    height: 20,
   },
   linkedInLink: {
     display: "flex",
