@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { withStyles, Fade, Grid } from "@material-ui/core";
 
 import rust from "../../images/home/rust.png";
-import composite from "../../images/home/composite.png";
+import composite from "../../images/home/composite.jpg";
 import sealants from "../../images/home/sealants.png";
 import fire from "../../images/home/fire.png";
 import { IntroCard } from "../../components/intro-card/IntroCard";
