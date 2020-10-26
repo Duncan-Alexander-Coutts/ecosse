@@ -25,12 +25,12 @@ import ModuleHighlight from "./ModuleHighlight";
 import RiserHighlight from "./RiserHighlight";
 import Feature from "./Feature";
 
-import Clamp from "./composites/images/16_in_clamp.jpg";
-import Exchange from "./composites/images/42_in_heat_exchanger.jpg";
-import Cool from "./composites/images/60_in_cooling_water_line.jpg";
-import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../constants";
+import Clamp from "./../composites/images/16_in_clamp.jpg";
+import Exchange from "./../composites/images/42_in_heat_exchanger.jpg";
+import Cool from "./../composites/images/60_in_cooling_water_line.jpg";
+import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../../constants";
 import { Trans, useTranslation } from "react-i18next";
-import { LabeledTick } from "../components/labeled-tick/LabeledTick";
+import { LabeledTick } from "../../components/labeled-tick/LabeledTick";
 
 const useStyles = makeStyles((theme) => ({
   root: {

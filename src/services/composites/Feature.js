@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography, withStyles } from "@material-ui/core";
-import { ECOSSE_COLOURS } from "../constants";
+import { ECOSSE_COLOURS } from "../../constants";
 import { Trans, useTranslation } from "react-i18next";
 
 const styles = (theme) => ({

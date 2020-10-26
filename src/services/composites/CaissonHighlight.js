@@ -1,8 +1,8 @@
 import React from "react";
 import ProductHighlight from "./ProductHighlight";
-import IntermediateHeader from "../components/common/IntermediateHeader";
+import IntermediateHeader from "../../components/common/IntermediateHeader";
 import { Typography } from "@material-ui/core";
-import CaissonIntroImage from "../caisson-intro.png";
+import CaissonIntroImage from "../../caisson-intro.png";
 
 const CaissonHighlight = () => {
   const caseStudies = [{ label: "Golden Gate" }, { label: "BP Gulf Rig" }];

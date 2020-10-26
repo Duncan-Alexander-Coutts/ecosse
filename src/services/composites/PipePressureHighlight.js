@@ -1,8 +1,8 @@
 import React from "react";
 import ProductHighlight from "./ProductHighlight";
-import IntermediateHeader from "../components/common/IntermediateHeader";
+import IntermediateHeader from "../../components/common/IntermediateHeader";
 import { Typography } from "@material-ui/core";
-import PipePressureIntroImage from "../pipe-pressure-intro.png";
+import PipePressureIntroImage from "../../pipe-pressure-intro.png";
 
 const PipePressureHighlight = () => {
   const caseStudies = [

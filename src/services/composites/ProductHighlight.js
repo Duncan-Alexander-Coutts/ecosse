@@ -8,8 +8,8 @@ import {
   CardContent,
 } from "@material-ui/core";
 
-import { withFadeIn } from "../components/higher-order/withFadeIn";
-import ImagedContentItem from "../components/imaged-content/ImagedContentItem";
+import { withFadeIn } from "../../components/higher-order/withFadeIn";
+import ImagedContentItem from "../../components/imaged-content/ImagedContentItem";
 
 const styles = (theme) => ({
   container: {

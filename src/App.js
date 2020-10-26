@@ -7,7 +7,7 @@ import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import HomePage from "./home/HomePage";
 import TeamPage from "./team/TeamPage";
-import CompositesPage from "./services/CompositesPage";
+import CompositesPage from "./services/composites/CompositesPage";
 
 const theme = createMuiTheme({
   palette: {
