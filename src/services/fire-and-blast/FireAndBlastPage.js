@@ -2,6 +2,7 @@ import { makeStyles } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import FireProtectedCaisson from "../../images/fire-and-blast/fire-protected-caisson.jpg";
+import PipingHeatshield from "../../images/fire-and-blast/piping-heatshield.png";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
 import { Statement } from "../../components/statement/Statement";
 
@@ -15,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 const carouselItems = [
   { image: FireProtectedCaisson, altI18nKey: "Hello there" },
+  { image: PipingHeatshield, altI18nKey: "Hello there" },
 ];
 
 const FireAndBlastPage = ({ setPageTitle }) => {
