@@ -1,12 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  Typography,
-  Grid,
-  Fade,
-  Divider,
-  Paper,
-  makeStyles,
-} from "@material-ui/core";
+import { Typography, Grid, Fade, Paper, makeStyles } from "@material-ui/core";
 import {
   WhatshotOutlined,
   VerifiedUserOutlined,
@@ -28,9 +21,10 @@ import Clamp from "../../images/composites/clamp.jpg";
 import Exchange from "../../images/composites/heat_exchanger.jpg";
 import Cool from "../../images/composites/cooling_water_line.jpg";
 import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../../constants";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { LabeledTick } from "../../components/labeled-tick/LabeledTick";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
+import { Statement } from "../../components/statement/Statement";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -40,16 +34,6 @@ const useStyles = makeStyles((theme) => ({
   },
   bold: {
     fontWeight: "bold",
-  },
-  statement: {
-    maxWidth: theme.spacing(100),
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2),
-  },
-  statementDivider: {
-    width: theme.spacing(50),
   },
   contentContainer: {
     maxWidth: CONTENT_MAX_WIDTH,
@@ -97,15 +81,7 @@ const CompositesPage = ({ setPageTitle }) => {
     <Fade in timeout={FADE_TRANSITION_DURATION}>
       <div className={classes.root}>
         <HeroCarousel items={carouselItems} />
-        <Typography
-          color="primary"
-          align="center"
-          variant="h6"
-          className={classes.statement}
-        >
-          <Trans i18nKey="composites.intro" />
-        </Typography>
-        <Divider className={classes.statementDivider} />
+        <Statement i18nKey="composites.intro" />
         <div className={classes.contentContainer}>
           <Grid container>
             <FeatureGridItem>
