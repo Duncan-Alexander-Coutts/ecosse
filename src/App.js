@@ -8,6 +8,8 @@ import { red } from "@material-ui/core/colors";
 import HomePage from "./home/HomePage";
 import TeamPage from "./team/TeamPage";
 import CompositesPage from "./services/composites/CompositesPage";
+import FireAndBlastPage from "./services/fire-and-blast/FireAndBlastPage";
+import { ScrollToTop } from "./components/scroll-to-top/ScrollToTop";
 
 const theme = createMuiTheme({
   palette: {
@@ -34,6 +36,7 @@ const App = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <Router>
+        <ScrollToTop />
         <PageHeader pageTitle={pageTitle} />
         <Route
           path="/"
@@ -43,6 +46,10 @@ const App = () => {
         <Route
           path="/services/composites"
           render={() => <CompositesPage setPageTitle={setPageTitle} />}
+        />
+        <Route
+          path="/services/fireandblast"
+          render={() => <FireAndBlastPage setPageTitle={setPageTitle} />}
         />
         <Route
           path="/team"

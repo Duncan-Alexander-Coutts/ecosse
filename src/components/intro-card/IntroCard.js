@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -31,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const IntroCard = ({ header, image, imageAlt, description }) => {
+const IntroCard = ({ header, image, imageAlt, description, link }) => {
   const classes = useStyles();
 
   return (
@@ -39,7 +40,13 @@ const IntroCard = ({ header, image, imageAlt, description }) => {
       <CardHeader className={classes.header} title={header} />
       <CardContent className={classes.content}>
         <img className={classes.image} src={image} alt={imageAlt} />
-        <Button color="primary" title="More" variant="outlined">
+        <Button
+          component={Link}
+          to={link}
+          color="primary"
+          title="More"
+          variant="outlined"
+        >
           More
         </Button>
         <Typography color="primary" className={classes.description}>

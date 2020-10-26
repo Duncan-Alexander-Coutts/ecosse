@@ -75,8 +75,8 @@ const FeatureGridItem = ({ children }) => (
   </Grid>
 );
 
-const CompositesPage = (props) => {
-  useEffect(() => props.setPageTitle(t("composites.pageHeader")));
+const CompositesPage = ({ setPageTitle }) => {
+  useEffect(() => setPageTitle(t("composites.pageHeader")));
   const { t } = useTranslation();
   const classes = useStyles();
 

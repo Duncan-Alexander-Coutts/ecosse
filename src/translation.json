@@ -76,6 +76,9 @@
       ]
     }
   },
+  "fireAndBlast": {
+    "pageHeader": "Fire and Blast"
+  },
   "footer": {
     "ownership": "© Copyright 2020 – Ecosse Global UK LTD. All Rights Reserved"
   }

@@ -5,7 +5,7 @@ export const navigationItems = [
     children: [
       { label: "Anti-Corrosion", link: "/" },
       { label: "Composites", link: "/services/composites" },
-      { label: "Fire & Blast", link: "/" },
+      { label: "Fire and Blast", link: "/services/fireandblast" },
       { label: "Structural Sealants", link: "/" },
     ],
   },

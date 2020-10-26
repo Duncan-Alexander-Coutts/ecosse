@@ -41,6 +41,7 @@ export default withStyles(styles)((props) => {
               header={t("home.services.composites.title")}
               image={composite}
               description={t("home.services.composites.description")}
+              link="/services/composites"
             />
           </Grid>
           <Grid xs={12} md={6} item>
@@ -48,6 +49,7 @@ export default withStyles(styles)((props) => {
               header={t("home.services.fireAndBlast.title")}
               image={fire}
               description={t("home.services.fireAndBlast.description")}
+              link="/services/fireandblast"
             />
           </Grid>
           <Grid xs={12} md={6} item>
