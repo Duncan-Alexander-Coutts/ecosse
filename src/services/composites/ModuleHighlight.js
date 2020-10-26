@@ -2,7 +2,7 @@ import React from "react";
 import ProductHighlight from "./ProductHighlight";
 import IntermediateHeader from "../../components/common/IntermediateHeader";
 import { Typography } from "@material-ui/core";
-import ModuleIntroImage from "../../module-roof-intro.png";
+import ModuleIntroImage from "../../images/composites/module-roof-intro.png";
 
 const ModuleHighlight = () => {
   const caseStudies = [{ label: "Tay bridge" }];

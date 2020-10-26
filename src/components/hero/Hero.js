@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 
-import BigImage from "../../hero.jpg";
+import BigImage from "../../images/home/hero.jpg";
 import { withStyles, Typography, Grow } from "@material-ui/core";
 import { ECOSSE_COLOURS } from "../../constants";
 

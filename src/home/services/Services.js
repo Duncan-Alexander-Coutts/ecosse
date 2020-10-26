@@ -2,10 +2,10 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { withStyles, Fade, Grid } from "@material-ui/core";
 
-import rust from "../../rust.png";
-import composite from "../../composite.png";
-import sealants from "../../sealants.png";
-import fire from "../../fire.png";
+import rust from "../../images/home/rust.png";
+import composite from "../../images/home/composite.png";
+import sealants from "../../images/home/sealants.png";
+import fire from "../../images/home/fire.png";
 import { IntroCard } from "../../components/intro-card/IntroCard";
 import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../../constants";
 import { SectionTitle } from "../../components/section-title/SectionTitle";

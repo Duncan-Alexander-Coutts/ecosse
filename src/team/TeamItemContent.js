@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, makeStyles, Typography } from "@material-ui/core";
 import MailOutline from "@material-ui/icons/MailOutline";
-import linkedInIcon from "../LI-In-Bug.png";
+import linkedInIcon from "../images/team/LI-In-Bug.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -36,9 +36,7 @@ const TeamItemContent = (props) => {
       <Typography color="secondary" variant="caption">
         {props.title}
       </Typography>
-      <Typography color="primary" variant="body1">
-        {props.children}
-      </Typography>
+      {props.children}
       <div className={classes.emailContainer}>
         <a
           rel="noopener noreferrer"

@@ -17,7 +17,6 @@ import {
 } from "@material-ui/icons";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 
 import CaissonHighlight from "./CaissonHighlight";
 import PipePressureHighlight from "./PipePressureHighlight";
@@ -25,12 +24,13 @@ import ModuleHighlight from "./ModuleHighlight";
 import RiserHighlight from "./RiserHighlight";
 import Feature from "./Feature";
 
-import Clamp from "./../composites/images/16_in_clamp.jpg";
-import Exchange from "./../composites/images/42_in_heat_exchanger.jpg";
-import Cool from "./../composites/images/60_in_cooling_water_line.jpg";
+import Clamp from "../../images/composites/clamp.jpg";
+import Exchange from "../../images/composites/heat_exchanger.jpg";
+import Cool from "../../images/composites/cooling_water_line.jpg";
 import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../../constants";
 import { Trans, useTranslation } from "react-i18next";
 import { LabeledTick } from "../../components/labeled-tick/LabeledTick";
+import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -69,6 +69,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const carouselItems = [
+  { image: Clamp, altI18nKey: "composites.showcaseImages.altText.clamp" },
+  {
+    image: Exchange,
+    altI18nKey: "composites.showcaseImages.altText.heatExchange",
+  },
+  { image: Cool, altI18nKey: "composites.showcaseImages.altText.coolingWater" },
+];
+
 const FeatureGridItem = ({ children }) => (
   <Grid item xs={6} sm={4}>
     {children}
@@ -87,30 +96,7 @@ const CompositesPage = ({ setPageTitle }) => {
   return (
     <Fade in timeout={FADE_TRANSITION_DURATION}>
       <div className={classes.root}>
-        <Grid justify="center" container>
-          <Grid item xs={12} md={10} lg={8}>
-            <Carousel showThumbs={false} showStatus={false}>
-              <div>
-                <img
-                  src={Clamp}
-                  alt={t("composites.showcaseImages.altText.clamp")}
-                />
-              </div>
-              <div>
-                <img
-                  src={Exchange}
-                  alt={t("composites.showcaseImages.altText.heatExchange")}
-                />
-              </div>
-              <div>
-                <img
-                  src={Cool}
-                  alt={t("composites.showcaseImages.altText.coolingWater")}
-                />
-              </div>
-            </Carousel>
-          </Grid>
-        </Grid>
+        <HeroCarousel items={carouselItems} />
         <Typography
           color="primary"
           align="center"

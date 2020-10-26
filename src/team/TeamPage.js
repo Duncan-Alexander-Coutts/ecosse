@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import ImagedContentItem from "../components/imaged-content/ImagedContentItem";
-import carolineMugshot from "../caroline.jpg";
-import ernieMugshot from "../ernie.jpg";
-import { withStyles, Fade } from "@material-ui/core";
+import carolineMugshot from "../images/team/caroline.jpg";
+import ernieMugshot from "../images/team/ernie.jpg";
+import { withStyles, Fade, Typography } from "@material-ui/core";
 import TeamItemContent from "./TeamItemContent";
 import { FADE_TRANSITION_DURATION } from "../constants";
 
@@ -41,19 +41,19 @@ const TeamPage = (props) => {
               email="ernie.coutts@ecosseglobaluk.com"
               linkedInLink="https://www.linkedin.com/in/ernie-coutts-95a33a45/"
             >
-              <p>
+              <Typography color="primary" paragraph>
                 Energy industry professional with a wealth of experience
                 covering design through to delivery of many commonly used
                 products in new-build and brownfield projects. Currently
                 focusing on "life cycle enhancement" projects and their many
                 challenges relating to retaining current operator assets using
                 composite repair techniques.
-              </p>
-              <p>
+              </Typography>
+              <Typography color="primary" paragraph>
                 Ernie has designed a range of “industry first” diverless repairs
                 using retrofit internal water tolerant composite liners for the
                 reconditioning of ageing caissons and conductors.
-              </p>
+              </Typography>
             </TeamItemContent>
           </ImagedContentItem>
           <ImagedContentItem
@@ -67,13 +67,13 @@ const TeamPage = (props) => {
               email="caroline.hyland@ecosseglobaluk.com"
               linkedInLink="https://www.linkedin.com/in/caroline-hyland-8a4a6166/"
             >
-              <p>
+              <Typography color="primary" paragraph>
                 Experienced Director with a demonstrated history of working in
                 the oil & gas energy industry. Skilled in Accounting,
                 Management, Product Marketing, and Renewable Energy. Strong
                 professional with a BA (Hons) focused in Liberal Arts and
                 Sciences.
-              </p>
+              </Typography>
             </TeamItemContent>
           </ImagedContentItem>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import EcosseLogo from "../../logo_svg.svg";
+import EcosseLogo from "../../images/logos/logo_svg.svg";
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 

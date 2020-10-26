@@ -1,8 +1,8 @@
 import React from "react";
 import { withStyles, Typography, Paper } from "@material-ui/core";
-import Achilles from "../../svg/achilles.svg";
-import CompositesBadge from "../../svg/composites-badge.svg";
-import DnvGl from "../../svg/dnvgl.svg";
+import Achilles from "../../images/logos/achilles.svg";
+import CompositesBadge from "../../images/logos/composites-badge.svg";
+import DnvGl from "../../images/logos/dnvgl.svg";
 import { useTranslation } from "react-i18next";
 
 const styles = (theme) => ({
