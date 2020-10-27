@@ -78,7 +78,29 @@
   },
   "fireAndBlast": {
     "pageHeader": "Fire and Blast",
-    "intro": "Ecosse Global are specialist suppliers of flexible <strong>Passive Fire Protection Systems</strong> to the oil, gas, petrochemical and refining industries worldwide. Our highly specialised sealing systems offer asset protection from <strong>Hydrocarbon</strong>, <strong>Cellulosic</strong> and <strong>Jet Fire scenarios</strong>"
+    "intro": "Ecosse Global are specialist suppliers of flexible <strong>Passive Fire Protection Systems</strong> to the oil, gas, petrochemical and refining industries worldwide. Our highly specialised sealing systems offer asset protection from <strong>Hydrocarbon</strong>, <strong>Cellulosic</strong> and <strong>Jet Fire scenarios</strong>",
+    "features": {
+      "design": {
+        "label": "Design",
+        "description": "Our design centre uses state of the art CAD software for bespoke sealing design solutions."
+      },
+      "testing": {
+        "label": "Testing",
+        "description": "We have full access use of approved test houses complete with evaluation facilities to support your application."
+      },
+      "manufacture": {
+        "label": "Manufacture",
+        "description": "We have a dedicated production team with a wealth of specialised product knowledge."
+      },
+      "support": {
+        "label": "After Sales Support",
+        "description": "Our specialist trained after-sales team are here to help with any questions you may have concerning your PFP installation."
+      },
+      "flexible": {
+        "label": "Flexible",
+        "description": "We can also cater for extreme movement between pipe and sleeve, unlike some competitors systems that remain fixed in position."
+      }
+    }
   },
   "footer": {
     "ownership": "© Copyright 2020 – Ecosse Global UK LTD. All Rights Reserved"

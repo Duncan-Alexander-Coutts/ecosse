@@ -25,6 +25,7 @@ import { useTranslation } from "react-i18next";
 import { LabeledTick } from "../../components/labeled-tick/LabeledTick";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
 import { Statement } from "../../components/statement/Statement";
+import { FeatureGridItem } from "../../components/feature/Feature";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,12 +62,6 @@ const carouselItems = [
   },
   { image: Cool, altI18nKey: "composites.showcaseImages.altText.coolingWater" },
 ];
-
-const FeatureGridItem = ({ children }) => (
-  <Grid item xs={6} sm={4}>
-    {children}
-  </Grid>
-);
 
 const CompositesPage = ({ setPageTitle }) => {
   useEffect(() => setPageTitle(t("composites.pageHeader")));
