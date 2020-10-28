@@ -15,7 +15,6 @@ import CaissonHighlight from "./CaissonHighlight";
 import PipePressureHighlight from "./PipePressureHighlight";
 import ModuleHighlight from "./ModuleHighlight";
 import RiserHighlight from "./RiserHighlight";
-import Feature from "./Feature";
 
 import Clamp from "../../images/composites/clamp.jpg";
 import Exchange from "../../images/composites/heat_exchanger.jpg";
@@ -25,7 +24,7 @@ import { useTranslation } from "react-i18next";
 import { LabeledTick } from "../../components/labeled-tick/LabeledTick";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
 import { Statement } from "../../components/statement/Statement";
-import { FeatureGridItem } from "../../components/feature/Feature";
+import { Feature, FeatureGridItem } from "../../components/feature/Feature";
 
 const useStyles = makeStyles((theme) => ({
   root: {

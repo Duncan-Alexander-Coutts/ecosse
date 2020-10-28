@@ -5,8 +5,7 @@ import FireProtectedCaisson from "../../images/fire-and-blast/fire-protected-cai
 import PipingHeatshield from "../../images/fire-and-blast/piping-heatshield.jpg";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
 import { Statement } from "../../components/statement/Statement";
-import { FeatureGridItem } from "../../components/feature/Feature";
-import Feature from "../composites/Feature";
+import { FeatureGridItem, Feature } from "../../components/feature/Feature";
 import {
   Beenhere,
   ContactSupport,
@@ -68,6 +67,7 @@ const FireAndBlastPage = ({ setPageTitle }) => {
             />
           </FeatureGridItem>
         </Grid>
+        <section></section>
       </div>
     </div>
   );
