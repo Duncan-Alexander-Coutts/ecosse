@@ -1,7 +1,7 @@
 import React from "react";
-import ProductHighlight from "./ProductHighlight";
-import IntermediateHeader from "../../components/common/IntermediateHeader";
 import { Typography } from "@material-ui/core";
+import ProductHighlight from "../../components/product-highlight/ProductHighlight";
+import IntermediateHeader from "../../components/common/IntermediateHeader";
 import PipePressureIntroImage from "../../images/composites/pipe-pressure-intro.png";
 
 const PipePressureHighlight = () => {

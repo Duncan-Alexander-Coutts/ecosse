@@ -14,6 +14,9 @@ import {
   PanoramaHorizontal,
 } from "@material-ui/icons";
 import { CONTENT_MAX_WIDTH } from "../../constants";
+import PipePenetrationHighlight from "./PipePenetrationHighlight";
+import FlexJacketsHighlight from "./FlexJacketsHighlight";
+import ModuleSealsHighlight from "./ModuleSeals";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,7 +70,11 @@ const FireAndBlastPage = ({ setPageTitle }) => {
             />
           </FeatureGridItem>
         </Grid>
-        <section></section>
+        <section>
+          <PipePenetrationHighlight />
+          <FlexJacketsHighlight />
+          <ModuleSealsHighlight />
+        </section>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
-import ProductHighlight from "./ProductHighlight";
-import IntermediateHeader from "../../components/common/IntermediateHeader";
 import { Typography } from "@material-ui/core";
+import ProductHighlight from "../../components/product-highlight/ProductHighlight";
+import IntermediateHeader from "../../components/common/IntermediateHeader";
 import RiserIntroImage from "../../images/composites/riser-intro.png";
 
 const RiserHighlight = () => {
