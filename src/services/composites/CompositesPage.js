@@ -19,7 +19,11 @@ import RiserHighlight from "./RiserHighlight";
 import Clamp from "../../images/composites/clamp.jpg";
 import Exchange from "../../images/composites/heat_exchanger.jpg";
 import Cool from "../../images/composites/cooling_water_line.jpg";
-import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../../constants";
+import {
+  CONTENT_MAX_WIDTH,
+  ECOSSE_COLOURS,
+  FADE_TRANSITION_DURATION,
+} from "../../constants";
 import { useTranslation } from "react-i18next";
 import { LabeledTick } from "../../components/labeled-tick/LabeledTick";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
@@ -35,10 +39,39 @@ const useStyles = makeStyles((theme) => ({
   bold: {
     fontWeight: "bold",
   },
+  contentSection: {
+    display: "flex",
+    width: "100%",
+    justifyContent: "center",
+    flexDirection: "column",
+    background: `linear-gradient(
+        to bottom right,
+        transparent 0%,
+        transparent 40%,
+        ${ECOSSE_COLOURS.blue} 41%,
+        ${ECOSSE_COLOURS.blue} 60%,
+        transparent 61%,
+        transparent 100%
+      )
+      0% 100% / 100% 100%,
+    linear-gradient(
+        to top right,
+        transparent 0%,
+        transparent 40%,
+        ${ECOSSE_COLOURS.red} 41%,
+        ${ECOSSE_COLOURS.red} 60%,
+        transparent 61%,
+        transparent 100%
+      )
+      100% 0% / 100% 100%`,
+    backgroundRepeat: "repeat-y",
+    backgroundSize: "100% 50%",
+  },
   contentContainer: {
     maxWidth: CONTENT_MAX_WIDTH,
+    position: "relative",
   },
-  compositeHighlights: {
+  highlights: {
     paddingTop: theme.spacing(4),
     width: "100%",
   },
@@ -115,7 +148,7 @@ const CompositesPage = ({ setPageTitle }) => {
               />
             </FeatureGridItem>
           </Grid>
-          <section className={classes.compositeHighlights}>
+          <section className={classes.highlights}>
             <CaissonHighlight />
             <PipePressureHighlight />
             <ModuleHighlight />

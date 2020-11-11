@@ -9,7 +9,6 @@ import { FeatureGridItem, Feature } from "../../components/feature/Feature";
 import {
   Beenhere,
   ContactSupport,
-  HomeWork,
   Laptop,
   PanoramaHorizontal,
 } from "@material-ui/icons";
@@ -17,6 +16,7 @@ import { CONTENT_MAX_WIDTH } from "../../constants";
 import PipePenetrationHighlight from "./PipePenetrationHighlight";
 import FlexJacketsHighlight from "./FlexJacketsHighlight";
 import ModuleSealsHighlight from "./ModuleSeals";
+import { Factory } from "mdi-material-ui";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
   },
   contentContainer: {
     maxWidth: CONTENT_MAX_WIDTH,
+  },
+  highlights: {
+    paddingTop: theme.spacing(4),
   },
 }));
 
@@ -53,7 +56,7 @@ const FireAndBlastPage = ({ setPageTitle }) => {
           </FeatureGridItem>
           <FeatureGridItem>
             <Feature
-              icon={HomeWork}
+              icon={Factory}
               i18nKey="fireAndBlast.features.manufacture"
             />
           </FeatureGridItem>
@@ -70,7 +73,7 @@ const FireAndBlastPage = ({ setPageTitle }) => {
             />
           </FeatureGridItem>
         </Grid>
-        <section>
+        <section className={classes.highlights}>
           <PipePenetrationHighlight />
           <FlexJacketsHighlight />
           <ModuleSealsHighlight />

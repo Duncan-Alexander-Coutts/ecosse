@@ -57,6 +57,7 @@ export default withStyles(styles)((props) => {
               header={t("home.services.sealants.title")}
               image={sealants}
               description={t("home.services.sealants.description")}
+              link="/services/sealants"
             />
           </Grid>
         </Grid>

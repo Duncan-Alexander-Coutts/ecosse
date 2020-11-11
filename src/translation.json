@@ -17,7 +17,7 @@
         "description": "Some text that describes Fire And Blast services. And then some other text. Some other text too."
       },
       "sealants": {
-        "title": "Structural Sealants",
+        "title": "Specialist Sealants and Coatings",
         "description": "Some text that describes Sealants services. And then some other text. Some other text too."
       }
     }
@@ -99,6 +99,32 @@
       "flexible": {
         "label": "Flexible",
         "description": "We can also cater for extreme movement between pipe and sleeve, unlike some competitors systems that remain fixed in position."
+      }
+    }
+  },
+  "sealants": {
+    "pageHeader": "Specialist Sealants and Coatings",
+    "intro": "Ecosse Global are suppliers of <strong>specialist sealants</strong> and coatings to the oil, gas, petrochemical and wind farm industries. Our highly specialised sealing systems offer <strong>excellent adhesion</strong> and <strong>long-term protection</strong> from corrosion.",
+    "features": {
+      "deck": {
+        "label": "Deck Repair",
+        "description": "Easy to use, fire-retardant epoxy with a long pot life for large deck areas."
+      },
+      "module": {
+        "label": "Module Roof Repair",
+        "description": "Water tolerant, corrosion arresting epoxy that forms an impermeable seal."
+      },
+      "tank": {
+        "label": "Large Tank Repairs",
+        "description": "Specially designed for tricky weld seams and applied by heated airless spray."
+      },
+      "abrasian": {
+        "label": "Abrasion Resistant Coatings",
+        "description": "Full of Kevlar™ filaments, developed to withstand high impact loadings on offshore boat landings."
+      },
+      "flexible": {
+        "label": "Nuclear Grade Coatings",
+        "description": "Certified for use in ‘Service Level 1’ applications. Application friendly, so reduces man-rem exposure."
       }
     }
   },

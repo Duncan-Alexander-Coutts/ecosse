@@ -6,7 +6,7 @@ export const navigationItems = [
       { label: "Anti-Corrosion", link: "/" },
       { label: "Composites", link: "/services/composites" },
       { label: "Fire and Blast", link: "/services/fireandblast" },
-      { label: "Structural Sealants", link: "/" },
+      { label: "Specialist Sealants and Coatings", link: "/services/sealants" },
     ],
   },
   { label: "Team", link: "/team" },
