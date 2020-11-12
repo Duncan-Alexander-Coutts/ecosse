@@ -5,9 +5,6 @@ import { Feature, FeatureGridItem } from "../../components/feature/Feature";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
 import { Statement } from "../../components/statement/Statement";
 import { CONTENT_MAX_WIDTH } from "../../constants";
-import FlexJacketsHighlight from "../fire-and-blast/FlexJacketsHighlight";
-import ModuleSealsHighlight from "../fire-and-blast/ModuleSeals";
-import PipePenetrationHighlight from "../fire-and-blast/PipePenetrationHighlight";
 
 import ResinPour from "../../images/sealants/resin-pour.jpg";
 import ResinBucket from "../../images/sealants/resin-bucket.jpg";
