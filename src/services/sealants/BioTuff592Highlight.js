@@ -1,20 +1,20 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import ProductHighlight from "../../components/product-highlight/ProductHighlight";
-import ModuleIntroImage from "../../images/composites/module-roof-intro.png";
+import BioTuffImage from "../../images/sealants/bio-tuff-592.jpg";
 import { Trans, useTranslation } from "react-i18next";
 
-const BioDur563Highlight = () => {
+const BioTuff592Highlight = () => {
   const { t } = useTranslation();
   const caseStudies = [{ label: "Tay bridge" }];
 
   return (
     <ProductHighlight
-      title={t("sealants.highlights.biodur563.title")}
+      title={t("sealants.highlights.bioTuff592.title")}
       caseStudies={caseStudies}
-      image={ModuleIntroImage}
+      image={BioTuffImage}
     >
-      {t("sealants.highlights.biodur563.paragraphs", {
+      {t("sealants.highlights.bioTuff592.paragraphs", {
         returnObjects: true,
       }).map((paragraph) => (
         <Typography color="primary" paragraph>
@@ -25,4 +25,4 @@ const BioDur563Highlight = () => {
   );
 };
 
-export default BioDur563Highlight;
+export default BioTuff592Highlight;

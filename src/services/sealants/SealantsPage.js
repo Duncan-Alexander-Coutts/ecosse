@@ -12,6 +12,8 @@ import BioDurPour from "../../images/sealants/bio-dur-pour.jpg";
 import { BlurOn, PanoramaWideAngle } from "@material-ui/icons";
 import { Radioactive, HomeRoof, HammerWrench } from "mdi-material-ui";
 import BioDur563Highlight from "./BioDur563Highlight";
+import BioSeal197Highlight from "./BioSeal197Highlight";
+import BioTuff592Highlight from "./BioTuff592Highlight";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -65,6 +67,8 @@ const SealantsPage = ({ setPageTitle }) => {
         </Grid>
         <section className={classes.highlights}>
           <BioDur563Highlight />
+          <BioSeal197Highlight />
+          <BioTuff592Highlight />
         </section>
       </div>
     </div>

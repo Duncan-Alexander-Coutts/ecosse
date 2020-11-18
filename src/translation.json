@@ -126,6 +126,46 @@
         "label": "Nuclear Grade Coatings",
         "description": "Certified for use in ‘Service Level 1’ applications. Application friendly, so reduces man-rem exposure."
       }
+    },
+    "highlights": {
+      "biodur563": {
+        "title": "Bio-Dur 563",
+        "paragraphs": [
+          "<strong>Problem -</strong> Severe corrosion of metal resulting in leaking module roof",
+          "<strong>Solution -</strong> Patch repairs using carbon fibre and epoxy resin sealant topcoat of <strong>Bio-Dur 563</strong>",
+          "2 layers of carbon fibre saturated with moisture tolerant resin to add structural strength and patch holes. As the resin is completely moisture tolerant, the repair can be installed in the pouring rain. Topcoat of <strong>Bio-Dur 563</strong>"
+        ]
+      },
+      "bioseal197": {
+        "title": "Bio-Seal 197",
+        "paragraphs": [
+          "<strong>Problem -</strong> Deteriorating deck plates, extensive pitting, pooling and holes",
+          "<strong>Solution - Bio-Seal 197</strong>; A two-part 100% solids epoxy resin over entire deck area"
+        ],
+        "keyPoints": [
+          "Excellent adhesion",
+          "No primer required",
+          "Will not shrink, crack or foam",
+          "Displaces water",
+          "Fire retardant",
+          "Arrests corrosion",
+          "Forms an impermeable seal",
+          "Prevents CUI",
+          "Self-leveling - Can be pumped or poured",
+          "2 Part Kit form - easy to use",
+          "Long pot life - 1.5 hours average"
+        ]
+      },
+      "bioTuff592": {
+        "title": "Bio-Tuff 592",
+        "paragraphs": [
+          "<strong>BIO-TUFF 592 -</strong> Epoxy based system with Kevlar™ filaments, able to be applied in one coat and cure underwater",
+          "Minimal requirement for preparation and salt water tolerant.",
+          "Developed to withstand high impact loadings on offshore boat landings.",
+          "Apply by brush to a wft of 750.",
+          "Tested under tidal operating conditions, 1,002 cycles of direct, extreme abrasion and loading (in excess of 20 tonnes) with <strong>no degradation whatsoever</strong>."
+        ]
+      }
     }
   },
   "footer": {
