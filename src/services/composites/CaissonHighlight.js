@@ -5,14 +5,8 @@ import IntermediateHeader from "../../components/common/IntermediateHeader";
 import CaissonIntroImage from "../../images/composites/caisson-intro.png";
 
 const CaissonHighlight = () => {
-  const caseStudies = [{ label: "Golden Gate" }, { label: "BP Gulf Rig" }];
-
   return (
-    <ProductHighlight
-      title="Caisson"
-      caseStudies={caseStudies}
-      image={CaissonIntroImage}
-    >
+    <ProductHighlight title="Caisson" image={CaissonIntroImage}>
       <IntermediateHeader>
         Caissons are the arteries of offshore assets and in particular those
         servicing the firewater and dump functions.

@@ -17,6 +17,8 @@ import {
   TextureBox,
 } from "mdi-material-ui";
 import ApplicationsHighlight from "./ApplicationsHighlight";
+import InstallationsHighlight from "./InstallationsHighlight";
+import VariantsHighlight from "./VariantsHighlight";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -78,6 +80,8 @@ const CorrosionPage = ({ setPageTitle }) => {
         </Grid>
         <section className={classes.highlights}>
           <ApplicationsHighlight />
+          <InstallationsHighlight />
+          <VariantsHighlight />
         </section>
       </div>
     </div>

@@ -5,17 +5,8 @@ import IntermediateHeader from "../../components/common/IntermediateHeader";
 import RiserIntroImage from "../../images/composites/riser-intro.png";
 
 const RiserHighlight = () => {
-  const caseStudies = [
-    { label: "Almost heaven" },
-    { label: "Brooklyn bridge" },
-  ];
-
   return (
-    <ProductHighlight
-      caseStudies={caseStudies}
-      title="Riser"
-      image={RiserIntroImage}
-    >
+    <ProductHighlight title="Riser" image={RiserIntroImage}>
       <IntermediateHeader>
         For producing risers in the splashzone, the shutdown of the same is not
         always possible to effect corrosion protection so Ecosse have developed

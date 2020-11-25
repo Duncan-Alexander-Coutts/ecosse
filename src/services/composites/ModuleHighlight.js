@@ -5,14 +5,8 @@ import IntermediateHeader from "../../components/common/IntermediateHeader";
 import ModuleIntroImage from "../../images/composites/module-roof-intro.png";
 
 const ModuleHighlight = () => {
-  const caseStudies = [{ label: "Tay bridge" }];
-
   return (
-    <ProductHighlight
-      title="Deck, Vessel and Module"
-      caseStudies={caseStudies}
-      image={ModuleIntroImage}
-    >
+    <ProductHighlight title="Deck, Vessel and Module" image={ModuleIntroImage}>
       <IntermediateHeader>
         The loss of production due to leaking and structurally weakened pipework
         caused by corrosion and erosion costs the industry £Millions annually.

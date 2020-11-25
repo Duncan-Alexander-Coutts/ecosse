@@ -5,18 +5,8 @@ import IntermediateHeader from "../../components/common/IntermediateHeader";
 import PipePressureIntroImage from "../../images/composites/pipe-pressure-intro.png";
 
 const PipePressureHighlight = () => {
-  const caseStudies = [
-    { label: "LHC Geneva" },
-    { label: "EFD gas mains" },
-    { label: "Rowan Gorilla II" },
-  ];
-
   return (
-    <ProductHighlight
-      caseStudies={caseStudies}
-      title="Pipe Pressure"
-      image={PipePressureIntroImage}
-    >
+    <ProductHighlight title="Pipe Pressure" image={PipePressureIntroImage}>
       <IntermediateHeader>
         The loss of production due to leaking and structurally weakened pipework
         caused by corrosion and erosion costs the industry £Millions annually.

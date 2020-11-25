@@ -5,14 +5,8 @@ import IntermediateHeader from "../../components/common/IntermediateHeader";
 import PipePenetrationImage from "../../images/fire-and-blast/flex-jackets.jpg";
 
 const FlexJacketsHighlight = () => {
-  const caseStudies = [{ label: "Golden Gate" }, { label: "BP Gulf Rig" }];
-
   return (
-    <ProductHighlight
-      title="Flexible Jackets"
-      caseStudies={caseStudies}
-      image={PipePenetrationImage}
-    >
+    <ProductHighlight title="Flexible Jackets" image={PipePenetrationImage}>
       <IntermediateHeader>
         Manufactured from multi-layer fabrics, our Jacket Systems are designed
         with ease of installation in mind.

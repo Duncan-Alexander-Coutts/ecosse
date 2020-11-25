@@ -5,12 +5,9 @@ import IntermediateHeader from "../../components/common/IntermediateHeader";
 import PipePenetrationImage from "../../images/fire-and-blast/pipe-penetration-seal.jpg";
 
 const PipePenetrationHighlight = () => {
-  const caseStudies = [{ label: "Golden Gate" }, { label: "BP Gulf Rig" }];
-
   return (
     <ProductHighlight
       title="Pipe Penetration Seals"
-      caseStudies={caseStudies}
       image={PipePenetrationImage}
     >
       <IntermediateHeader>
