@@ -132,7 +132,7 @@ const CompositesPage = ({ setPageTitle }) => {
             <FeatureGridItem>
               <Feature
                 icon={WavesOutlined}
-                i18nKey="composites.features.corrosionResistent"
+                i18nKey="composites.features.corrosionResistant"
               />
             </FeatureGridItem>
             <FeatureGridItem>

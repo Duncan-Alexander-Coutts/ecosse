@@ -11,6 +11,7 @@ import CompositesPage from "./services/composites/CompositesPage";
 import FireAndBlastPage from "./services/fire-and-blast/FireAndBlastPage";
 import { ScrollToTop } from "./components/scroll-to-top/ScrollToTop";
 import { SealantsPage } from "./services/sealants/SealantsPage";
+import { CorrosionPage } from "./services/corrosion/CorrosionPage";
 
 const theme = createMuiTheme({
   palette: {
@@ -55,6 +56,10 @@ const App = () => {
         <Route
           path="/services/sealants"
           render={() => <SealantsPage setPageTitle={setPageTitle} />}
+        />
+        <Route
+          path="/services/corrosion"
+          render={() => <CorrosionPage setPageTitle={setPageTitle} />}
         />
         <Route
           path="/team"

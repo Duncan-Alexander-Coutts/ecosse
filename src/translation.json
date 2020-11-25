@@ -45,8 +45,8 @@
         "label": "Extensively Tested",
         "description": "Our engineered composite systems are in compliance with to validated to the following industry standards:ASME PCC-2, ISO/TS 24817, DNV Type Approval."
       },
-      "corrosionResistent": {
-        "label": "Corrosion Resistent",
+      "corrosionResistant": {
+        "label": "Corrosion Resistant",
         "description": "The impermeability and high adhesion level of our 100% solids epoxy resin creates the containment barrier, arresting corrosion immediately."
       },
       "pipingCompatibility": {
@@ -165,6 +165,36 @@
           "Apply by brush to a wft of 750.",
           "Tested under tidal operating conditions, 1,002 cycles of direct, extreme abrasion and loading (in excess of 20 tonnes) with <strong>no degradation whatsoever</strong>."
         ]
+      }
+    }
+  },
+  "corrosion": {
+    "pageHeader": "Anti-Corrosion",
+    "intro": "<strong>Ecosse Global</strong> are leaders in the supply of a range of specialist anticorrosion solutions to suit the most <strong>arduous situations</strong> including the aggressive splash zone areas of <strong>offshore structures</strong>.",
+    "features": {
+      "diameter": {
+        "label": "Suits Any Diameter",
+        "description": "From 50mm to 3 meters, and can be interlocked to accommodate any length"
+      },
+      "flange": {
+        "label": "Full Length Flange",
+        "description": "Factory fitted with corrosion-resistant self-threading fasteners"
+      },
+      "active": {
+        "label": "Active Protection",
+        "description": "Contains environmentally safe corrosion inhibitors"
+      },
+      "inspection": {
+        "label": "Easy Removal for Inspection",
+        "description": "Unlike any other anti-corrosion system"
+      },
+      "preparation": {
+        "label": "Minimum Surface Preparation",
+        "description": "Does not require substrate shotblast preparation"
+      },
+      "cold": {
+        "label": "Cold Applied",
+        "description": "No hot work permit required"
       }
     }
   },

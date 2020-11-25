@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
     display: "block",
     margin: "auto",
   },
+  description: {
+    textAlign: "center",
+  },
 }));
 
 const Feature = (props) => {
@@ -39,7 +42,7 @@ const Feature = (props) => {
       <Typography color="primary" className={classes.title} variant="h6">
         {t(`${props.i18nKey}.label`)}
       </Typography>
-      <Typography color="primary">
+      <Typography className={classes.description} color="primary">
         <Trans i18nKey={`${props.i18nKey}.description`} />
       </Typography>
     </div>

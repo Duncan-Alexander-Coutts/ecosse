@@ -34,6 +34,7 @@ export default withStyles(styles)((props) => {
               header={t("home.services.antiCorrosion.title")}
               image={rust}
               description={t("home.services.antiCorrosion.description")}
+              link="/services/corrosion"
             />
           </Grid>
           <Grid xs={12} md={6} item>
