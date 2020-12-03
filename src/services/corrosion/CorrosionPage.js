@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
-
-import { Grid, makeStyles } from "@material-ui/core";
+import {
+  Grid,
+  makeStyles,
+  Paper,
+  Divider,
+  Typography,
+} from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import { Feature, FeatureGridItem } from "../../components/feature/Feature";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
@@ -19,6 +24,7 @@ import {
 import ApplicationsHighlight from "./ApplicationsHighlight";
 import InstallationsHighlight from "./InstallationsHighlight";
 import VariantsHighlight from "./VariantsHighlight";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -30,7 +36,20 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: CONTENT_MAX_WIDTH,
   },
   highlights: {
-    paddingTop: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+  },
+  otherAntiCorrosionContainer: {
+    "& > hr": {
+      marginBottom: theme.spacing(2),
+    },
+  },
+  otherAntiCorrosionContent: {
+    padding: theme.spacing(2),
+    "& > p": {
+      maxWidth: theme.spacing(62),
+      margin: "auto",
+      textAlign: "center",
+    },
   },
 }));
 
@@ -78,6 +97,21 @@ const CorrosionPage = ({ setPageTitle }) => {
             <Feature icon={Snowflake} i18nKey="corrosion.features.cold" />
           </FeatureGridItem>
         </Grid>
+        <div className={classes.otherAntiCorrosionContainer}>
+          <Divider />
+          <Paper
+            className={classes.otherAntiCorrosionContent}
+            variant="outlined"
+          >
+            <Typography color="primary">
+              For other anti-corrosion products and applications see{" "}
+              <Link to="/services/composites">Composites</Link> and{" "}
+              <Link to="/services/sealants">
+                Specialist Sealants and Coatings
+              </Link>
+            </Typography>
+          </Paper>
+        </div>
         <section className={classes.highlights}>
           <ApplicationsHighlight />
           <InstallationsHighlight />

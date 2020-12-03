@@ -1,24 +1,24 @@
 {
   "home": {
     "intro": "At <strong>Ecosse Global UK</strong>, our aim is to provide our clients with the most effective, innovative solutions for all their asset integrity needs",
-    "subIntro": "Ecosse Global UK Limited has over 30 years of industry experience of understanding effective asset lifecycle extension. Looking for the answers to clients problems, we at Ecosse Global UK maintain a watchful eye on new technology with a view to developing innovative products.",
+    "subIntro": "Ecosse Global UK Limited has over <strong>30 years</strong> of industry experience of understanding effective <strong>asset lifecycle extension</strong>. Looking for the answers to clients problems, we at Ecosse Global UK maintain a watchful eye on new technology with a view to developing <strong>innovative products</strong>.",
     "services": {
       "title": "What we do",
       "antiCorrosion": {
         "title": "Anti Corrosion",
-        "description": "Some text that describes Anti Corrosion services. And then some other text. Some other text too."
+        "description": "Our Ecowrap system comprises an impact resistant outer nylon Neoprene jacket with polyester internal carrier membrane, into which a gel anti-corrosion formulation is impregnated at the factory. It was been especially designed for the highly corrosive splashzone."
       },
       "composites": {
         "title": "Composites",
-        "description": "Our modern composite repair systems are extremely versatile, adaptable and reliable. They have many impressive capabilities that make them an attractive alternative to traditional repair or replacement methods."
+        "description": "Our modern composite wrap repair system is built for tough environments. It has been used extensively on oil and gas offshore platforms and has many impressive capabilities that makes it an attractive alternative to traditional repair or replacement methods. In 2019, Ecosse Global was awarded DNV GL Type Approval for our PowerSleeve pipe wrap system."
       },
       "fireAndBlast": {
         "title": "Fire and Blast",
-        "description": "Some text that describes Fire And Blast services. And then some other text. Some other text too."
+        "description": "Our fire seal and enclosure systems are independently tested by IMO-approved third party test houses. Throughout testing our systems have maintained their integrity, stability and insulation properties, and accordingly carry certification issued by Lloyd's Register of Shipping, Det Norske Veritas (DNV) and/or the American Bureau of Shipping (ABS)."
       },
       "sealants": {
         "title": "Specialist Sealants and Coatings",
-        "description": "Some text that describes Sealants services. And then some other text. Some other text too."
+        "description": "At Ecosse Global UK, we provide a range of high quality epoxy resins, including products that can be used below the waterline and even displace fuel to form a permanent bond. Our high performing sealants have been used extensively on North Sea Platforms for the last 10 years."
       }
     }
   },

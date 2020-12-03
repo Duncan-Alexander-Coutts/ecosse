@@ -6,12 +6,10 @@ import { Trans, useTranslation } from "react-i18next";
 
 const BioDur563Highlight = () => {
   const { t } = useTranslation();
-  const caseStudies = [{ label: "Tay bridge" }];
 
   return (
     <ProductHighlight
       title={t("sealants.highlights.biodur563.title")}
-      caseStudies={caseStudies}
       image={ModuleIntroImage}
     >
       {t("sealants.highlights.biodur563.paragraphs", {

@@ -62,7 +62,7 @@ const DesktopNavigation = () => {
             <Button
               className={classes.navButton}
               variant="outlined"
-              component={Link}
+              component={item.link ? Link : undefined}
               to={item.link || ""}
               onClick={(event) => handleClick(event, item)}
               size="large"

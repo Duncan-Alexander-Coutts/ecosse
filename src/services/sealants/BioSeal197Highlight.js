@@ -17,7 +17,6 @@ const useStyles = makeStyles(() => ({
 const BioSeal197Highlight = () => {
   const classes = useStyles();
   const { t } = useTranslation();
-  const caseStudies = [{ label: "Tay bridge" }];
 
   const keyPoints = t("sealants.highlights.bioseal197.keyPoints", {
     returnObjects: true,
@@ -26,7 +25,6 @@ const BioSeal197Highlight = () => {
   return (
     <ProductHighlight
       title={t("sealants.highlights.bioseal197.title")}
-      caseStudies={caseStudies}
       image={BioSealImage}
     >
       {t("sealants.highlights.bioseal197.paragraphs", {

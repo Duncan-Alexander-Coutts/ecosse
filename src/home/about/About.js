@@ -53,7 +53,7 @@ export default withStyles(styles)((props) => {
               color="primary"
               variant="subtitle1"
             >
-              {t("home.subIntro")}
+              <Trans>{t("home.subIntro")}</Trans>
             </Typography>
           </Grid>
         </Grid>
