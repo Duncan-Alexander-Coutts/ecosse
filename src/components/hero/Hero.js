@@ -1,6 +1,4 @@
 import React from "react";
-import classNames from "classnames";
-
 import BigImage from "../../images/home/hero.jpg";
 import { withStyles, Typography, Grow } from "@material-ui/core";
 import { ECOSSE_COLOURS } from "../../constants";
@@ -11,19 +9,16 @@ const styles = (theme) => ({
   },
   hero: {
     width: "100%",
-    height: 138,
+    height: 550,
     [theme.breakpoints.down("xs")]: {
       height: theme.spacing(11),
     },
     backgroundRepeat: "none",
     backgroundSize: "cover",
     backgroundImage: `url(${BigImage})`,
+    backgroundPosition: "center",
     boxShadow: theme.shadows[2],
     backgroundPositionY: -40,
-  },
-  heroLarge: {
-    height: 550,
-    backgroundPosition: "center",
   },
   overlayContainer: {
     position: "absolute",
@@ -68,38 +63,32 @@ export default withStyles(styles)((props) => {
   const renderSlogan = () => {
     return (
       <div className={props.classes.overlayContainer}>
-        {props.fullHeight && (
-          <Grow in={true} timeout={1000}>
-            <>
-              <Typography
-                align="center"
-                className={props.classes.slogan}
-                variant="h2"
-              >
-                Ultimate asset integrity solutions
-              </Typography>
-              <div className={props.classes.polygonContainer}>
-                <div
-                  className={`${props.classes.polygon} ${props.classes.polygonBlue}`}
-                />
-                <div
-                  className={`${props.classes.polygon} ${props.classes.polygonRed}`}
-                />
-              </div>
-            </>
-          </Grow>
-        )}
+        <Grow in={true} timeout={1000}>
+          <>
+            <Typography
+              align="center"
+              className={props.classes.slogan}
+              variant="h2"
+            >
+              Ultimate asset integrity solutions
+            </Typography>
+            <div className={props.classes.polygonContainer}>
+              <div
+                className={`${props.classes.polygon} ${props.classes.polygonBlue}`}
+              />
+              <div
+                className={`${props.classes.polygon} ${props.classes.polygonRed}`}
+              />
+            </div>
+          </>
+        </Grow>
       </div>
     );
   };
 
   return (
     <div className={props.classes.heroContainer}>
-      <div
-        className={classNames(props.classes.hero, {
-          [props.classes.heroLarge]: props.fullHeight,
-        })}
-      />
+      <div className={props.classes.hero} />
       {renderSlogan()}
     </div>
   );

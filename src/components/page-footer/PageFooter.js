@@ -37,7 +37,7 @@ export default withStyles(styles)((props) => {
   const { t } = useTranslation();
 
   return (
-    <>
+    <footer>
       <div className={props.classes.badgeContainer}>
         <img
           className={props.classes.achilles}
@@ -62,6 +62,6 @@ export default withStyles(styles)((props) => {
           {t("footer.ownership")}
         </Typography>
       </Paper>
-    </>
+    </footer>
   );
 });

@@ -38,34 +38,38 @@ const App = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <Router>
-        <ScrollToTop />
-        <PageHeader pageTitle={pageTitle} />
-        <Route
-          path="/"
-          render={() => <HomePage setPageTitle={setPageTitle} />}
-          exact
-        />
-        <Route
-          path="/services/composites"
-          render={() => <CompositesPage setPageTitle={setPageTitle} />}
-        />
-        <Route
-          path="/services/fireandblast"
-          render={() => <FireAndBlastPage setPageTitle={setPageTitle} />}
-        />
-        <Route
-          path="/services/sealants"
-          render={() => <SealantsPage setPageTitle={setPageTitle} />}
-        />
-        <Route
-          path="/services/corrosion"
-          render={() => <CorrosionPage setPageTitle={setPageTitle} />}
-        />
-        <Route
-          path="/team"
-          render={() => <TeamPage setPageTitle={setPageTitle} />}
-        />
-        <PageFooter />
+        <div>
+          <ScrollToTop />
+          <PageHeader pageTitle={pageTitle} />
+          <div>
+            <Route
+              path="/"
+              render={() => <HomePage setPageTitle={setPageTitle} />}
+              exact
+            />
+            <Route
+              path="/services/composites"
+              render={() => <CompositesPage setPageTitle={setPageTitle} />}
+            />
+            <Route
+              path="/services/fireandblast"
+              render={() => <FireAndBlastPage setPageTitle={setPageTitle} />}
+            />
+            <Route
+              path="/services/sealants"
+              render={() => <SealantsPage setPageTitle={setPageTitle} />}
+            />
+            <Route
+              path="/services/corrosion"
+              render={() => <CorrosionPage setPageTitle={setPageTitle} />}
+            />
+            <Route
+              path="/team"
+              render={() => <TeamPage setPageTitle={setPageTitle} />}
+            />
+          </div>
+          <PageFooter />
+        </div>
       </Router>
     </MuiThemeProvider>
   );

@@ -8,8 +8,15 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
+  imageContainer: {
+    backgroundColor: theme.palette.common.white,
+    borderRadius: "50%",
+    padding: theme.spacing(),
+    display: "flex",
+  },
   logo: {
     width: 50,
+    height: 50,
   },
   companyName: {
     marginLeft: theme.spacing(1),
@@ -22,11 +29,13 @@ const Logo = (props) => {
 
   return (
     <div className={classes.root}>
-      <img
-        src={EcosseLogo}
-        alt="Ecosse Global fire and water logo"
-        className={classes.logo}
-      />
+      <div className={classes.imageContainer}>
+        <img
+          src={EcosseLogo}
+          alt="Ecosse Global fire and water logo"
+          className={classes.logo}
+        />
+      </div>
       {!props.hideText && (
         <Typography className={classes.companyName} variant="h5">
           Ecosse Global UK
