@@ -39,34 +39,6 @@ const useStyles = makeStyles((theme) => ({
   bold: {
     fontWeight: "bold",
   },
-  contentSection: {
-    display: "flex",
-    width: "100%",
-    justifyContent: "center",
-    flexDirection: "column",
-    background: `linear-gradient(
-        to bottom right,
-        transparent 0%,
-        transparent 40%,
-        ${ECOSSE_COLOURS.blue} 41%,
-        ${ECOSSE_COLOURS.blue} 60%,
-        transparent 61%,
-        transparent 100%
-      )
-      0% 100% / 100% 100%,
-    linear-gradient(
-        to top right,
-        transparent 0%,
-        transparent 40%,
-        ${ECOSSE_COLOURS.red} 41%,
-        ${ECOSSE_COLOURS.red} 60%,
-        transparent 61%,
-        transparent 100%
-      )
-      100% 0% / 100% 100%`,
-    backgroundRepeat: "repeat-y",
-    backgroundSize: "100% 50%",
-  },
   contentContainer: {
     maxWidth: CONTENT_MAX_WIDTH,
     position: "relative",
@@ -154,7 +126,7 @@ const CompositesPage = ({ setPageTitle }) => {
             <ModuleHighlight />
             <RiserHighlight />
           </section>
-          <Paper elevation={8} className={classes.repairSection}>
+          <Paper elevation={0} className={classes.repairSection}>
             <Typography
               color="primary"
               className={classes.bold}

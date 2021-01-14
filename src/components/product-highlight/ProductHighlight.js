@@ -17,6 +17,7 @@ const styles = (theme) => ({
   },
   content: {
     margin: "auto",
+    border: `2px solid ${theme.palette.primary.main}`,
     maxWidth: theme.breakpoints.values.md,
   },
   productHighlightDescriptionContainer: {
@@ -45,7 +46,7 @@ const ProductHighlight = (props) => {
     ));
 
   return (
-    <Card elevation={8} className={props.classes.container}>
+    <Card elevation={0} className={props.classes.container}>
       <CardContent className={props.classes.content}>
         <ImagedContentItem
           title={props.title}

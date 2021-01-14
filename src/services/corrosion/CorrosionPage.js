@@ -98,11 +98,7 @@ const CorrosionPage = ({ setPageTitle }) => {
           </FeatureGridItem>
         </Grid>
         <div className={classes.otherAntiCorrosionContainer}>
-          <Divider />
-          <Paper
-            className={classes.otherAntiCorrosionContent}
-            variant="outlined"
-          >
+          <Paper elevation={0} className={classes.otherAntiCorrosionContent}>
             <Typography color="primary">
               For other anti-corrosion products and applications see{" "}
               <Link to="/services/composites">Composites</Link> and{" "}
