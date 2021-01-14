@@ -1,23 +1,16 @@
 import React, { useRef, useState } from "react";
-import {
-  withStyles,
-  Typography,
-  AppBar,
-  Toolbar,
-  useMediaQuery,
-  Grid,
-} from "@material-ui/core";
+import { Typography, AppBar, Toolbar, useMediaQuery } from "@material-ui/core";
 
-import { useTheme } from "@material-ui/core/styles";
-import { withRouter } from "react-router-dom";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import classNames from "classnames";
 import Hero from "../hero/Hero";
 import Logo from "../common/Logo";
 import MobileNavigation from "../navigation/MobileNavigation";
 import DesktopNavigation from "../navigation/DesktopNavigation";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
+import { useLocation } from "react-router-dom";
 
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "sticky",
     background: "#1f3b66",
@@ -38,73 +31,62 @@ const styles = (theme) => ({
     justifyContent: "space-between",
     background: "transparent",
   },
-  toolbarGrid: {
-    alignItems: "center",
-  },
   toolbarLeft: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
   },
-  pageTitleContainer: {
-    textAlign: "center",
-    marginRight: theme.spacing(),
-  },
   pageTitle: {
     color: theme.palette.common.white,
     fontWeight: "bold",
+    marginLeft: theme.spacing(),
+    marginRight: theme.spacing(),
   },
-});
+}));
 
-export default withRouter(
-  withStyles(styles)((props) => {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
-    const isHome = props.location.pathname === "/";
-    const [showSolidBackground, setShowSolidBackground] = useState(
-      isHome ? false : true
-    );
-    const refElement = useRef(null);
+const PageHeader = ({ pageTitle }) => {
+  const classes = useStyles();
+  const location = useLocation();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
+  const isHome = location.pathname === "/";
+  const [showSolidBackground, setShowSolidBackground] = useState(
+    isHome ? false : true
+  );
+  const refElement = useRef(null);
 
-    useScrollPosition(({ currPos }) => {
-      if (isHome) {
-        currPos.y < refElement.current.clientHeight * -1
-          ? setShowSolidBackground(true)
-          : setShowSolidBackground(false);
-      }
-    });
+  useScrollPosition(({ currPos }) => {
+    if (isHome) {
+      currPos.y < refElement.current.clientHeight * -1
+        ? setShowSolidBackground(true)
+        : setShowSolidBackground(false);
+    }
+  });
 
-    return (
-      <>
-        <AppBar
-          ref={refElement}
-          elevation={isHome ? 0 : 1}
-          className={classNames(props.classes.appBar, {
-            [props.classes.appBarHome]: isHome,
-            [props.classes.appBarHomeSolid]: isHome && showSolidBackground,
-          })}
-        >
-          <Toolbar className={props.classes.toolbar}>
-            <Grid className={props.classes.toolbarGrid} container>
-              <Grid xs={2} sm={12} item className={props.classes.toolbarLeft}>
-                <div className={props.classes.toolbarLeft}>
-                  {isMobile && <MobileNavigation />}
-                  <Logo hideText={isMobile} />
-                </div>
-                {!isMobile && <DesktopNavigation />}
-              </Grid>
-              <Grid xs={10} sm={12} item>
-                <div className={props.classes.pageTitleContainer}>
-                  <Typography className={props.classes.pageTitle} variant="h3">
-                    {props.pageTitle}
-                  </Typography>
-                </div>
-              </Grid>
-            </Grid>
-          </Toolbar>
-        </AppBar>
-        {isHome && <Hero />}
-      </>
-    );
-  })
-);
+  return (
+    <>
+      <AppBar
+        ref={refElement}
+        elevation={isHome ? 0 : 1}
+        className={classNames(classes.appBar, {
+          [classes.appBarHome]: isHome,
+          [classes.appBarHomeSolid]: isHome && showSolidBackground,
+        })}
+      >
+        <Toolbar className={classes.toolbar}>
+          <div className={classes.toolbarLeft}>
+            {isMobile && <MobileNavigation />}
+            <Logo hideText={isMobile} />
+          </div>
+          <Typography className={classes.pageTitle} variant="h5">
+            {pageTitle}
+          </Typography>
+          {!isMobile && <DesktopNavigation />}
+        </Toolbar>
+      </AppBar>
+      {isHome && <Hero />}
+    </>
+  );
+};
+
+export default PageHeader;

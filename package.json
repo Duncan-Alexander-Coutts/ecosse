@@ -26,12 +26,21 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "plugins": [
+      "mui-unused-classes"
+    ],
+    "rules": {
+      "mui-unused-classes/unused-classes": "warn"
+    }
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "eslint-plugin-mui-unused-classes": "^1.0.3"
+  }
 }

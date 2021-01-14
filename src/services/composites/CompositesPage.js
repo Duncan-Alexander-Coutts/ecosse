@@ -19,11 +19,7 @@ import RiserHighlight from "./RiserHighlight";
 import Clamp from "../../images/composites/clamp.jpg";
 import Exchange from "../../images/composites/heat_exchanger.jpg";
 import Cool from "../../images/composites/cooling_water_line.jpg";
-import {
-  CONTENT_MAX_WIDTH,
-  ECOSSE_COLOURS,
-  FADE_TRANSITION_DURATION,
-} from "../../constants";
+import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../../constants";
 import { useTranslation } from "react-i18next";
 import { LabeledTick } from "../../components/labeled-tick/LabeledTick";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";

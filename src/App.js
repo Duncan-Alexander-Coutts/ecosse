@@ -1,3 +1,4 @@
+import "./App.css";
 import React, { useState } from "react";
 import PageHeader from "./components/page-header/PageHeader";
 import PageFooter from "./components/page-footer/PageFooter";
@@ -43,10 +44,10 @@ const App = () => {
   return (
     <MuiThemeProvider theme={theme}>
       <Router>
-        <div>
+        <div className="page-container">
           <ScrollToTop />
           <PageHeader pageTitle={pageTitle} />
-          <div>
+          <div className="route-container">
             <Route
               path="/"
               render={() => <HomePage setPageTitle={setPageTitle} />}

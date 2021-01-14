@@ -1,11 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  Grid,
-  makeStyles,
-  Paper,
-  Divider,
-  Typography,
-} from "@material-ui/core";
+import { Grid, makeStyles, Paper, Typography } from "@material-ui/core";
 import { useTranslation } from "react-i18next";
 import { Feature, FeatureGridItem } from "../../components/feature/Feature";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
