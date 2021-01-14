@@ -14,8 +14,8 @@ const BioDur563Highlight = () => {
     >
       {t("sealants.highlights.biodur563.paragraphs", {
         returnObjects: true,
-      }).map((paragraph) => (
-        <Typography color="primary" paragraph>
+      }).map((paragraph, index) => (
+        <Typography key={index} color="primary" paragraph>
           <Trans>{paragraph}</Trans>
         </Typography>
       ))}

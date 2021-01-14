@@ -29,14 +29,14 @@ const BioSeal197Highlight = () => {
     >
       {t("sealants.highlights.bioseal197.paragraphs", {
         returnObjects: true,
-      }).map((paragraph) => (
-        <Typography color="primary" paragraph>
+      }).map((paragraph, index) => (
+        <Typography key={index} color="primary" paragraph>
           <Trans>{paragraph}</Trans>
         </Typography>
       ))}
       <ul className={classes.keyPointsList}>
         {keyPoints.map((point) => (
-          <li>
+          <li key={point}>
             <LabeledTick label={point} />
           </li>
         ))}

@@ -59,7 +59,7 @@ export default withStyles(styles)((props) => {
       </div>
       <Paper className={props.classes.root}>
         <Typography className={props.classes.copyright}>
-          {t("footer.ownership")}
+          {t("footer.ownership", { date: new Date() })}
         </Typography>
       </Paper>
     </footer>

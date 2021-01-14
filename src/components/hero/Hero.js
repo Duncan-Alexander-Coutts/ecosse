@@ -10,15 +10,11 @@ const styles = (theme) => ({
   hero: {
     width: "100%",
     height: 550,
-    [theme.breakpoints.down("xs")]: {
-      height: theme.spacing(11),
-    },
-    backgroundRepeat: "none",
+    backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
     backgroundImage: `url(${BigImage})`,
     backgroundPosition: "center",
     boxShadow: theme.shadows[2],
-    backgroundPositionY: -40,
   },
   overlayContainer: {
     position: "absolute",

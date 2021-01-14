@@ -14,8 +14,8 @@ const BioTuff592Highlight = () => {
     >
       {t("sealants.highlights.bioTuff592.paragraphs", {
         returnObjects: true,
-      }).map((paragraph) => (
-        <Typography color="primary" paragraph>
+      }).map((paragraph, index) => (
+        <Typography key={index} color="primary" paragraph>
           <Trans>{paragraph}</Trans>
         </Typography>
       ))}

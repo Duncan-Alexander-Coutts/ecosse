@@ -10,6 +10,7 @@
     "@n8tb1t/use-scroll-position": "2.0.3",
     "classnames": "2.2.6",
     "i18next": "19.8.4",
+    "luxon": "1.25.0",
     "mdi-material-ui": "6.20.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
