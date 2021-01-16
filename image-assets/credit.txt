@@ -1,2 +1,0 @@
-rust.jpg - https://unsplash.com/photos/pEK3AbP8wa4
-fire.jpg - https://unsplash.com/photos/AtPbmIH97mA
