@@ -1,6 +1,9 @@
 import React from "react";
 import { Typography, withStyles, Grid, Fade } from "@material-ui/core";
-import { FADE_TRANSITION_DURATION } from "../../constants";
+import {
+  EXPERIENCE_START_YEAR,
+  FADE_TRANSITION_DURATION,
+} from "../../constants";
 import { Trans, useTranslation } from "react-i18next";
 
 const styles = (theme) => ({
@@ -32,6 +35,8 @@ const styles = (theme) => ({
 export default withStyles(styles)((props) => {
   const { t } = useTranslation();
 
+  const yearsOfExperience = new Date().getFullYear() - EXPERIENCE_START_YEAR;
+
   return (
     <Fade in timeout={FADE_TRANSITION_DURATION}>
       <section className={props.classes.root}>
@@ -53,7 +58,7 @@ export default withStyles(styles)((props) => {
               color="primary"
               variant="subtitle1"
             >
-              <Trans>{t("home.subIntro")}</Trans>
+              <Trans>{t("home.subIntro", { yearsOfExperience })}</Trans>
             </Typography>
           </Grid>
         </Grid>

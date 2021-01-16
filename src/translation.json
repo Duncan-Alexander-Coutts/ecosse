@@ -1,7 +1,7 @@
 {
   "home": {
     "intro": "At <strong>Ecosse Global UK</strong>, our aim is to provide our clients with the most effective, innovative solutions for all their asset integrity needs",
-    "subIntro": "Ecosse Global UK Limited has over <strong>30 years</strong> of industry experience of understanding effective <strong>asset lifecycle extension</strong>. Looking for the answers to clients problems, we at Ecosse Global UK maintain a watchful eye on new technology with a view to developing <strong>innovative products</strong>.",
+    "subIntro": "Ecosse Global UK Limited has over <strong>{{yearsOfExperience}} years</strong> of industry experience of understanding effective <strong>asset lifecycle extension</strong>. Looking for the answers to clients problems, we at Ecosse Global UK maintain a watchful eye on new technology with a view to developing <strong>innovative products</strong>.",
     "services": {
       "title": "What we do",
       "antiCorrosion": {
