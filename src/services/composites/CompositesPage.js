@@ -52,7 +52,6 @@ const useStyles = makeStyles((theme) => ({
     margin: "auto",
     maxWidth: theme.breakpoints.values.sm,
   },
-  blahh: {},
 }));
 
 const carouselItems = [
