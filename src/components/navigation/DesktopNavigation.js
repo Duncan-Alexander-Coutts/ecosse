@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, makeStyles, Menu, MenuItem } from "@material-ui/core";
-import { Link } from "react-router-dom";
 import { navigationItems } from "./navigation-constants";
 
 const useStyles = makeStyles((theme) => ({
@@ -59,7 +58,7 @@ const DesktopNavigation = () => {
       {navigationItems.map((item) => {
         return (
           <div key={item.label}>
-            <Button
+            {/* <Button
               className={classes.navButton}
               variant="outlined"
               component={item.link ? Link : undefined}
@@ -69,7 +68,7 @@ const DesktopNavigation = () => {
             >
               {item.label}
             </Button>
-            {renderChildren(item.children)}
+            {renderChildren(item.children)} */}
           </div>
         );
       })}

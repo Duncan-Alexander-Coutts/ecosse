@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, makeStyles, Typography } from "@material-ui/core";
 import MailOutline from "@material-ui/icons/MailOutline";
-import linkedInIcon from "../images/team/LI-In-Bug.png";
+import linkedInIcon from "../../images/team/LI-In-Bug.png";
 
 const useStyles = makeStyles((theme) => ({
   container: {

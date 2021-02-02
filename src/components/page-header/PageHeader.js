@@ -46,10 +46,9 @@ const useStyles = makeStyles((theme) => ({
 
 const PageHeader = ({ pageTitle }) => {
   const classes = useStyles();
-  const location = useLocation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
-  const isHome = location.pathname === "/";
+  const isHome = false;
   const [showSolidBackground, setShowSolidBackground] = useState(
     isHome ? false : true
   );

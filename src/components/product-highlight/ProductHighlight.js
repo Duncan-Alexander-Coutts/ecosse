@@ -8,7 +8,6 @@ import {
   CardContent,
 } from "@material-ui/core";
 
-import { withFadeIn } from "../higher-order/withFadeIn";
 import ImagedContentItem from "../imaged-content/ImagedContentItem";
 
 const styles = (theme) => ({
@@ -76,4 +75,4 @@ const ProductHighlight = (props) => {
   );
 };
 
-export default withFadeIn(withStyles(styles)(ProductHighlight));
+export default withStyles(styles)(ProductHighlight);

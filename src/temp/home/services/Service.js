@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import TitledImageContent from "../../services/TitledImageContent";
 import { Typography, Button, withStyles } from "@material-ui/core";
-import { withFadeIn } from "../../components/higher-order/withFadeIn";
 
 const styles = (theme) => ({
   serviceRoot: {
@@ -42,31 +41,29 @@ const styles = (theme) => ({
   },
 });
 
-export default withFadeIn(
-  withStyles(styles)((props) => {
-    return (
-      <div>
-        <TitledImageContent
-          image={props.image}
-          title={props.title}
-          imageClass={props.classes.imageClass}
-        >
-          <div className={props.classes.descriptionContentContainer}>
-            <Typography color="primary" variant="h6">
-              {props.description}
-            </Typography>
-            <Button
-              component={Link}
-              to={props.url}
-              color="primary"
-              className={props.classes.button}
-              variant="outlined"
-            >
-              Learn more
-            </Button>
-          </div>
-        </TitledImageContent>
-      </div>
-    );
-  })
-);
+export default withStyles(styles)((props) => {
+  return (
+    <div>
+      <TitledImageContent
+        image={props.image}
+        title={props.title}
+        imageClass={props.classes.imageClass}
+      >
+        <div className={props.classes.descriptionContentContainer}>
+          <Typography color="primary" variant="h6">
+            {props.description}
+          </Typography>
+          <Button
+            component={Link}
+            to={props.url}
+            color="primary"
+            className={props.classes.button}
+            variant="outlined"
+          >
+            Learn more
+          </Button>
+        </div>
+      </TitledImageContent>
+    </div>
+  );
+});

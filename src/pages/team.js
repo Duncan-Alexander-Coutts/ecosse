@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ImagedContentItem from "../components/imaged-content/ImagedContentItem";
+import { Layout } from "../components/Layout";
 import carolineMugshot from "../images/team/caroline.jpg";
 import ernieMugshot from "../images/team/ernie.jpg";
-import { withStyles, Fade, Typography } from "@material-ui/core";
-import TeamItemContent from "./TeamItemContent";
+import { Fade, Typography, makeStyles } from "@material-ui/core";
+import TeamItemContent from "../components/team-item-content/TeamItemContent";
 import { FADE_TRANSITION_DURATION } from "../constants";
 
-const styles = (theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
@@ -21,18 +22,18 @@ const styles = (theme) => ({
     width: 300,
     borderRadius: "50%",
   },
-});
+}));
 
-const TeamPage = (props) => {
-  useEffect(() => props.setPageTitle("Team"));
+const TeamPage = () => {
+  const classes = useStyles();
   return (
-    <Fade in timeout={FADE_TRANSITION_DURATION}>
-      <div className={props.classes.root}>
-        <div className={props.classes.teamContainer}>
+    <Layout pageTitle="Team">
+      <div className={classes.root}>
+        <div className={classes.teamContainer}>
           <ImagedContentItem
             reverseAlignment
             image={ernieMugshot}
-            imageClass={props.classes.imageClass}
+            imageClass={classes.imageClass}
             imageAlt="Ernie Coutts CEO"
           >
             <TeamItemContent
@@ -58,7 +59,7 @@ const TeamPage = (props) => {
           </ImagedContentItem>
           <ImagedContentItem
             image={carolineMugshot}
-            imageClass={props.classes.imageClass}
+            imageClass={classes.imageClass}
             imageAlt="Caroline Hyland Director"
           >
             <TeamItemContent
@@ -78,8 +79,8 @@ const TeamPage = (props) => {
           </ImagedContentItem>
         </div>
       </div>
-    </Fade>
+    </Layout>
   );
 };
 
-export default withStyles(styles)(TeamPage);
+export default TeamPage;

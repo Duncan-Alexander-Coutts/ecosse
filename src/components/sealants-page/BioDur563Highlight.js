@@ -1,6 +1,6 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import ProductHighlight from "../../components/product-highlight/ProductHighlight";
+import ProductHighlight from "../product-highlight/ProductHighlight";
 import ModuleIntroImage from "../../images/composites/module-roof-intro.png";
 import { Trans, useTranslation } from "react-i18next";
 
