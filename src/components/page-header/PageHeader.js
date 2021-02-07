@@ -3,25 +3,23 @@ import { Typography, AppBar, Toolbar, useMediaQuery } from "@material-ui/core";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import classNames from "classnames";
-import Hero from "../hero/Hero";
 import Logo from "../common/Logo";
 import MobileNavigation from "../navigation/MobileNavigation";
 import DesktopNavigation from "../navigation/DesktopNavigation";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import { useLocation } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
     position: "sticky",
     background: "#1f3b66",
   },
-  appBarHome: {
+  transparentAppBar: {
     backgroundColor: "transparent",
     position: "fixed",
     transition: `background-color ${theme.transitions.duration.short}ms`,
     transitionTimingFunction: theme.transitions.easing.easeIn,
   },
-  appBarHomeSolid: {
+  solidAppBar: {
     backgroundColor: "#1f3b66",
   },
   toolbar: {
@@ -44,18 +42,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PageHeader = ({ pageTitle }) => {
+const PageHeader = ({ pageTitle, delayBackgroundColour }) => {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
-  const isHome = false;
   const [showSolidBackground, setShowSolidBackground] = useState(
-    isHome ? false : true
+    !delayBackgroundColour
   );
   const refElement = useRef(null);
 
   useScrollPosition(({ currPos }) => {
-    if (isHome) {
+    if (delayBackgroundColour) {
       currPos.y < refElement.current.clientHeight * -1
         ? setShowSolidBackground(true)
         : setShowSolidBackground(false);
@@ -66,10 +63,10 @@ const PageHeader = ({ pageTitle }) => {
     <>
       <AppBar
         ref={refElement}
-        elevation={isHome ? 0 : 1}
+        elevation={showSolidBackground ? 1 : 0}
         className={classNames(classes.appBar, {
-          [classes.appBarHome]: isHome,
-          [classes.appBarHomeSolid]: isHome && showSolidBackground,
+          [classes.transparentAppBar]: delayBackgroundColour,
+          [classes.solidAppBar]: delayBackgroundColour && showSolidBackground,
         })}
       >
         <Toolbar className={classes.toolbar}>
@@ -83,7 +80,6 @@ const PageHeader = ({ pageTitle }) => {
           {!isMobile && <DesktopNavigation />}
         </Toolbar>
       </AppBar>
-      {isHome && <Hero />}
     </>
   );
 };

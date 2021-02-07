@@ -31,10 +31,17 @@ const theme = createMuiTheme({
   },
 });
 
-const Layout = ({ children, pageTitle }) => (
+const Layout = ({
+  children,
+  pageTitle,
+  delayHeaderBackgroundColour = false,
+}) => (
   <MuiThemeProvider theme={theme}>
     <div className="page-container">
-      <PageHeader pageTitle={pageTitle} />
+      <PageHeader
+        pageTitle={pageTitle}
+        delayBackgroundColour={delayHeaderBackgroundColour}
+      />
       {children}
       <PageFooter />
     </div>

@@ -5,9 +5,9 @@ import {
   CardHeader,
   makeStyles,
   Typography,
+  Link,
 } from "@material-ui/core";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   card: {
@@ -42,7 +42,7 @@ const IntroCard = ({ header, image, imageAlt, description, link }) => {
         <img className={classes.image} src={image} alt={imageAlt} />
         <Button
           component={Link}
-          to={link}
+          href={link}
           color="primary"
           title="More"
           variant="outlined"
