@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import ProductHighlight from "../../components/product-highlight/ProductHighlight";
-import IntermediateHeader from "../../components/common/IntermediateHeader";
+import ProductHighlight from "../product-highlight/ProductHighlight";
+import IntermediateHeader from "../common/IntermediateHeader";
 import PipePenetrationImage from "../../images/fire-and-blast/flex-jackets.jpg";
 
 const FlexJacketsHighlight = () => {
