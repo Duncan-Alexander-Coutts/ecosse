@@ -38,7 +38,7 @@ const TeamPage = (props) => {
             <TeamItemContent
               name="Ernie Coutts"
               title="Chief Executive Officer"
-              email="ernie.coutts@ecosseglobaluk.com"
+              email="ernie@ecosseglobaluk.com"
               linkedInLink="https://www.linkedin.com/in/ernie-coutts-95a33a45/"
             >
               <Typography color="primary" paragraph>
@@ -64,7 +64,7 @@ const TeamPage = (props) => {
             <TeamItemContent
               name="Caroline Hyland"
               title="Managing Director"
-              email="caroline.hyland@ecosseglobaluk.com"
+              email="caroline@ecosseglobaluk.com"
               linkedInLink="https://www.linkedin.com/in/caroline-hyland-8a4a6166/"
             >
               <Typography color="primary" paragraph>

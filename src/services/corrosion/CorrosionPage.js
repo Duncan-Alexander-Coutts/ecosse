@@ -58,6 +58,44 @@ const CorrosionPage = ({ setPageTitle }) => {
     <div className={classes.root}>
       <HeroCarousel items={carouselItems} />
       <Statement i18nKey="corrosion.intro" />
+      <Paper
+        style={{
+          marginTop: 8,
+          marginBottom: 8,
+        }}
+        elevation={0}
+      >
+        <Typography
+          style={{
+            width: 800,
+            textAlign: "center",
+          }}
+          variant="h6"
+          color="primary"
+          paragraph
+        >
+          Our range of anti corrosion products also extends to{" "}
+          <Link to="/services/composites">Composites</Link> and{" "}
+          <Link to="/services/sealants">Specialist Sealants and Coatings</Link>{" "}
+          . This range whilst not exhaustive covers all areas of the energy
+          resource and generation sectors including renewables and nuclear.
+        </Typography>
+      </Paper>
+      <Typography variant="h4" color="primary">
+        Ecowrap
+      </Typography>
+      <Typography
+        style={{ width: 800, textAlign: "center" }}
+        variant="h6"
+        color="primary"
+        paragraph
+      >
+        Ecosse Global UK however have a range of application specific products
+        such as our <strong>Ecowrap</strong> polymer active corrosion protection
+        jacket system as highlighted below. The anecdotal pedigree covers oil
+        and gas, civils, ports and harbours, offshore wind and utilities. Please
+        contact us for applications
+      </Typography>
       <div className={classes.contentContainer}>
         <Grid className={classes.featuresContainer} justify="center" container>
           <FeatureGridItem>
@@ -91,7 +129,7 @@ const CorrosionPage = ({ setPageTitle }) => {
             <Feature icon={Snowflake} i18nKey="corrosion.features.cold" />
           </FeatureGridItem>
         </Grid>
-        <div className={classes.otherAntiCorrosionContainer}>
+        {/* <div className={classes.otherAntiCorrosionContainer}>
           <Paper elevation={0} className={classes.otherAntiCorrosionContent}>
             <Typography color="primary">
               For other anti-corrosion products and applications see{" "}
@@ -101,7 +139,7 @@ const CorrosionPage = ({ setPageTitle }) => {
               </Link>
             </Typography>
           </Paper>
-        </div>
+        </div> */}
         <section className={classes.highlights}>
           <ApplicationsHighlight />
           <InstallationsHighlight />
