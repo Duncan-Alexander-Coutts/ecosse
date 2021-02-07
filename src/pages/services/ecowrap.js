@@ -54,7 +54,7 @@ const EcowrapPage = () => {
   const classes = useStyles();
 
   return (
-    <Layout title={t("corrosion.pageHeader")}>
+    <Layout pageTitle={t("corrosion.pageHeader")}>
       <div className={classes.root}>
         <HeroCarousel items={carouselItems} />
         <Statement i18nKey="corrosion.intro" />

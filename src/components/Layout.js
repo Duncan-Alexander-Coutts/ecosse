@@ -1,5 +1,4 @@
 import "./../index.css";
-import "./../App.css";
 import React from "react";
 import PageHeader from "../components/page-header/PageHeader";
 import PageFooter from "../components/page-footer/PageFooter";
@@ -42,7 +41,7 @@ const Layout = ({
         pageTitle={pageTitle}
         delayBackgroundColour={delayHeaderBackgroundColour}
       />
-      {children}
+      <div className="page-content">{children}</div>
       <PageFooter />
     </div>
   </MuiThemeProvider>

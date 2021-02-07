@@ -73,7 +73,7 @@ const CompositesPage = () => {
   });
 
   return (
-    <Layout title={t("composites.pageHeader")}>
+    <Layout pageTitle={t("composites.pageHeader")}>
       <div className={classes.root}>
         <HeroCarousel items={carouselItems} />
         <Statement i18nKey="composites.intro" />

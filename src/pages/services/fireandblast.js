@@ -43,7 +43,7 @@ const FireAndBlastPage = () => {
   const classes = useStyles();
 
   return (
-    <Layout title={t("fireAndBlast.pageHeader")}>
+    <Layout pageTitle={t("fireAndBlast.pageHeader")}>
       <div className={classes.root}>
         <HeroCarousel items={carouselItems} />
         <Statement i18nKey="fireAndBlast.intro" />
