@@ -1,12 +1,12 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
-import ProductHighlight from "../../components/product-highlight/ProductHighlight";
-import IntermediateHeader from "../../components/common/IntermediateHeader";
-import ModuleIntroImage from "../../images/composites/module-roof-intro.png";
+import ProductHighlight from "../product-highlight/ProductHighlight";
+import IntermediateHeader from "../common/IntermediateHeader";
+import PipePressureIntroImage from "../../images/composites/pipe-pressure-intro.png";
 
-const ModuleHighlight = () => {
+const PipePressureHighlight = () => {
   return (
-    <ProductHighlight title="Deck, Vessel and Module" image={ModuleIntroImage}>
+    <ProductHighlight title="Pipe Pressure" image={PipePressureIntroImage}>
       <IntermediateHeader>
         The loss of production due to leaking and structurally weakened pipework
         caused by corrosion and erosion costs the industry £Millions annually.
@@ -28,4 +28,4 @@ const ModuleHighlight = () => {
   );
 };
 
-export default ModuleHighlight;
+export default PipePressureHighlight;

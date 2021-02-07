@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Typography, Grid, Fade, Paper, makeStyles } from "@material-ui/core";
+import { Typography, Grid, Paper, makeStyles } from "@material-ui/core";
 import {
   WhatshotOutlined,
   VerifiedUserOutlined,
@@ -11,20 +11,21 @@ import {
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-import CaissonHighlight from "./CaissonHighlight";
-import PipePressureHighlight from "./PipePressureHighlight";
-import ModuleHighlight from "./ModuleHighlight";
-import RiserHighlight from "./RiserHighlight";
+import CaissonHighlight from "../../components/composites-page/CaissonHighlight";
+import PipePressureHighlight from "../../components/composites-page/PipePressureHighlight";
+import ModuleHighlight from "../../components/composites-page/ModuleHighlight";
+import RiserHighlight from "../../components/composites-page/RiserHighlight";
 
 import Clamp from "../../images/composites/clamp.jpg";
 import Exchange from "../../images/composites/heat_exchanger.jpg";
 import Cool from "../../images/composites/cooling_water_line.jpg";
-import { CONTENT_MAX_WIDTH, FADE_TRANSITION_DURATION } from "../../constants";
+import { CONTENT_MAX_WIDTH } from "../../constants";
 import { useTranslation } from "react-i18next";
 import { LabeledTick } from "../../components/labeled-tick/LabeledTick";
 import { HeroCarousel } from "../../components/hero-carousel/HeroCarousel";
 import { Statement } from "../../components/statement/Statement";
 import { Feature, FeatureGridItem } from "../../components/feature/Feature";
+import { Layout } from "../../components/Layout";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -63,8 +64,7 @@ const carouselItems = [
   { image: Cool, altI18nKey: "composites.showcaseImages.altText.coolingWater" },
 ];
 
-const CompositesPage = ({ setPageTitle }) => {
-  useEffect(() => setPageTitle(t("composites.pageHeader")));
+const CompositesPage = () => {
   const { t } = useTranslation();
   const classes = useStyles();
 
@@ -73,7 +73,7 @@ const CompositesPage = ({ setPageTitle }) => {
   });
 
   return (
-    <Fade in timeout={FADE_TRANSITION_DURATION}>
+    <Layout title={t("composites.pageHeader")}>
       <div className={classes.root}>
         <HeroCarousel items={carouselItems} />
         <Statement i18nKey="composites.intro" />
@@ -146,7 +146,7 @@ const CompositesPage = ({ setPageTitle }) => {
           </Paper>
         </div>
       </div>
-    </Fade>
+    </Layout>
   );
 };
 
