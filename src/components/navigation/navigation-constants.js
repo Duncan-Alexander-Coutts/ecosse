@@ -3,7 +3,7 @@ export const navigationItems = [
   {
     label: "Services",
     children: [
-      { label: "Anti-Corrosion", link: "/services/corrosion" },
+      { label: "Anti-Corrosion", link: "/services/ecowrap" },
       { label: "Composites", link: "/services/composites" },
       { label: "Fire and Blast", link: "/services/fireandblast" },
       { label: "Specialist Sealants and Coatings", link: "/services/sealants" },

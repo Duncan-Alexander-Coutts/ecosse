@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Button, makeStyles, Menu, MenuItem } from "@material-ui/core";
-import { Link } from "react-router-dom";
+import { Button, Link, makeStyles, Menu, MenuItem } from "@material-ui/core";
 import { navigationItems } from "./navigation-constants";
 
 const useStyles = makeStyles((theme) => ({
@@ -43,7 +42,7 @@ const DesktopNavigation = () => {
           <MenuItem
             key={child.label}
             onClick={handleClose}
-            to={child.link}
+            href={child.link}
             className={classes.childButton}
             component={Link}
           >
@@ -63,7 +62,7 @@ const DesktopNavigation = () => {
               className={classes.navButton}
               variant="outlined"
               component={item.link ? Link : undefined}
-              to={item.link || ""}
+              href={item.link}
               onClick={(event) => handleClick(event, item)}
               size="large"
             >

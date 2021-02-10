@@ -1,0 +1,204 @@
+{
+  "home": {
+    "intro": "At <strong>Ecosse Global UK</strong>, our aim is to provide our clients with the most effective, innovative solutions for all their asset integrity needs",
+    "subIntro": "Ecosse Global UK Limited has over <strong>{{yearsOfExperience}} years</strong> of industry experience of understanding effective <strong>asset lifecycle extension</strong>. Looking for the answers to clients problems, we at Ecosse Global UK maintain a watchful eye on new technology with a view to developing <strong>innovative products</strong>.",
+    "services": {
+      "title": "What we do",
+      "antiCorrosion": {
+        "title": "Anti Corrosion",
+        "description": "Our Ecowrap system comprises an impact resistant outer nylon Neoprene jacket with polyester internal carrier membrane, into which a gel anti-corrosion formulation is impregnated at the factory. It was been especially designed for the highly corrosive splashzone."
+      },
+      "composites": {
+        "title": "Composites",
+        "description": "Our modern composite wrap repair system is built for tough environments. It has been used extensively on oil and gas offshore platforms and has many impressive capabilities that makes it an attractive alternative to traditional repair or replacement methods. In 2019, Ecosse Global was awarded DNV GL Type Approval for our PowerSleeve pipe wrap system."
+      },
+      "fireAndBlast": {
+        "title": "Fire and Blast",
+        "description": "Our fire seal and enclosure systems are independently tested by IMO-approved third party test houses. Throughout testing our systems have maintained their integrity, stability and insulation properties, and accordingly carry certification issued by Lloyd's Register of Shipping, Det Norske Veritas (DNV) and/or the American Bureau of Shipping (ABS)."
+      },
+      "sealants": {
+        "title": "Specialist Sealants and Coatings",
+        "description": "At Ecosse Global UK, we provide a range of high quality epoxy resins, including products that can be used below the waterline and even displace fuel to form a permanent bond. Our high performing sealants have been used extensively on North Sea Platforms for the last 10 years."
+      }
+    }
+  },
+  "composites": {
+    "pageHeader": "Composites",
+    "intro": "Our modern composite repair systems are extremely <strong>versatile</strong>, <strong>adaptable</strong> and <strong>reliable</strong>. They have many impressive capabilities that make them an attractive alternative to traditional repair or replacement methods.",
+    "showcaseImages": {
+      "altText": {
+        "clamp": "Clamp type composite repair",
+        "heatExchange": "Heat exchanger composite repair",
+        "coolingWater": "Cooling water line composite repair"
+      }
+    },
+    "features": {
+      "noDownTime": {
+        "label": "No Down Time",
+        "description": "In most cases composites can be installed with no downtime or depressurisation and can be designed as a permanent repair, saving the platform a lot of money."
+      },
+      "noHotWork": {
+        "label": "No Hot Work",
+        "description": "In piping or infrastructure welding repairs, costs associated with hot work can be tremendous and generate their own numerous safety concerns. Composite repairs require no hot work whatsoever."
+      },
+      "extensivelyTested": {
+        "label": "Extensively Tested",
+        "description": "Our engineered composite systems are in compliance with to validated to the following industry standards:ASME PCC-2, ISO/TS 24817, DNV Type Approval."
+      },
+      "corrosionResistant": {
+        "label": "Corrosion Resistant",
+        "description": "The impermeability and high adhesion level of our 100% solids epoxy resin creates the containment barrier, arresting corrosion immediately."
+      },
+      "pipingCompatibility": {
+        "label": "Compatible with all Piping",
+        "description": "Compatible with Aluminium, GRE, Carbon Steel, PVC, Cast Iron, Polyethylene, Concrete, Polypropylene, Copper, Stainless Steel, Fibreglass, Titanium and many other materials."
+      },
+      "economical": {
+        "label": "Economical",
+        "description": "As a repair or reinforcement, composites can cost much less to install when compared to traditional welded sleeve or replacement methods."
+      }
+    },
+    "repairTypes": {
+      "header": "More Repair Types",
+      "items": [
+        "Abrasian & Wear",
+        "Underwater",
+        "Pipe Bends",
+        "Leaks",
+        "Corrosion Mitigation",
+        "Cracks, Dents, Gouges",
+        "Encapsulation",
+        "Erosion",
+        "Full Hoop / Axial Strength Replacement",
+        "Isolation / Insulation",
+        "Structural Reinforcement",
+        "Weld Joint / HAZ Reinforcement"
+      ]
+    }
+  },
+  "fireAndBlast": {
+    "pageHeader": "Fire and Blast",
+    "intro": "Ecosse Global are specialist suppliers of flexible <strong>Passive Fire Protection Systems</strong> to the oil, gas, petrochemical and refining industries worldwide. Our highly specialised sealing systems offer asset protection from <strong>Hydrocarbon</strong>, <strong>Cellulosic</strong> and <strong>Jet Fire scenarios</strong>",
+    "features": {
+      "design": {
+        "label": "Design",
+        "description": "Our design centre uses state of the art CAD software for bespoke sealing design solutions."
+      },
+      "testing": {
+        "label": "Testing",
+        "description": "We have full access use of approved test houses complete with evaluation facilities to support your application."
+      },
+      "manufacture": {
+        "label": "Manufacture",
+        "description": "We have a dedicated production team with a wealth of specialised product knowledge."
+      },
+      "support": {
+        "label": "After Sales Support",
+        "description": "Our specialist trained after-sales team are here to help with any questions you may have concerning your PFP installation."
+      },
+      "flexible": {
+        "label": "Flexible",
+        "description": "We can also cater for extreme movement between pipe and sleeve, unlike some competitors systems that remain fixed in position."
+      }
+    }
+  },
+  "sealants": {
+    "pageHeader": "Specialist Sealants and Coatings",
+    "intro": "Ecosse Global are suppliers of <strong>specialist sealants</strong> and coatings to the oil, gas, petrochemical and wind farm industries. Our highly specialised sealing systems offer <strong>excellent adhesion</strong> and <strong>long-term protection</strong> from corrosion.",
+    "features": {
+      "deck": {
+        "label": "Deck Repair",
+        "description": "Easy to use, fire-retardant epoxy with a long pot life for large deck areas."
+      },
+      "module": {
+        "label": "Module Roof Repair",
+        "description": "Water tolerant, corrosion arresting epoxy that forms an impermeable seal."
+      },
+      "tank": {
+        "label": "Large Tank Repairs",
+        "description": "Specially designed for tricky weld seams and applied by heated airless spray."
+      },
+      "abrasian": {
+        "label": "Abrasion Resistant Coatings",
+        "description": "Full of Kevlar™ filaments, developed to withstand high impact loadings on offshore boat landings."
+      },
+      "flexible": {
+        "label": "Nuclear Grade Coatings",
+        "description": "Certified for use in ‘Service Level 1’ applications. Application friendly, so reduces man-rem exposure."
+      }
+    },
+    "highlights": {
+      "biodur563": {
+        "title": "Bio-Dur 563",
+        "paragraphs": [
+          "<strong>Problem -</strong> Severe corrosion of metal resulting in leaking module roof",
+          "<strong>Solution -</strong> Patch repairs using carbon fibre and epoxy resin sealant topcoat of <strong>Bio-Dur 563</strong>",
+          "2 layers of carbon fibre saturated with moisture tolerant resin to add structural strength and patch holes. As the resin is completely moisture tolerant, the repair can be installed in the pouring rain. Topcoat of <strong>Bio-Dur 563</strong>"
+        ]
+      },
+      "bioseal197": {
+        "title": "Bio-Seal 197",
+        "paragraphs": [
+          "<strong>Problem -</strong> Deteriorating deck plates, extensive pitting, pooling and holes",
+          "<strong>Solution - Bio-Seal 197</strong>; A two-part 100% solids epoxy resin over entire deck area"
+        ],
+        "keyPoints": [
+          "Excellent adhesion",
+          "No primer required",
+          "Will not shrink, crack or foam",
+          "Displaces water",
+          "Fire retardant",
+          "Arrests corrosion",
+          "Forms an impermeable seal",
+          "Prevents CUI",
+          "Self-leveling - Can be pumped or poured",
+          "2 Part Kit form - easy to use",
+          "Long pot life - 1.5 hours average"
+        ]
+      },
+      "bioTuff592": {
+        "title": "Bio-Tuff 592",
+        "paragraphs": [
+          "<strong>BIO-TUFF 592 -</strong> Epoxy based system with Kevlar™ filaments, able to be applied in one coat and cure underwater",
+          "Minimal requirement for preparation and salt water tolerant.",
+          "Developed to withstand high impact loadings on offshore boat landings.",
+          "Apply by brush to a wft of 750.",
+          "Tested under tidal operating conditions, 1,002 cycles of direct, extreme abrasion and loading (in excess of 20 tonnes) with <strong>no degradation whatsoever</strong>."
+        ]
+      }
+    }
+  },
+  "corrosion": {
+    "pageHeader": "Anti-Corrosion",
+    "intro": "<strong>Ecosse Global</strong> are leaders in the supply of a range of specialist anticorrosion solutions to suit the most <strong>arduous situations</strong> including the aggressive splash zone areas of <strong>offshore structures</strong>.",
+    "features": {
+      "diameter": {
+        "label": "Suits Any Diameter",
+        "description": "From 50mm to 3 meters, and can be interlocked to accommodate any length"
+      },
+      "flange": {
+        "label": "Full Length Flange",
+        "description": "Factory fitted with corrosion-resistant self-threading fasteners"
+      },
+      "active": {
+        "label": "Active Protection",
+        "description": "Contains environmentally safe corrosion inhibitors"
+      },
+      "inspection": {
+        "label": "Easy Removal for Inspection",
+        "description": "Unlike any other anti-corrosion system"
+      },
+      "preparation": {
+        "label": "Minimum Surface Preparation",
+        "description": "Does not require substrate shotblast preparation"
+      },
+      "cold": {
+        "label": "Cold Applied",
+        "description": "No hot work permit required"
+      }
+    }
+  },
+  "footer": {
+    "ownership": "© Copyright {{year}} – Ecosse Global UK LTD. All Rights Reserved"
+  }
+}
