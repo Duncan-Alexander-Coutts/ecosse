@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     color: ECOSSE_COLOURS.red,
     padding: theme.spacing(1),
     textAlign: "center",
-    display: "block",
+    display: "block !important",
     margin: "auto",
   },
   description: {
