@@ -14,7 +14,11 @@ const styles = () => ({
 
 const HomePage = (props) => {
   return (
-    <Layout delayHeaderBackgroundColour>
+    <Layout
+      pageTitle="Ecosse Global UK"
+      hideInPageTitle
+      delayHeaderBackgroundColour
+    >
       <Hero />
       <About />
       <div className={props.classes.services}>

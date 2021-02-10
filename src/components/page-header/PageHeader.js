@@ -74,9 +74,11 @@ const PageHeader = ({ pageTitle, delayBackgroundColour }) => {
             {isMobile && <MobileNavigation />}
             <Logo hideText={isMobile} />
           </div>
-          <Typography className={classes.pageTitle} variant="h5">
-            {pageTitle}
-          </Typography>
+          {pageTitle ? (
+            <Typography className={classes.pageTitle} variant="h5">
+              {pageTitle}
+            </Typography>
+          ) : null}
           {!isMobile && <DesktopNavigation />}
         </Toolbar>
       </AppBar>

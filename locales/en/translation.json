@@ -199,6 +199,6 @@
     }
   },
   "footer": {
-    "ownership": "© Copyright {{date, yyyy}} – Ecosse Global UK LTD. All Rights Reserved"
+    "ownership": "© Copyright {{year}} – Ecosse Global UK LTD. All Rights Reserved"
   }
 }

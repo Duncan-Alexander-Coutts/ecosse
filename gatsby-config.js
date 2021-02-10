@@ -1,11 +1,9 @@
-const DateTime = require("luxon");
-
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Ecosse Global UK`,
     siteUrl: `https://www.ecosseglobaluk.com`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Ecosse Global UK Customer Website`,
+    author: `duncan-alexander-coutts`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,36 +19,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Ecosse Global UK`,
+        short_name: `EGUK`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        background_color: "#ffffff",
+        display: `standalone`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-react-i18next`,
-    //   options: {
-    //     path: `${__dirname}/locales`,
-    //     languages: [`en`],
-    //     defaultLanguage: `en`,
-
-    //     // you can pass any i18next options
-    //     // pass following options to allow message content as a key
-    //     i18nextOptions: {
-    //       interpolation: {
-    //         escapeValue: false, // not needed for react as it escapes by default
-    //         format: function (value, format) {
-    //           if (value instanceof Date)
-    //             return DateTime.fromJSDate(value).toFormat(format);
-    //           return value;
-    //         },
-    //       },
-    //     },
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+    },
     {
       resolve: `gatsby-theme-i18n`,
       options: {
@@ -62,19 +41,11 @@ module.exports = {
       resolve: `gatsby-theme-i18n-react-i18next`,
       options: {
         locales: `./locales`,
-
         defaultLocale: `./locales/en.json`,
         i18nextOptions: {
           fallbackLng: "en",
-
           interpolation: {
             escapeValue: false,
-            format: function (value, format) {
-              console.log(value, format);
-              if (value instanceof Date)
-                return DateTime.fromJSDate(value).toFormat(format);
-              return value;
-            },
           },
         },
       },
