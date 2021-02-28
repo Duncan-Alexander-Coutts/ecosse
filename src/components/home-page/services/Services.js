@@ -18,6 +18,10 @@ const styles = (theme) => ({
     padding: theme.spacing(),
     paddingTop: theme.spacing(5),
     maxWidth: CONTENT_MAX_WIDTH,
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: theme.spacing(5),
+      paddingRight: theme.spacing(5),
+    },
   },
   supportingServicesList: {
     justifyContent: "center",
