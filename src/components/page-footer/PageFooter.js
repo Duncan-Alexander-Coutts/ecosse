@@ -5,8 +5,12 @@ import CompositesBadge from "../../images/logos/composites-badge.svg";
 import DnvGl from "../../images/logos/dnvgl.svg";
 import Chamber from "../../images/logos/dacc_logo.png";
 import { useTranslation } from "react-i18next";
+import { ECOSSE_COLOURS } from "../../constants";
 
 const styles = (theme) => ({
+  footer: {
+    position: "relative",
+  },
   root: {
     marginTop: theme.spacing(2),
     background: theme.palette.primary.main,
@@ -31,13 +35,34 @@ const styles = (theme) => ({
   copyright: {
     color: theme.palette.common.white,
   },
+  polygonContainer: {
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    display: "flex",
+    opacity: 0.75,
+    zIndex: -1,
+    top: 0,
+  },
+  polygon: {
+    height: "100%",
+    flex: 1,
+  },
+  polygonRed: {
+    backgroundColor: ECOSSE_COLOURS.blue,
+    clipPath: "polygon(100% 0, 100% 100%, 0 100%)",
+  },
+  polygonBlue: {
+    backgroundColor: ECOSSE_COLOURS.red,
+    clipPath: "polygon(0 0, 100% 100%, 0 100%)",
+  },
 });
 
 export default withStyles(styles)((props) => {
   const { t } = useTranslation();
 
   return (
-    <footer>
+    <footer className={props.classes.footer}>
       <div className={props.classes.badgeContainer}>
         <img
           className={props.classes.achilles}
@@ -45,7 +70,6 @@ export default withStyles(styles)((props) => {
           alt="Achilles logo"
         />
         <img className={props.classes.achilles} src={DnvGl} alt="DNV GL logo" />
-
         <img
           className={props.classes.achilles}
           src={CompositesBadge}
@@ -62,6 +86,14 @@ export default withStyles(styles)((props) => {
           {t("footer.ownership", { year: new Date().getFullYear() })}
         </Typography>
       </Paper>
+      <div className={props.classes.polygonContainer}>
+        <div
+          className={`${props.classes.polygon} ${props.classes.polygonBlue}`}
+        />
+        <div
+          className={`${props.classes.polygon} ${props.classes.polygonRed}`}
+        />
+      </div>
     </footer>
   );
 });

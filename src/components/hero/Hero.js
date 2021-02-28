@@ -38,7 +38,7 @@ const styles = (theme) => ({
     height: "100%",
     position: "absolute",
     display: "flex",
-    opacity: 0.25,
+    opacity: 0.4,
     zIndex: 0,
   },
   polygon: {
