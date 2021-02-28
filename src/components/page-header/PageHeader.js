@@ -38,10 +38,13 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  slash: {
+    marginLeft: theme.spacing(),
+  },
   pageTitle: {
     color: theme.palette.common.white,
     fontWeight: "bold",
-    marginLeft: theme.spacing(4),
+    marginLeft: theme.spacing(),
   },
 }));
 
@@ -78,9 +81,16 @@ const PageHeader = ({ pageTitle, delayBackgroundColour }) => {
             <Logo hideText={isMobile} />
           </div>
           {pageTitle ? (
-            <Typography className={classes.pageTitle} variant="h5">
-              {pageTitle}
-            </Typography>
+            <>
+              {!isMobile && (
+                <Typography className={classes.slash}>
+                  {String.fromCharCode(47)}
+                </Typography>
+              )}
+              <Typography className={classes.pageTitle} variant="h5">
+                {pageTitle}
+              </Typography>
+            </>
           ) : null}
         </Toolbar>
       </AppBar>
