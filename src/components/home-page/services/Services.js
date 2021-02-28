@@ -19,6 +19,9 @@ const styles = (theme) => ({
     paddingTop: theme.spacing(5),
     maxWidth: CONTENT_MAX_WIDTH,
   },
+  supportingServicesList: {
+    justifyContent: "center",
+  },
 });
 
 export default withStyles(styles)((props) => {
@@ -26,17 +29,17 @@ export default withStyles(styles)((props) => {
 
   return (
     <div>
-      <SectionTitle title={t("home.services.title")} />
+      <SectionTitle title={t("home.services.antiCorrosionTitle")} />
       <Grid container spacing={2} className={props.classes.serviceList}>
-        <Grid xs={12} md={6} item>
+        <Grid xs={12} md={4} item>
           <IntroCard
-            header={t("home.services.antiCorrosion.title")}
+            header={t("home.services.polymerWraps.title")}
             image={rust}
-            description={t("home.services.antiCorrosion.description")}
-            link="/services/ecowrap"
+            description={t("home.services.polymerWraps.description")}
+            link="/services/polymerwraps"
           />
         </Grid>
-        <Grid xs={12} md={6} item>
+        <Grid xs={12} md={4} item>
           <IntroCard
             header={t("home.services.composites.title")}
             image={composite}
@@ -44,20 +47,27 @@ export default withStyles(styles)((props) => {
             link="/services/composites"
           />
         </Grid>
-        <Grid xs={12} md={6} item>
-          <IntroCard
-            header={t("home.services.fireAndBlast.title")}
-            image={fire}
-            description={t("home.services.fireAndBlast.description")}
-            link="/services/fireandblast"
-          />
-        </Grid>
-        <Grid xs={12} md={6} item>
+        <Grid xs={12} md={4} item>
           <IntroCard
             header={t("home.services.sealants.title")}
             image={sealants}
             description={t("home.services.sealants.description")}
             link="/services/sealants"
+          />
+        </Grid>
+      </Grid>
+      <SectionTitle title={t("home.services.supportingProductsTitle")} />
+      <Grid
+        container
+        spacing={2}
+        className={`${props.classes.serviceList} ${props.classes.supportingServicesList}`}
+      >
+        <Grid xs={12} md={4} item>
+          <IntroCard
+            header={t("home.services.fireAndBlast.title")}
+            image={fire}
+            description={t("home.services.fireAndBlast.description")}
+            link="/services/fireandblast"
           />
         </Grid>
       </Grid>

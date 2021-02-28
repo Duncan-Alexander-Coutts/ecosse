@@ -1,11 +1,16 @@
 import React, { useRef, useState } from "react";
-import { Typography, AppBar, Toolbar, useMediaQuery } from "@material-ui/core";
+import {
+  Typography,
+  AppBar,
+  Toolbar,
+  useMediaQuery,
+  Divider,
+} from "@material-ui/core";
 
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import classNames from "classnames";
 import Logo from "../common/Logo";
 import MobileNavigation from "../navigation/MobileNavigation";
-import DesktopNavigation from "../navigation/DesktopNavigation";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(1),
     display: "flex",
-    justifyContent: "space-between",
     background: "transparent",
   },
   toolbarLeft: {
@@ -37,8 +41,7 @@ const useStyles = makeStyles((theme) => ({
   pageTitle: {
     color: theme.palette.common.white,
     fontWeight: "bold",
-    marginLeft: theme.spacing(),
-    marginRight: theme.spacing(),
+    marginLeft: theme.spacing(4),
   },
 }));
 
@@ -71,7 +74,7 @@ const PageHeader = ({ pageTitle, delayBackgroundColour }) => {
       >
         <Toolbar className={classes.toolbar}>
           <div className={classes.toolbarLeft}>
-            {isMobile && <MobileNavigation />}
+            <MobileNavigation />
             <Logo hideText={isMobile} />
           </div>
           {pageTitle ? (
@@ -79,7 +82,6 @@ const PageHeader = ({ pageTitle, delayBackgroundColour }) => {
               {pageTitle}
             </Typography>
           ) : null}
-          {!isMobile && <DesktopNavigation />}
         </Toolbar>
       </AppBar>
     </>

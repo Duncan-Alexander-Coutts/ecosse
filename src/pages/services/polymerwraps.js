@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 
 const carouselItems = [{ image: BridgeEcoWrap, altI18nKey: "Hello there" }];
 
-const EcowrapPage = () => {
+const PolymerWrapsPage = () => {
   const { t } = useTranslation();
   const classes = useStyles();
 
@@ -117,4 +117,4 @@ const EcowrapPage = () => {
   );
 };
 
-export default EcowrapPage;
+export default PolymerWrapsPage;

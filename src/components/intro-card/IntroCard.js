@@ -22,6 +22,8 @@ const useStyles = makeStyles((theme) => ({
   header: {
     fontWeight: "bold",
     color: theme.palette.primary.main,
+    height: theme.spacing(8),
+    alignItems: "flex-start",
   },
   image: {
     width: 300,

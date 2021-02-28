@@ -5,6 +5,7 @@ module.exports = {
     description: `Ecosse Global UK Customer Website`,
     author: `duncan-alexander-coutts`,
   },
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

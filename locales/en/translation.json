@@ -3,9 +3,10 @@
     "intro": "At <strong>Ecosse Global UK</strong>, our aim is to provide our clients with the most effective, innovative solutions for all their asset integrity needs",
     "subIntro": "Ecosse Global UK Limited has over <strong>{{yearsOfExperience}} years</strong> of industry experience of understanding effective <strong>asset lifecycle extension</strong>. Looking for the answers to clients problems, we at Ecosse Global UK maintain a watchful eye on new technology with a view to developing <strong>innovative products</strong>.",
     "services": {
-      "title": "What we do",
-      "antiCorrosion": {
-        "title": "Anti Corrosion",
+      "antiCorrosionTitle": "Anti-corrosion & Structural Repair",
+      "supportingProductsTitle": "Supporting Products",
+      "polymerWraps": {
+        "title": "Polymer wraps",
         "description": "Our Ecowrap system comprises an impact resistant outer nylon Neoprene jacket with polyester internal carrier membrane, into which a gel anti-corrosion formulation is impregnated at the factory. It was been especially designed for the highly corrosive splashzone."
       },
       "composites": {

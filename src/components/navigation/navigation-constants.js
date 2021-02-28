@@ -3,10 +3,21 @@ export const navigationItems = [
   {
     label: "Services",
     children: [
-      { label: "Anti-Corrosion", link: "/services/ecowrap" },
-      { label: "Composites", link: "/services/composites" },
-      { label: "Fire and Blast", link: "/services/fireandblast" },
-      { label: "Specialist Sealants and Coatings", link: "/services/sealants" },
+      {
+        label: "Anti-corrosion & Structural Repair",
+        children: [
+          { label: "Polymer Wraps", link: "/services/polymerwraps" },
+          { label: "Composites", link: "/services/composites" },
+          {
+            label: "Specialist Sealants and Coatings",
+            link: "/services/sealants",
+          },
+        ],
+      },
+      {
+        label: "Supporting Products",
+        children: [{ label: "Fire and Blast", link: "/services/fireandblast" }],
+      },
     ],
   },
   { label: "Team", link: "/team" },
