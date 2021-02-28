@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MobileNavigation = () => {
+const Navigation = () => {
   const classes = useStyles();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -84,4 +84,4 @@ const MobileNavigation = () => {
   );
 };
 
-export default MobileNavigation;
+export default Navigation;

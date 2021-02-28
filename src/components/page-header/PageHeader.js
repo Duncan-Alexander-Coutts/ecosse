@@ -10,7 +10,7 @@ import {
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import classNames from "classnames";
 import Logo from "../common/Logo";
-import MobileNavigation from "../navigation/MobileNavigation";
+import Navigation from "../navigation/Navigation";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
 const useStyles = makeStyles((theme) => ({
@@ -74,7 +74,7 @@ const PageHeader = ({ pageTitle, delayBackgroundColour }) => {
       >
         <Toolbar className={classes.toolbar}>
           <div className={classes.toolbarLeft}>
-            <MobileNavigation />
+            <Navigation />
             <Logo hideText={isMobile} />
           </div>
           {pageTitle ? (
