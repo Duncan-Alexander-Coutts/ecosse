@@ -6,6 +6,7 @@ import DnvGl from "../../images/logos/dnvgl.svg";
 import Chamber from "../../images/logos/dacc_logo.png";
 import { useTranslation } from "react-i18next";
 import { ECOSSE_COLOURS } from "../../constants";
+import { graphql, useStaticQuery } from "gatsby";
 
 const styles = (theme) => ({
   footer: {
@@ -61,6 +62,16 @@ const styles = (theme) => ({
 export default withStyles(styles)((props) => {
   const { t } = useTranslation();
 
+  const data = useStaticQuery(
+    graphql`
+      query MyQuery {
+        allContentfulBlogPost {
+          totalCount
+        }
+      }
+    `
+  );
+
   return (
     <footer className={props.classes.footer}>
       <div className={props.classes.badgeContainer}>
@@ -93,6 +104,9 @@ export default withStyles(styles)((props) => {
         <div
           className={`${props.classes.polygon} ${props.classes.polygonRed}`}
         />
+      </div>
+      <div style={{ display: "none" }}>
+        {data?.allContentfulBlogPost?.totalCount}
       </div>
     </footer>
   );

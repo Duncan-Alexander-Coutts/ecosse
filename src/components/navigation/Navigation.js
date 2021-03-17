@@ -21,12 +21,6 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     padding: theme.spacing(2),
   },
-  indent: {
-    padding: theme.spacing(0, 0, 0, 2),
-  },
-  ul: {
-    padding: 0,
-  },
 }));
 
 const Navigation = () => {
