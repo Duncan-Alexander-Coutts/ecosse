@@ -22,7 +22,7 @@ const Statement = ({ i18nKey }) => {
       <Typography
         color="primary"
         align="center"
-        variant="h6"
+        variant="h3"
         className={classes.statement}
       >
         <Trans i18nKey={i18nKey} />

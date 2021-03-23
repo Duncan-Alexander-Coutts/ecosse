@@ -56,7 +56,7 @@ const ProductHighlight = (props) => {
             {props.children}
             {props.caseStudies && props.caseStudies.length && (
               <div>
-                <Typography color="primary" variant="h6">
+                <Typography color="primary" variant="h3">
                   Case Studies
                 </Typography>
                 <Grid

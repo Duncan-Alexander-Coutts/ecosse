@@ -39,7 +39,9 @@ const IntroCard = ({ header, image, imageAlt, description, link }) => {
 
   return (
     <Card elevation={0} className={classes.card}>
-      <CardHeader className={classes.header} title={header} />
+      <Typography className={classes.header} variant="h3">
+        {header}
+      </Typography>
       <CardContent className={classes.content}>
         <img className={classes.image} src={image} alt={imageAlt} />
         <Button

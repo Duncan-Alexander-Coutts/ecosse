@@ -40,7 +40,7 @@ const ImagedContentItem = (props) => {
       <Grid className={props.classes.imageContainer} item s={12} sm={6}>
         <Typography
           color="primary"
-          variant="h4"
+          variant="h2"
           className={props.classes.title}
         >
           {props.title}

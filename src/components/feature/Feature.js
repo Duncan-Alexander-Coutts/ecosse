@@ -39,7 +39,7 @@ const Feature = (props) => {
   return (
     <div className={classes.root}>
       <props.icon fontSize="large" className={classes.icon} />
-      <Typography color="primary" className={classes.title} variant="h6">
+      <Typography color="primary" className={classes.title} variant="h4">
         {t(`${props.i18nKey}.label`)}
       </Typography>
       <Typography className={classes.description} color="primary">

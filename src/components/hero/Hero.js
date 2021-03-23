@@ -64,7 +64,7 @@ export default withStyles(styles)((props) => {
             <Typography
               align="center"
               className={props.classes.slogan}
-              variant="h2"
+              variant="h1"
             >
               Ultimate asset integrity solutions
             </Typography>

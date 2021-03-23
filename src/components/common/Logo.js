@@ -37,7 +37,7 @@ const Logo = (props) => {
         />
       </div>
       {!props.hideText && (
-        <Typography className={classes.companyName} variant="h5">
+        <Typography className={classes.companyName} variant="h2">
           Ecosse Global UK
         </Typography>
       )}

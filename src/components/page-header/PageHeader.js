@@ -87,7 +87,7 @@ const PageHeader = ({ pageTitle, delayBackgroundColour }) => {
                   {String.fromCharCode(47)}
                 </Typography>
               )}
-              <Typography className={classes.pageTitle} variant="h5">
+              <Typography className={classes.pageTitle} variant="h3">
                 {pageTitle}
               </Typography>
             </>

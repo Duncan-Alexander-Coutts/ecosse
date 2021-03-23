@@ -30,7 +30,7 @@ const TeamItemContent = (props) => {
 
   return (
     <div className={classes.container}>
-      <Typography color="primary" variant="h5">
+      <Typography color="primary" variant="h1">
         {props.name}
       </Typography>
       <Typography color="secondary" variant="caption">
