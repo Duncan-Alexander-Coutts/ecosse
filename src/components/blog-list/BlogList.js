@@ -39,29 +39,30 @@ const BlogList = (props) => {
   const classes = useStyles(props);
   const { posts } = props;
 
+  const renderPosts = () =>
+    posts.edges.map((edge) => (
+      <Card className={classes.postCard} key={edge.node.id}>
+        <CardHeader
+          titleTypographyProps={{ variant: "h3" }}
+          title={edge.node.title}
+          subheader={<DatePosted datePosted={edge.node.datePosted} />}
+        />
+        {edge.node.featuredImage && (
+          <Img fluid={edge.node.featuredImage.fluid} alt={edge.node.title} />
+        )}
+        <CardContent>
+          <Typography>{edge.node.shortDescription}</Typography>
+        </CardContent>
+        <CardActions className={classes.actions}>
+          <Link to={`/blog/${edge.node.slug}/`}>
+            <Typography>Read more</Typography>
+          </Link>
+        </CardActions>
+      </Card>
+    ));
+
   return (
-    <div className={classes.container}>
-      {posts.edges.map((edge) => (
-        <Card className={classes.postCard} key={edge.node.id}>
-          <CardHeader
-            titleTypographyProps={{ variant: "h3" }}
-            title={edge.node.title}
-            subheader={<DatePosted datePosted={edge.node.datePosted} />}
-          />
-          {edge.node.featuredImage && (
-            <Img fluid={edge.node.featuredImage.fluid} alt={edge.node.title} />
-          )}
-          <CardContent>
-            <Typography>{edge.node.shortDescription}</Typography>
-          </CardContent>
-          <CardActions className={classes.actions}>
-            <Link to={`/blog/${edge.node.slug}/`}>
-              <Typography>Read more</Typography>
-            </Link>
-          </CardActions>
-        </Card>
-      ))}
-    </div>
+    <div className={classes.container}>{posts ? renderPosts() : null}</div>
   );
 };
 
