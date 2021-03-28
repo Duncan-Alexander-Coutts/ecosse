@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
   },
   richTextContainer: {
-    marginTop: theme.spacing(2),
+    marginTop: theme.spacing(4),
   },
 }));
 
@@ -99,26 +99,26 @@ const options = {
   },
 };
 
-const BlogPost = (props) => {
+const BlogPost = ({ data }) => {
   const classes = useStyles();
   return (
     <Layout>
       <div className={classes.contentContainer}>
         <Typography className={classes.title} variant="h1">
-          {props.data.contentfulBlogPost.title}
+          {data.contentfulBlogPost.title}
         </Typography>
         <div className={classes.datePosted}>
-          <DatePosted datePosted={props.data.contentfulBlogPost.datePosted} />
+          <DatePosted datePosted={data.contentfulBlogPost.datePosted} />
         </div>
-        {props.data.contentfulBlogPost.featuredImage && (
+        {data.contentfulBlogPost.featuredImage && (
           <Img
             className={classes.featuredImage}
-            fluid={props.data.contentfulBlogPost.featuredImage.fluid}
-            alt={props.data.contentfulBlogPost.title}
+            fluid={data.contentfulBlogPost.featuredImage.fluid}
+            alt={data.contentfulBlogPost.title}
           />
         )}
         <div className={classes.richTextContainer}>
-          {renderRichText(props.data.contentfulBlogPost.body, options)}
+          {renderRichText(data.contentfulBlogPost.body, options)}
         </div>
       </div>
     </Layout>
