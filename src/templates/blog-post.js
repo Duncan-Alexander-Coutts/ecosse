@@ -51,9 +51,10 @@ const useStyles = makeStyles((theme) => ({
   richTextContainer: {
     marginTop: theme.spacing(4),
   },
+  commonHeading: { marginBottom: theme.spacing(), fontWeight: "bold" },
 }));
 
-const options = {
+const getOptions = (classes) => ({
   renderNode: {
     [INLINES.ENTRY_HYPERLINK]: ({
       data: {
@@ -67,37 +68,37 @@ const options = {
       </Typography>
     ),
     [BLOCKS.HEADING_1]: (node, children) => (
-      <Typography style={{ marginBottom: 8, fontWeight: "bold" }} variant="h1">
+      <Typography className={classes.commonHeading} variant="h1">
         {children}
       </Typography>
     ),
     [BLOCKS.HEADING_2]: (node, children) => (
-      <Typography style={{ marginBottom: 8, fontWeight: "bold" }} variant="h2">
+      <Typography className={classes.commonHeading} variant="h2">
         {children}
       </Typography>
     ),
     [BLOCKS.HEADING_3]: (node, children) => (
-      <Typography style={{ marginBottom: 8, fontWeight: "bold" }} variant="h3">
+      <Typography className={classes.commonHeading} variant="h3">
         {children}
       </Typography>
     ),
     [BLOCKS.HEADING_4]: (node, children) => (
-      <Typography style={{ marginBottom: 8, fontWeight: "bold" }} variant="h4">
+      <Typography className={classes.commonHeading} variant="h4">
         {children}
       </Typography>
     ),
     [BLOCKS.HEADING_5]: (node, children) => (
-      <Typography style={{ marginBottom: 8, fontWeight: "bold" }} variant="h5">
+      <Typography className={classes.commonHeading} variant="h5">
         {children}
       </Typography>
     ),
     [BLOCKS.HEADING_6]: (node, children) => (
-      <Typography style={{ marginBottom: 8, fontWeight: "bold" }} variant="h6">
+      <Typography className={classes.commonHeading} variant="h6">
         {children}
       </Typography>
     ),
   },
-};
+});
 
 const BlogPost = ({ data }) => {
   const classes = useStyles();
@@ -118,7 +119,7 @@ const BlogPost = ({ data }) => {
           />
         )}
         <div className={classes.richTextContainer}>
-          {renderRichText(data.contentfulBlogPost.body, options)}
+          {renderRichText(data.contentfulBlogPost.body, getOptions(classes))}
         </div>
       </div>
     </Layout>
