@@ -4,6 +4,7 @@ import Achilles from "../../images/logos/achilles.svg";
 import CompositesBadge from "../../images/logos/composites-badge.svg";
 import DnvGl from "../../images/logos/dnvgl.svg";
 import Chamber from "../../images/logos/dacc_logo.png";
+import DeepWind from "../../images/logos/deepwind-membership.png";
 import { useTranslation } from "react-i18next";
 import { ECOSSE_COLOURS } from "../../constants";
 import { graphql, useStaticQuery } from "gatsby";
@@ -90,6 +91,11 @@ export default withStyles(styles)((props) => {
           className={props.classes.chamber}
           src={Chamber}
           alt="Dundee and Angus Chamber of Commerce"
+        />
+        <img
+          className={props.classes.chamber}
+          src={DeepWind}
+          alt="A member of DeepWind"
         />
       </div>
       <Paper className={props.classes.root}>
