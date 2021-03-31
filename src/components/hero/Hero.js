@@ -1,7 +1,8 @@
 import React from "react";
-import BigImage from "../../images/home/hero.jpg";
 import { withStyles, Typography, Grow } from "@material-ui/core";
 import { ECOSSE_COLOURS } from "../../constants";
+import { graphql, useStaticQuery } from "gatsby";
+import BackgroundImage from "gatsby-background-image";
 
 const styles = (theme) => ({
   heroContainer: {
@@ -12,7 +13,6 @@ const styles = (theme) => ({
     height: 550,
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    backgroundImage: `url(${BigImage})`,
     backgroundPosition: "center",
     boxShadow: theme.shadows[2],
   },
@@ -57,6 +57,22 @@ const styles = (theme) => ({
 });
 
 export default withStyles(styles)((props) => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        desktop: file(relativePath: { eq: "home/hero.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  );
+
+  const heroImage = data.desktop.childImageSharp.fluid;
+
   const renderSlogan = () => {
     return (
       <div className={props.classes.overlayContainer}>
@@ -81,7 +97,7 @@ export default withStyles(styles)((props) => {
 
   return (
     <div className={props.classes.heroContainer}>
-      <div className={props.classes.hero} />
+      <BackgroundImage fluid={heroImage} className={props.classes.hero} />
       {renderSlogan()}
     </div>
   );
