@@ -20,5 +20,6 @@ export const navigationItems = [
       },
     ],
   },
-  { label: "Team", link: "/team" },
+  { label: "Blog", link: "/blog/" },
+  { label: "Team", link: "/team/" },
 ];

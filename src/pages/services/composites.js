@@ -126,7 +126,7 @@ const CompositesPage = () => {
             <Typography
               color="primary"
               className={classes.bold}
-              variant="h4"
+              variant="h3"
               align="center"
             >
               {t("composites.repairTypes.header")}

@@ -46,7 +46,7 @@ export default withStyles(styles)((props) => {
           <Typography
             color="primary"
             className={props.classes.intro}
-            variant="h5"
+            variant="h3"
           >
             <Trans i18nKey="home.intro" />
           </Typography>

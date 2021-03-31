@@ -21,7 +21,7 @@ const SectionTitle = ({ title }) => {
   return (
     <div className={classes.container}>
       <Divider />
-      <Typography color="primary" className={classes.title} variant="h3">
+      <Typography color="primary" className={classes.title} variant="h2">
         {title}
       </Typography>
       <Divider />

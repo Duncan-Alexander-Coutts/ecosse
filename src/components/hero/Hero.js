@@ -29,6 +29,7 @@ const styles = (theme) => ({
   },
   slogan: {
     color: "white",
+    fontSize: "3em",
     fontWeight: "bold",
     marginBottom: theme.spacing(1),
     zIndex: 1,
@@ -61,11 +62,7 @@ export default withStyles(styles)((props) => {
       <div className={props.classes.overlayContainer}>
         <Grow in={true} timeout={1000}>
           <>
-            <Typography
-              align="center"
-              className={props.classes.slogan}
-              variant="h2"
-            >
+            <Typography align="center" className={props.classes.slogan}>
               Ultimate asset integrity solutions
             </Typography>
             <div className={props.classes.polygonContainer}>
