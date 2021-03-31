@@ -37,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     margin: "auto",
     fontWeight: "bold",
+    textAlign: "center",
     marginBottom: theme.spacing(),
   },
   datePosted: {
